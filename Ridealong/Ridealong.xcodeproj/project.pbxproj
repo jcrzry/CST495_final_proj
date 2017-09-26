@@ -20,6 +20,10 @@
 		DDB7C9D51F71FB3500D5A7FD /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB7C9D41F71FB3500D5A7FD /* Login.storyboard */; };
 		DDBE54711F7498B4004319E9 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDBE54701F7498B4004319E9 /* Feed.storyboard */; };
 		DDBE54731F74A1C2004319E9 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDBE54721F74A1C2004319E9 /* Settings.storyboard */; };
+		DDC40EB51F7A10B700A340AA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC40EB41F7A10B700A340AA /* SettingsViewController.swift */; };
+		DDC40EBB1F7A19CC00A340AA /* ProfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC40EBA1F7A19CC00A340AA /* ProfilViewController.swift */; };
+		DDC40EBE1F7A1A2100A340AA /* Profil.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDC40EBD1F7A1A2100A340AA /* Profil.storyboard */; };
+		DDC40EC01F7A213400A340AA /* ProfilImage.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DDC40EBF1F7A213400A340AA /* ProfilImage.jpeg */; };
 		E5B276452470A1F7AC915227 /* Pods_RidealongTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62622914A1907F6778756BDC /* Pods_RidealongTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +69,10 @@
 		DDB7C9D41F71FB3500D5A7FD /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		DDBE54701F7498B4004319E9 /* Feed.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		DDBE54721F74A1C2004319E9 /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		DDC40EB41F7A10B700A340AA /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		DDC40EBA1F7A19CC00A340AA /* ProfilViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilViewController.swift; sourceTree = "<group>"; };
+		DDC40EBD1F7A1A2100A340AA /* Profil.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profil.storyboard; sourceTree = "<group>"; };
+		DDC40EBF1F7A213400A340AA /* ProfilImage.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ProfilImage.jpeg; sourceTree = "<group>"; };
 		DEEF4DC02FBEA1A59BD8F1B5 /* Pods-Ridealong.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ridealong.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ridealong/Pods-Ridealong.debug.xcconfig"; sourceTree = "<group>"; };
 		DF6718BA2747AA000E92A9B7 /* Pods-Ridealong.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ridealong.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ridealong/Pods-Ridealong.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -146,13 +154,11 @@
 			isa = PBXGroup;
 			children = (
 				DD73115C1F68CD1900568833 /* AppDelegate.swift */,
-				DD73115E1F68CD1900568833 /* FirstViewController.swift */,
-				DD7311601F68CD1900568833 /* SecondViewController.swift */,
-				DD7311621F68CD1900568833 /* Main.storyboard */,
-				DDBE54701F7498B4004319E9 /* Feed.storyboard */,
-				DDBE54721F74A1C2004319E9 /* Settings.storyboard */,
-				DDB7C9D41F71FB3500D5A7FD /* Login.storyboard */,
+				DDC40EBC1F7A19D300A340AA /* Views */,
+				DDC40EB71F7A110100A340AA /* ViewController */,
+				DDC40EB61F7A10F500A340AA /* Storyboards */,
 				DD7311651F68CD1900568833 /* Assets.xcassets */,
+				DDC40EBF1F7A213400A340AA /* ProfilImage.jpeg */,
 				DD7311671F68CD1900568833 /* LaunchScreen.storyboard */,
 				DD73116A1F68CD1900568833 /* Info.plist */,
 			);
@@ -175,6 +181,36 @@
 				DD7311801F68CD1900568833 /* Info.plist */,
 			);
 			path = RidealongUITests;
+			sourceTree = "<group>";
+		};
+		DDC40EB61F7A10F500A340AA /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				DD7311621F68CD1900568833 /* Main.storyboard */,
+				DDBE54701F7498B4004319E9 /* Feed.storyboard */,
+				DDBE54721F74A1C2004319E9 /* Settings.storyboard */,
+				DDB7C9D41F71FB3500D5A7FD /* Login.storyboard */,
+				DDC40EBD1F7A1A2100A340AA /* Profil.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		DDC40EB71F7A110100A340AA /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DD73115E1F68CD1900568833 /* FirstViewController.swift */,
+				DD7311601F68CD1900568833 /* SecondViewController.swift */,
+				DDC40EB41F7A10B700A340AA /* SettingsViewController.swift */,
+				DDC40EBA1F7A19CC00A340AA /* ProfilViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		DDC40EBC1F7A19D300A340AA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,10 +332,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDC40EC01F7A213400A340AA /* ProfilImage.jpeg in Resources */,
 				DDBE54711F7498B4004319E9 /* Feed.storyboard in Resources */,
 				DDB7C9D51F71FB3500D5A7FD /* Login.storyboard in Resources */,
 				DD7311691F68CD1900568833 /* LaunchScreen.storyboard in Resources */,
 				DDBE54731F74A1C2004319E9 /* Settings.storyboard in Resources */,
+				DDC40EBE1F7A1A2100A340AA /* Profil.storyboard in Resources */,
 				DD7311661F68CD1900568833 /* Assets.xcassets in Resources */,
 				DD7311641F68CD1900568833 /* Main.storyboard in Resources */,
 			);
@@ -481,8 +519,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD7311611F68CD1900568833 /* SecondViewController.swift in Sources */,
+				DDC40EBB1F7A19CC00A340AA /* ProfilViewController.swift in Sources */,
 				DD73115D1F68CD1900568833 /* AppDelegate.swift in Sources */,
 				DD73115F1F68CD1900568833 /* FirstViewController.swift in Sources */,
+				DDC40EB51F7A10B700A340AA /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
