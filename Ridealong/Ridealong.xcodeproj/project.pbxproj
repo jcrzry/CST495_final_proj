@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		135BDC591F7B30C100449C08 /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135BDC581F7B30C100449C08 /* FeedTableViewController.swift */; };
+		135BDC5B1F7B319F00449C08 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135BDC5A1F7B319F00449C08 /* FeedTableViewCell.swift */; };
 		721BFB875881E20AF72E3898 /* Pods_RidealongUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AA4BE44488141C96D7221E0 /* Pods_RidealongUITests.framework */; };
 		9C512C0C9D9B87B14FB1A723 /* Pods_Ridealong.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8106CD4B3B5311508CC56A12 /* Pods_Ridealong.framework */; };
 		DD73115D1F68CD1900568833 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD73115C1F68CD1900568833 /* AppDelegate.swift */; };
@@ -45,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		135BDC581F7B30C100449C08 /* FeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
+		135BDC5A1F7B319F00449C08 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		2AA4BE44488141C96D7221E0 /* Pods_RidealongUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RidealongUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C16515354A766ADC23D9431 /* Pods-RidealongUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RidealongUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RidealongUITests/Pods-RidealongUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4954CD06798D50D6ADC78AA4 /* Pods-RidealongTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RidealongTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RidealongTests/Pods-RidealongTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -202,6 +206,8 @@
 				DD7311601F68CD1900568833 /* SecondViewController.swift */,
 				DDC40EB41F7A10B700A340AA /* SettingsViewController.swift */,
 				DDC40EBA1F7A19CC00A340AA /* ProfilViewController.swift */,
+				135BDC581F7B30C100449C08 /* FeedTableViewController.swift */,
+				135BDC5A1F7B319F00449C08 /* FeedTableViewCell.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -519,6 +525,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD7311611F68CD1900568833 /* SecondViewController.swift in Sources */,
+				135BDC591F7B30C100449C08 /* FeedTableViewController.swift in Sources */,
+				135BDC5B1F7B319F00449C08 /* FeedTableViewCell.swift in Sources */,
 				DDC40EBB1F7A19CC00A340AA /* ProfilViewController.swift in Sources */,
 				DD73115D1F68CD1900568833 /* AppDelegate.swift in Sources */,
 				DD73115F1F68CD1900568833 /* FirstViewController.swift in Sources */,
