@@ -32,6 +32,8 @@
                             <outlet property="delegate" destination="Bf9-Iv-MZL" id="qUL-YE-dyD"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v27-4o-poD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
