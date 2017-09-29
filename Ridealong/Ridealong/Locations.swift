@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Location {
+struct Locations {
     
     // Properties
     var startDest : Date?

@@ -15,3 +15,4 @@ struct Options {
     var smokingAllowed : Bool?
     var petsAllowed : Bool?
     var gasShare : Bool?
+}
