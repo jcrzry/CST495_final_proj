@@ -15,8 +15,9 @@ struct User {
     var lastName : String?
     var email : String?
     var bio : String?
-    var vehicle : Vehicle()?
+    var vehicle = Vehicle()
+  
+ 
     
-    func currentRating()
     
 }
