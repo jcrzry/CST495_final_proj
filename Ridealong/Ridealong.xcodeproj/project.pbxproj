@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22A5CD5F1F779B9B008F5E5D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A5CD5E1F779B9B008F5E5D /* LoginViewController.swift */; };
+		22FAA9FD1F7A423800E9158A /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FAA9FC1F7A423800E9158A /* SignupViewController.swift */; };
 		721BFB875881E20AF72E3898 /* Pods_RidealongUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AA4BE44488141C96D7221E0 /* Pods_RidealongUITests.framework */; };
 		9C512C0C9D9B87B14FB1A723 /* Pods_Ridealong.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8106CD4B3B5311508CC56A12 /* Pods_Ridealong.framework */; };
 		DD73115D1F68CD1900568833 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD73115C1F68CD1900568833 /* AppDelegate.swift */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		22A5CD5E1F779B9B008F5E5D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		22FAA9FC1F7A423800E9158A /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		2AA4BE44488141C96D7221E0 /* Pods_RidealongUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RidealongUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C16515354A766ADC23D9431 /* Pods-RidealongUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RidealongUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RidealongUITests/Pods-RidealongUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4954CD06798D50D6ADC78AA4 /* Pods-RidealongTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RidealongTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RidealongTests/Pods-RidealongTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -146,6 +150,8 @@
 				DD7311601F68CD1900568833 /* SecondViewController.swift */,
 				DD7311621F68CD1900568833 /* Main.storyboard */,
 				DDB7C9D41F71FB3500D5A7FD /* Login.storyboard */,
+				22A5CD5E1F779B9B008F5E5D /* LoginViewController.swift */,
+				22FAA9FC1F7A423800E9158A /* SignupViewController.swift */,
 				DD7311651F68CD1900568833 /* Assets.xcassets */,
 				DD7311671F68CD1900568833 /* LaunchScreen.storyboard */,
 				DD73116A1F68CD1900568833 /* Info.plist */,
@@ -248,7 +254,7 @@
 				TargetAttributes = {
 					DD7311581F68CD1900568833 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 6XRGVQSWRU;
+						DevelopmentTeam = T7L2FQY8CD;
 						ProvisioningStyle = Automatic;
 					};
 					DD73116E1F68CD1900568833 = {
@@ -472,7 +478,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22A5CD5F1F779B9B008F5E5D /* LoginViewController.swift in Sources */,
 				DD7311611F68CD1900568833 /* SecondViewController.swift in Sources */,
+				22FAA9FD1F7A423800E9158A /* SignupViewController.swift in Sources */,
 				DD73115D1F68CD1900568833 /* AppDelegate.swift in Sources */,
 				DD73115F1F68CD1900568833 /* FirstViewController.swift in Sources */,
 			);
@@ -627,12 +635,14 @@
 			baseConfigurationReference = DEEF4DC02FBEA1A59BD8F1B5 /* Pods-Ridealong.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6XRGVQSWRU;
+				DEVELOPMENT_TEAM = T7L2FQY8CD;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = Ridealong/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.CSUMB.Ridealong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -641,12 +651,16 @@
 			baseConfigurationReference = DF6718BA2747AA000E92A9B7 /* Pods-Ridealong.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6XRGVQSWRU;
+				DEVELOPMENT_TEAM = T7L2FQY8CD;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = Ridealong/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"MTL_ENABLE_DEBUG_INFO[arch=*]" = NO;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = edu.CSUMB.Ridealong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
