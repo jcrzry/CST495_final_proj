@@ -42,7 +42,6 @@ class SettingsViewController: UITableViewController{
         return cell
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        TB.info("YOu selected\(indexPath.row)")
         if indexPath.row == 0 {
             let storyboard = UIStoryboard(name: "Profil", bundle: nil)
             let viewController = storyboard.instantiateInitialViewController()
