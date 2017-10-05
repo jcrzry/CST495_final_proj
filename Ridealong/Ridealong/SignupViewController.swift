@@ -6,6 +6,7 @@
 //  Copyright © 2017 CSUMB. All rights reserved.
 //
 import UIKit
+import TB
 
 class SignupViewController: UIViewController {
     @IBOutlet weak var firstTF: UITextField!
@@ -21,17 +22,13 @@ class SignupViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        hideKeyboardWhenTappedAround()
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true);
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
