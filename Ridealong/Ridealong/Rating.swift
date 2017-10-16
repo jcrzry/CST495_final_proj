@@ -11,7 +11,7 @@ struct Rating{
     
     var rating : Int
     var description : String?
-    var averageRating : Int
+    var averageRating : Int 
     
     //RATING FUNCTIONS
     
@@ -27,7 +27,12 @@ struct Rating{
         
     }
     func createUserRating() -> Rating{
-       
+        // TODO: Change this code
+        let rat = 2
+        let des = ""
+        let ave = 2
+        let currentRating = Rating.init(rating: rat, description: des, averageRating: ave)
+        return currentRating
     }
     func presentAverageRating(){
         
