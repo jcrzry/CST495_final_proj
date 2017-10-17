@@ -1,6 +1,6 @@
 {
   "name": "TB",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "summary": "TB means Toolbox for some swift stuff.",
   "description": "The Toolbox customize some useful things in your Swift project.",
   "homepage": "www.jonasdeichelmann.wordpress.com",
@@ -9,11 +9,10 @@
     "Jonas Deichelmann": "Jonas.Deichelmann@me.com"
   },
   "platforms": {
-    "ios": "10.0"
+    "ios": null
   },
   "source": {
-    "git": "https://github.com/JonasDeichelmann/ToolBox.git",
-    "tag": "1.0.0"
+    "git": "https://github.com/JonasDeichelmann/ToolBox.git"
   },
   "source_files": [
     "TB",
