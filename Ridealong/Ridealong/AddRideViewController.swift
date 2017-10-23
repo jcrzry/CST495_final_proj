@@ -10,6 +10,8 @@ import UIKit
 import Realm
 
 class AddViewController: UIViewController, UITextFieldDelegate {
+    
+    // MARK: Variables
     @IBOutlet var txtDate: UITextField!
     @IBOutlet var txtTime: UITextField!
     var datePicker = UIDatePicker()
@@ -19,7 +21,21 @@ class AddViewController: UIViewController, UITextFieldDelegate {
     var txtDescription: UITextField?
     
     
-    // datepicker function
+    // MARK: - Lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = UIColor.white
+        setupTextField()
+        setupNavigationBar()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) { // [2]
+        super.viewDidAppear(animated)
+       //Keyboard pop up right after view load
+        txtLocationFrom?.becomeFirstResponder()
+    }
+    
+    // MARK: datepicker function
     func displayDate(){
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
@@ -34,7 +50,7 @@ class AddViewController: UIViewController, UITextFieldDelegate {
         self.timePicker.datePickerMode = .time
         
         txtTime.inputView = timePicker
-        }
+    }
     func donePick(){
         
         let dateFormatter = DateFormatter()
@@ -55,22 +71,7 @@ class AddViewController: UIViewController, UITextFieldDelegate {
         let formatter = DateFormatter()
         formatter.timeStyle = .short
         txtTime.text = formatter.string(from: sender.date)
-    }
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = UIColor.white
-        setupTextField()
-        setupNavigationBar()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) { // [2]
-        super.viewDidAppear(animated)
-       //Keyboard pop up right after view load
-        txtLocationFrom?.becomeFirstResponder()
-    }
-    
+    } 
     func setupTextField() {
         
         txtLocationFrom?.placeholder = "From where are we driving?"
@@ -95,9 +96,6 @@ class AddViewController: UIViewController, UITextFieldDelegate {
     func setupNavigationBar() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(AddViewController.doneAction))
     }
-    
-    
-    
     func doneAction() {
         let realm = RLMRealm.default()
         if (self.txtLocationFrom?.text?.characters.count)! > 0 {
@@ -111,7 +109,6 @@ class AddViewController: UIViewController, UITextFieldDelegate {
         // Go back to previous view
         dismiss(animated: true, completion: nil)
     }
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool { // [8]
         doneAction()
         textField.resignFirstResponder()
