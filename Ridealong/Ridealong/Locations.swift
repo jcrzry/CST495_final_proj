@@ -7,11 +7,13 @@
 
 
 import Foundation
+import Realm
 
-struct Locations {
+class Locations: RLMObject {
+
     
     // Properties
-    var startDest : Date?
-    var endDest : Date?
+    var locationEnd : String?
+    var locationStart : String?
     
 }

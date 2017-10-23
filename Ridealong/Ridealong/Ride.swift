@@ -6,11 +6,17 @@
 //  Copyright © 2017 CSUMB. All rights reserved.
 //
 
-import Foundation
-struct Ride {
-    
-    var user = User()
-    var options = Options()
-    var locations = Locations()
+import UIKit
+import Realm
+class Ride: RLMObject {
 
+    var user = User()
+    //var options = Options()
+    var locations = Locations()
+    var date: String?
+    var time: String?
+    
 }
+
+
+

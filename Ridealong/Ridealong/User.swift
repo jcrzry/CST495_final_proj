@@ -7,7 +7,10 @@
 //
 
 import Foundation
-struct User {
+import Realm
+
+class User: RLMObject {
+
     
     // Properties
     var username : String?
@@ -15,6 +18,7 @@ struct User {
     var lastName : String?
     var email : String?
     var bio : String?
+    var profileImage : NSObjectFileImage?
     var vehicle = Vehicle()
   
  
