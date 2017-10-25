@@ -7,8 +7,34 @@
 //
 
 import Foundation
-struct Vehicle {
+import RealmSwift
+
+class Vehicle: Object {
+    let types = ["s":"Sedan","t":"Truck","sv":"SUV","c":"Coupe"]
     //Properties
-    var numberOfSeats : Int?
-    var numberOfSeatsAvailable : Int?
+    dynamic var make: String = ""
+    dynamic var model: String = ""
+    var year: Int = 0
+    var cylinder: Int = 0
+    var type: String = ""
+    var isDefault: Bool = false
+    
+//    required init(){
+ //       self.make = "make"
+   //     self.model = "model"
+     //   self.year = 000
+       // self.isDefault = false
+    //}
+    
+    //Init
+    convenience init?(make: String, model: String, year: Int, type: String, isDefault: Bool){
+        self.init()
+        self.make = make
+        self.model = model
+        self.year = year
+        self.isDefault = isDefault
+    
+    }
+
 }
+	

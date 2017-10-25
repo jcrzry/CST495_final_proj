@@ -1,23 +1,60 @@
-//
-//  User.swift
-//  Ridealong
-//
-//  Created by SImon Nielsen on 26/09/2017.
-//  Copyright © 2017 CSUMB. All rights reserved.
-//
-
 import Foundation
-struct User {
+import RealmSwift
+
+class User: Object {
     
     // Properties
-    var username : String?
-    var firstName : String?
-    var lastName : String?
-    var email : String?
-    var bio : String?
-    var vehicle = Vehicle()
-  
- 
+    @objc dynamic var username: String = ""
+    @objc dynamic var firstname: String = ""
+    @objc dynamic var lastname: String = ""
+    @objc dynamic var email: String = ""
+    @objc dynamic var bio: String = ""
+    var vehicles: List<Vehicle> = List<Vehicle>()
+    @objc var defaultVehicle: Vehicle = Vehicle()
     
     
+    //Initializers
+   convenience init?(username: String,firstname: String, lastname: String, email: String){
+        self.init()
+        self.username = username
+        self.firstname = firstname
+        self.lastname = lastname
+        self.email = email
+        self.vehicles = List<Vehicle>()
+    }
+    
+
+    override static func primaryKey() -> String?{
+        return "username"
+    }
+    
+    func addVehicle(name: String, vehicle: Vehicle) -> Bool{
+        if self.vehicles.value(forKey: name) == nil{
+            vehicles.append(vehicle)
+            return true
+        }
+        return false
+    }
+    
+    
+    //returns default vehicle if one exists
+    func getDefaultVehicle() -> Vehicle?{
+        for v in self.vehicles{
+            if v.isDefault == true{
+                return v
+            }
+        }
+        return nil
+    }
+    
+    //sets default vehicle and and returns vehicle object
+    func setDefaultVehicle(vehicle: Vehicle) -> Vehicle?{
+        for v in self.vehicles{
+            if v == vehicle{
+                v.isDefault = true
+                return v
+            }
+        }
+        return nil
+    }
 }

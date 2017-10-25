@@ -7,12 +7,21 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct Options {
+class Options: Object {
     
     // Properties
 
-    var smokingAllowed : Bool?
-    var petsAllowed : Bool?
-    var gasShare : Bool?
+    dynamic var smokingAllowed : Bool = false
+    dynamic var petsAllowed : Bool = false
+    dynamic var gasShare : Bool = false
+
+    convenience init?(smoking: Bool, pets: Bool, gas: Bool){
+        self.init()
+        self.smokingAllowed = smoking
+        self.petsAllowed = pets
+        self.gasShare = gas
+        
+    }
 }

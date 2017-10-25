@@ -7,10 +7,23 @@
 //
 
 import Foundation
-struct Ride {
-    
-    var user = User()
-    var options = Options()
-    var locations = Locations()
+import RealmSwift
 
+class Ride: Object {
+    
+    dynamic var creator: User = User()
+    dynamic var options: Options = Options()
+    dynamic var locations: Locations = Locations()
+    var vehicle:	 Vehicle = Vehicle()
+    
+   convenience init?(creator: User, options: Options, locations: Locations){
+        self.creator = creator
+        self.options = options
+        self.locations = locations
+        self.vehicle = creator.defaultVehicle
+    }
+    
+    
+    
+  
 }

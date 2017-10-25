@@ -7,11 +7,13 @@
 //
 
 import Foundation
-struct Rating{
+import RealmSwift
+
+class Rating: Object{
     
-    var rating : Int
-    var description : String?
-    var averageRating : Int
+    dynamic var rating : Int
+    dynamic var description : String
+    dynamic var averageRating : Int
     
     //RATING FUNCTIONS
     
@@ -29,7 +31,7 @@ struct Rating{
     func createUserRating() -> Rating{
        
     }
-    func presentAverageRating(){
+    func presentAverageRating() -> Rating{
         
     }
     

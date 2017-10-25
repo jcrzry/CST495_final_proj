@@ -7,11 +7,18 @@
 
 
 import Foundation
+import RealmSwift
 
-struct Locations {
+class Locations: Object {
     
     // Properties
-    var startDest : Date?
-    var endDest : Date?
+    @objc dynamic var startDest : Date = ""
+    @objc dynamic var endDest : Date = ""
+    
+    convenience init?(startDest: String, endDest: String){
+        self.init()
+        self.startDest = startDest
+        self.endDest = endDest
+    }
     
 }
