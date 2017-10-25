@@ -12,12 +12,12 @@ import RealmSwift
 class Vehicle: Object {
     let types = ["s":"Sedan","t":"Truck","sv":"SUV","c":"Coupe"]
     //Properties
-    dynamic var make: String = ""
-    dynamic var model: String = ""
-    var year: Int = 0
-    var cylinder: Int = 0
-    var type: String = ""
-    var isDefault: Bool = false
+    @objc  dynamic var make: String = ""
+    @objc dynamic var model: String = ""
+    @objc var year: Int = 0
+    @objc var cylinder: Int = 0
+    @objc dynamic var type: String = ""
+    @objc var isDefault: Bool = false
     
 //    required init(){
  //       self.make = "make"
@@ -35,6 +35,7 @@ class Vehicle: Object {
         self.isDefault = isDefault
     
     }
+
 
 }
 	

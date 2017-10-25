@@ -23,7 +23,7 @@ class Ride: Object {
         self.vehicle = creator.defaultVehicle
     }
     
-    
-    
-  
-}
+ }
+
+
+

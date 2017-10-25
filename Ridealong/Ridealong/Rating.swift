@@ -11,9 +11,14 @@ import RealmSwift
 
 class Rating: Object{
     
-    dynamic var rating : Int
-    dynamic var description : String
-    dynamic var averageRating : Int
+
+    @objc dynamic var rating : Int
+    @objc dynamic var description : String
+    @objc dynamic var averageRating : Int
+
+    var rating : Int
+    var description : String?
+    var averageRating : Int 
     
     //RATING FUNCTIONS
     
@@ -29,7 +34,12 @@ class Rating: Object{
         
     }
     func createUserRating() -> Rating{
-       
+        // TODO: Change this code
+        let rat = 2
+        let des = ""
+        let ave = 2
+        let currentRating = Rating.init(rating: rat, description: des, averageRating: ave)
+        return currentRating
     }
     func presentAverageRating() -> Rating{
         

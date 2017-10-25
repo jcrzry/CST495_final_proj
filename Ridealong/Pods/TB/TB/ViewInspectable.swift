@@ -14,7 +14,6 @@ import Foundation
 @IBDesignable
 extension UIView
 {
-
     @IBInspectable
     public var cornerRadius: CGFloat
     {
@@ -22,7 +21,6 @@ extension UIView
             self.layer.cornerRadius = radius
             self.layer.masksToBounds = radius > 0
         }
-
         get {
             return self.layer.cornerRadius
         }
