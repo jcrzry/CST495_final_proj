@@ -8,8 +8,9 @@
 
 import Foundation
 import Realm
+import RealmSwift
 
-class User: RLMObject {
+class User: Object {
 
     
     // Properties
@@ -18,9 +19,9 @@ class User: RLMObject {
     var lastName : String?
     var email : String?
     var bio : String?
-    var profileImage : NSObjectFileImage?
+    var profileImage : UIImage?
     var vehicle = Vehicle()
-  
+    
  
     
     

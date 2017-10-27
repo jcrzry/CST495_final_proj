@@ -8,7 +8,9 @@
 
 import UIKit
 import Realm
-class Ride: RLMObject {
+import RealmSwift
+
+class Ride: Object {
 
     var user = User()
     //var options = Options()

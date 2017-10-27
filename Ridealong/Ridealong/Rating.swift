@@ -7,12 +7,15 @@
 //
 
 import Foundation
+import RealmSwift
+import Realm
+
 struct Rating{
     
     var rating : Int
     var description : String?
-    var averageRating : Int 
-    
+    var averageRating : Int
+
     //RATING FUNCTIONS
     
     /*

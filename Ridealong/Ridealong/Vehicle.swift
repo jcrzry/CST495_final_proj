@@ -8,8 +8,9 @@
 
 import UIKit
 import Realm
+import RealmSwift
 
-class Vehicle: RLMObject {
+class Vehicle: Object {
 
     //Properties
     var numberOfSeats : Int?

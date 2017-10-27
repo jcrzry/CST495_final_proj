@@ -8,8 +8,9 @@
 
 import Foundation
 import Realm
+import RealmSwift
 
-class Locations: RLMObject {
+class Locations: Object {
 
     
     // Properties

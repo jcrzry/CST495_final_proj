@@ -28,7 +28,7 @@ class FeedTableViewCell: UITableViewCell {
             animated)
 
     
-    var ride: Ride? {
+/*    var ride: Ride? {
         var locations: Locations? {
             var rating: Rating? {
                 var user: User? {
@@ -41,18 +41,14 @@ class FeedTableViewCell: UITableViewCell {
                         
                         lblLocationStart?.text = locations.locationStart
                         lblLocationEnd?.text = locations.locationEnd
-                        
-                      
+
                         //Thinking about a smart model for displaying the name after a ride is created.
                         //profileImg?.image = user.profileImage
                        // lblName?.text = ride.returnRiderName
-                        
                     }
                 }
-            
         }
-
    }
-}
+}*/
 
     }}

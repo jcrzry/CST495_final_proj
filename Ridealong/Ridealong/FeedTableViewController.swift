@@ -8,22 +8,31 @@
 
 import UIKit
 import Realm
+import RealmSwift
 
 private let reuseIdentifier = "Cell"
 
 class FeedTableViewController: UITableViewController {
 
     
-    var rides: RLMArray<RLMObject>{
-        get {
-            //return Ride.allObjects()
-        }
-    }
-    
+//    var rides: RLMArray<RLMObject>{
+//        get {
+//            //return Ride.allObjects()
+//        }
+//    }
+
+    var items: Results<Ride>!
+
     //func to register cell to be dequeued by the tableview
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        let realm = try! Realm()
+        let test = NSPredicate(format: "ride = %@", "title")
+        items = (realm.objects(Ride.self).filter(test))
+
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "FeedCell") // [1]
+        print(items[0].locations)
     }
     
     //reload the data to see the latest array fetched by allObjects()
@@ -33,7 +42,7 @@ class FeedTableViewController: UITableViewController {
     }
     //returns the number of how many cells the view should generate
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Int(rides.count)
+        return Int(1)
     }
     
     
@@ -44,10 +53,8 @@ class FeedTableViewController: UITableViewController {
         
         //fetch object from database at current index
       //  let ride = rides.objectAtIndex(index) as Ride
-        cell.textLabel.text = ride.name
-        
-        
-        
+        cell.textLabel?.text = items.description
+
         return cell
     }
     
