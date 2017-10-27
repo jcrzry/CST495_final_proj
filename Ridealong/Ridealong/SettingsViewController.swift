@@ -11,7 +11,7 @@ import UIKit
 import TB
 
 class SettingsViewController: UITableViewController{
-    var settings = ["Profil", "Feedback" ,"Contact" ,"Licences"]
+    var settings = ["Profile", "Feedback" ,"Contact" ,"Licences"]
 
     override func viewDidLoad() {
         super.viewDidLoad()

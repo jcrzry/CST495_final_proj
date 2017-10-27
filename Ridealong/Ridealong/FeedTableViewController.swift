@@ -14,9 +14,9 @@ private let reuseIdentifier = "Cell"
 class FeedTableViewController: UITableViewController {
 
     
-    var rides: RLMArray{
+    var rides: RLMArray<RLMObject>{
         get {
-            return Ride.allObjects()
+            //return Ride.allObjects()
         }
     }
     
@@ -43,7 +43,7 @@ class FeedTableViewController: UITableViewController {
         let index = UInt(indexPath.row)
         
         //fetch object from database at current index
-        let ride = rides.objectAtIndex(index) as Ride
+      //  let ride = rides.objectAtIndex(index) as Ride
         cell.textLabel.text = ride.name
         
         
