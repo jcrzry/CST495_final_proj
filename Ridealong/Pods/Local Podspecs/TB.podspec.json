@@ -1,10 +1,6 @@
 {
   "name": "TB",
-<<<<<<< HEAD
   "version": "1.0.5",
-=======
-  "version": "1.0.4",
->>>>>>> dfc2eac953ebec87d60a3ec8ece5583051bdd9fd
   "summary": "TB means Toolbox for some swift stuff.",
   "description": "The Toolbox customize some useful things in your Swift project.",
   "homepage": "www.jonasdeichelmann.wordpress.com",

@@ -1,6 +1,4 @@
 PODS:
-<<<<<<< HEAD
-=======
   - Bolts (1.8.4):
     - Bolts/AppLinks (= 1.8.4)
     - Bolts/Tasks (= 1.8.4)
@@ -54,17 +52,12 @@ PODS:
   - GTMSessionFetcher/Core (1.1.12)
   - GTMSessionFetcher/Full (1.1.12):
     - GTMSessionFetcher/Core (= 1.1.12)
->>>>>>> dfc2eac953ebec87d60a3ec8ece5583051bdd9fd
-  - Realm (2.10.2):
-    - Realm/Headers (= 2.10.2)
-  - Realm/Headers (2.10.2)
-  - RealmSwift (2.10.2):
-    - Realm (= 2.10.2)
-<<<<<<< HEAD
+  - Realm (3.0.1):
+    - Realm/Headers (= 3.0.1)
+  - Realm/Headers (3.0.1)
+  - RealmSwift (3.0.1):
+    - Realm (= 3.0.1)
   - TB (1.0.5)
-=======
-  - TB (1.0.4)
->>>>>>> dfc2eac953ebec87d60a3ec8ece5583051bdd9fd
 
 DEPENDENCIES:
   - FacebookCore
@@ -79,16 +72,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   TB:
-<<<<<<< HEAD
-    :commit: 3ab4c77ccd678fa55df0317a39d70efa12d2e881
-    :git: https://github.com/JonasDeichelmann/ToolBox.git
-
-SPEC CHECKSUMS:
-  Realm: 0ef72b837fb67e9f4b098bac771ddd72c7fdbb69
-  RealmSwift: 07a9ae0505091eda6b2ee7c190c3786d6e90a7b0
-  TB: f02020640e0ea29380a12d9f6dcc3b2e8863c670
-=======
-    :commit: b024b73ef29dc3a325a5b0b4bc0bb494e8237017
+    :commit: 452cb3dfc13d44a1b590772af17b08a23b65f68c
     :git: https://github.com/JonasDeichelmann/ToolBox.git
 
 SPEC CHECKSUMS:
@@ -105,10 +89,9 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   GTMOAuth2: be83fd28d63ae3087e7d351b1f39c1a7e24ab6e7
   GTMSessionFetcher: ebaa1f79a5366922c1735f1566901f50beba23b7
-  Realm: 0ef72b837fb67e9f4b098bac771ddd72c7fdbb69
-  RealmSwift: 07a9ae0505091eda6b2ee7c190c3786d6e90a7b0
-  TB: 0446bd39a19b3e0a21556eb03ff5dece2e55ea61
->>>>>>> dfc2eac953ebec87d60a3ec8ece5583051bdd9fd
+  Realm: ba6144c74f835f7497791f6599d63a7755377b83
+  RealmSwift: 7d13b1ac4b6022a13f841e3143e7789c9e40ad0d
+  TB: f02020640e0ea29380a12d9f6dcc3b2e8863c670
 
 PODFILE CHECKSUM: 46cf3ae4e67d8b0876ee2d1d2ac6fedd8d65e553
 
