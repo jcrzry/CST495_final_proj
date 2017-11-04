@@ -1,8 +1,7 @@
 //
 //  Rating.swift
 //  Ridealong
-//
-//  Created by SImon Nielsen on 28/09/2017.
+//	//  Created by SImon Nielsen on 28/09/2017.
 //  Copyright © 2017 CSUMB. All rights reserved.
 //
 
@@ -11,15 +10,12 @@ import RealmSwift
 
 class Rating: Object{
     
-
-    @objc dynamic var rating : Int
-    @objc dynamic var description : String
-    @objc dynamic var averageRating : Int
-
-    var rating : Int
-    var description : String?
-    var averageRating : Int 
     
+    @objc dynamic var rating : Int = 0
+    @objc dynamic var rideDescription : String = " "
+    var user_rated: User?
+    var user_rating: User?
+    @objc dynamic var date: Date = Date(timeIntervalSinceNow: 1)
     //RATING FUNCTIONS
     
     /*
@@ -29,19 +25,15 @@ class Rating: Object{
      4. We want to withhold the rating information and option of rating back for the rated user A until user A has rated back.
      */
     
+    convenience init?(user_rating: User, user_rated: User, rating: Int, rideDescription: String){
+        self.init()
+        self.user_rating = user_rating
+        self.user_rated = user_rated
+        self.rating = rating
+        self.rideDescription = rideDescription
+    }
     
     func authorizeUserToRate(){
-        
-    }
-    func createUserRating() -> Rating{
-        // TODO: Change this code
-        let rat = 2
-        let des = ""
-        let ave = 2
-        let currentRating = Rating.init(rating: rat, description: des, averageRating: ave)
-        return currentRating
-    }
-    func presentAverageRating() -> Rating{
         
     }
     

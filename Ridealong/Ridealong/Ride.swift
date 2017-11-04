@@ -11,17 +11,20 @@ import RealmSwift
 
 class Ride: Object {
     
-    dynamic var creator: User = User()
-    dynamic var options: Options = Options()
-    dynamic var locations: Locations = Locations()
-    var vehicle:	 Vehicle = Vehicle()
+    dynamic var creator: User?
+    dynamic var locations: Locations?
+    var vehicle:	 Vehicle?
+    var date: Date = Date(timeIntervalSinceNow: 1)
     
-   convenience init?(creator: User, options: Options, locations: Locations){
+   convenience init?(creator: User, locations: Locations){
+    self.init()
         self.creator = creator
-        self.options = options
         self.locations = locations
-        self.vehicle = creator.defaultVehicle
+        self.vehicle = creator.defaultVehicle!
+        self.date = Date(timeIntervalSinceNow: 1)
+    
     }
+    
     
  }
 

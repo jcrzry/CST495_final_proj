@@ -12,13 +12,13 @@ import RealmSwift
 class Locations: Object {
     
     // Properties
-    @objc dynamic var startDest : Date = ""
-    @objc dynamic var endDest : Date = ""
+    @objc dynamic var locationStart: String = ""
+    @objc dynamic var locationEnd : String = ""
     
-    convenience init?(startDest: String, endDest: String){
+    convenience init?(locationStart: String, locationEnd: String){
         self.init()
-        self.startDest = startDest
-        self.endDest = endDest
+        self.locationStart = locationStart
+        self.locationEnd = locationEnd
     }
     
 }

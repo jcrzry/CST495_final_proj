@@ -10,8 +10,8 @@ class User: Object {
     @objc dynamic var email: String = ""
     @objc dynamic var bio: String = ""
     var vehicles: List<Vehicle> = List<Vehicle>()
-    @objc var defaultVehicle: Vehicle = Vehicle()
-    
+    @objc dynamic var defaultVehicle: Vehicle?
+    var ratings: List<Rating> = List<Rating>()
     
     //Initializers
    convenience init?(username: String,firstname: String, lastname: String, email: String){
@@ -21,6 +21,7 @@ class User: Object {
         self.lastname = lastname
         self.email = email
         self.vehicles = List<Vehicle>()
+        self.ratings = List<Rating>()
     }
     
 
