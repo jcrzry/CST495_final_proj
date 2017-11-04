@@ -1,4 +1,5 @@
 import Foundation
+import Realm
 import RealmSwift
 
 class User: Object {
@@ -9,6 +10,7 @@ class User: Object {
     @objc dynamic var lastname: String = ""
     @objc dynamic var email: String = ""
     @objc dynamic var bio: String = ""
+    var profileImage: UIImage?
     var vehicles: List<Vehicle> = List<Vehicle>()
     @objc dynamic var defaultVehicle: Vehicle?
     var ratings: List<Rating> = List<Rating>()

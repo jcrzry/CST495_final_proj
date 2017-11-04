@@ -7,7 +7,9 @@
 
 
 import Foundation
+import Realm
 import RealmSwift
+
 
 class Locations: Object {
     

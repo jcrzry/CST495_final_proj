@@ -6,8 +6,11 @@
 //  Copyright © 2017 CSUMB. All rights reserved.
 //
 
-import Foundation
+
+import UIKit
+import Realm
 import RealmSwift
+
 
 class Vehicle: Object {
     let types = ["s":"Sedan","t":"Truck","sv":"SUV","c":"Coupe"]

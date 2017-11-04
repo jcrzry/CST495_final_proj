@@ -15,6 +15,8 @@
 		135BDC661F7DCCEA00449C08 /* Ride.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135BDC651F7DCCEA00449C08 /* Ride.swift */; };
 		135BDC681F7DD0C900449C08 /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135BDC671F7DD0C900449C08 /* Rating.swift */; };
 		13B95E701F9D6242009C142A /* AddRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B95E6F1F9D6242009C142A /* AddRideViewController.swift */; };
+		22278A721FA9755A00FAD2C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22278A711FA9755900FAD2C5 /* GoogleService-Info.plist */; };
+		22A5CD5F1F779B9B008F5E5D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A5CD5E1F779B9B008F5E5D /* LoginViewController.swift */; };
 		721BFB875881E20AF72E3898 /* Pods_RidealongUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AA4BE44488141C96D7221E0 /* Pods_RidealongUITests.framework */; };
 		9C512C0C9D9B87B14FB1A723 /* Pods_Ridealong.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8106CD4B3B5311508CC56A12 /* Pods_Ridealong.framework */; };
 		A051FF921F8ED22D007B5258 /* RealmConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A051FF911F8ED22D007B5258 /* RealmConfig.swift */; };
@@ -65,6 +67,8 @@
 		135BDC651F7DCCEA00449C08 /* Ride.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ride.swift; sourceTree = "<group>"; };
 		135BDC671F7DD0C900449C08 /* Rating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
 		13B95E6F1F9D6242009C142A /* AddRideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRideViewController.swift; sourceTree = "<group>"; };
+		22278A711FA9755900FAD2C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		22A5CD5E1F779B9B008F5E5D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2AA4BE44488141C96D7221E0 /* Pods_RidealongUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RidealongUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C16515354A766ADC23D9431 /* Pods-RidealongUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RidealongUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RidealongUITests/Pods-RidealongUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4954CD06798D50D6ADC78AA4 /* Pods-RidealongTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RidealongTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RidealongTests/Pods-RidealongTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -191,15 +195,25 @@
 		DD73115B1F68CD1900568833 /* Ridealong */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				A0F391501FAAB78000796EE5 /* realmInitalization.swift */,
 				135BDC5C1F7B396200449C08 /* ObjectModels */,
+=======
+>>>>>>> acb8515b2b0008ef10e2a49df1c36145f3d726d3
 				DD73115C1F68CD1900568833 /* AppDelegate.swift */,
+				135BDC5C1F7B396200449C08 /* ObjectModels */,
 				DDC40EBC1F7A19D300A340AA /* Views */,
 				DDC40EB71F7A110100A340AA /* ViewController */,
 				DDC40EB61F7A10F500A340AA /* Storyboards */,
+				DD73115E1F68CD1900568833 /* FirstViewController.swift */,
+				DD7311601F68CD1900568833 /* SecondViewController.swift */,
+				DD7311621F68CD1900568833 /* Main.storyboard */,
+				DDB7C9D41F71FB3500D5A7FD /* Login.storyboard */,
+				22A5CD5E1F779B9B008F5E5D /* LoginViewController.swift */,
 				DD7311651F68CD1900568833 /* Assets.xcassets */,
 				DD7311671F68CD1900568833 /* LaunchScreen.storyboard */,
 				DD73116A1F68CD1900568833 /* Info.plist */,
+				22278A711FA9755900FAD2C5 /* GoogleService-Info.plist */,
 			);
 			path = Ridealong;
 			sourceTree = "<group>";
@@ -225,10 +239,8 @@
 		DDC40EB61F7A10F500A340AA /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				DD7311621F68CD1900568833 /* Main.storyboard */,
 				DDBE54701F7498B4004319E9 /* Feed.storyboard */,
 				DDBE54721F74A1C2004319E9 /* Settings.storyboard */,
-				DDB7C9D41F71FB3500D5A7FD /* Login.storyboard */,
 				DDC40EBD1F7A1A2100A340AA /* Profil.storyboard */,
 				DD0A74581F945A0100C673F2 /* Calculator.storyboard */,
 			);
@@ -238,8 +250,6 @@
 		DDC40EB71F7A110100A340AA /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				DD73115E1F68CD1900568833 /* FirstViewController.swift */,
-				DD7311601F68CD1900568833 /* SecondViewController.swift */,
 				DDC40EB41F7A10B700A340AA /* SettingsViewController.swift */,
 				DDC40EBA1F7A19CC00A340AA /* ProfilViewController.swift */,
 				135BDC581F7B30C100449C08 /* FeedTableViewController.swift */,
@@ -381,6 +391,7 @@
 				DD7311691F68CD1900568833 /* LaunchScreen.storyboard in Resources */,
 				DDBE54731F74A1C2004319E9 /* Settings.storyboard in Resources */,
 				DDC40EBE1F7A1A2100A340AA /* Profil.storyboard in Resources */,
+				22278A721FA9755A00FAD2C5 /* GoogleService-Info.plist in Resources */,
 				DD7311661F68CD1900568833 /* Assets.xcassets in Resources */,
 				DD0A74591F945A0100C673F2 /* Calculator.storyboard in Resources */,
 				DD7311641F68CD1900568833 /* Main.storyboard in Resources */,
@@ -461,9 +472,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Ridealong/Pods-Ridealong-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -495,12 +509,28 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Ridealong/Pods-Ridealong-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/TB/TB.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TB.framework",
@@ -563,6 +593,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				135BDC601F7B3AD600449C08 /* Vehicle.swift in Sources */,
+				22A5CD5F1F779B9B008F5E5D /* LoginViewController.swift in Sources */,
 				DD7311611F68CD1900568833 /* SecondViewController.swift in Sources */,
 				A051FF921F8ED22D007B5258 /* RealmConfig.swift in Sources */,
 				135BDC591F7B30C100449C08 /* FeedTableViewController.swift in Sources */,
@@ -731,12 +762,18 @@
 			baseConfigurationReference = DEEF4DC02FBEA1A59BD8F1B5 /* Pods-Ridealong.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+<<<<<<< HEAD
 				DEVELOPMENT_TEAM = EA3U28S24C;
+=======
+				DEVELOPMENT_TEAM = 6XRGVQSWRU;
+				ENABLE_BITCODE = YES;
+>>>>>>> acb8515b2b0008ef10e2a49df1c36145f3d726d3
 				INFOPLIST_FILE = Ridealong/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.CSUMB.Ridealong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -745,12 +782,20 @@
 			baseConfigurationReference = DF6718BA2747AA000E92A9B7 /* Pods-Ridealong.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+<<<<<<< HEAD
 				DEVELOPMENT_TEAM = EA3U28S24C;
+=======
+				DEVELOPMENT_TEAM = 6XRGVQSWRU;
+				ENABLE_BITCODE = YES;
+>>>>>>> acb8515b2b0008ef10e2a49df1c36145f3d726d3
 				INFOPLIST_FILE = Ridealong/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"MTL_ENABLE_DEBUG_INFO[arch=*]" = NO;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = edu.CSUMB.Ridealong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

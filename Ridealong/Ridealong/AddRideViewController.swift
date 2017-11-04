@@ -8,6 +8,7 @@
 
 import UIKit
 import Realm
+import RealmSwift
 
 class AddViewController: UIViewController, UITextFieldDelegate {
     
@@ -97,14 +98,14 @@ class AddViewController: UIViewController, UITextFieldDelegate {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(AddViewController.doneAction))
     }
     func doneAction() {
-        let realm = RLMRealm.default()
+       let realm = try! Realm()
         if (self.txtLocationFrom?.text?.characters.count)! > 0 {
             let newRide = Ride()
             
-//            newRide.date = self.txtLocationFrom!.text!
-  //              realm.add(newRide)
-            
-            
+            newRide.date = self.txtLocationFrom!.text
+            realm.add(newRide)
+
+           
         }
         // Go back to previous view
         dismiss(animated: true, completion: nil)

@@ -50,3 +50,9 @@ fastlane/test_output
 ## Playgrounds
 timeline.xctimeline
 playground.xcworkspace
+
+
+##Pods
+Ridealong/Pods/
+Ridealong/PodFile
+Ridealong/Podfile.lock

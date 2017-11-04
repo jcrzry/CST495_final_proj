@@ -27,33 +27,28 @@ class FeedTableViewCell: UITableViewCell {
         super.setSelected(selected, animated:
             animated)
 
-    
-    //var ride: Ride? {
-      //  var locations: Locations? {
-        //    var rating: Rating? {
-          //      var user: User? {
-            //        didSet {
-              //          guard ride != nil else { return }
-                //        guard let locations = locations else {return}
-                  //      guard rating != nil else {return}
-                    //    guard user != nil else {return}
+/* var ride: Ride? {
+        var locations: Locations? {
+            var rating: Rating? {
+                var user: User? {
+                    didSet {
+                        guard ride != nil else { return }
+                        guard let locations = locations else {return}
+                        guard rating != nil else {return}
+                        guard user != nil else {return}
                         
-                      //
-                       // lblLocationStart?.text = //locations.locationStart
-                     //   lblLocationEnd?.text = locations.locationEnd
                         
-                      
+                        lblLocationStart?.text = locations.locationStart
+                        lblLocationEnd?.text = locations.locationEnd
+
                         //Thinking about a smart model for displaying the name after a ride is created.
                         //profileImg?.image = user.profileImage
                        // lblName?.text = ride.returnRiderName
-                        
-                    //}
-                //}
-            
-        //}
-
-   //}
-//}
+                    }
+                }
+        }
+   }
+}*/
 
     }
 
