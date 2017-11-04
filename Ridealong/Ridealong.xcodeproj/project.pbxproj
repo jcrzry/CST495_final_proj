@@ -195,11 +195,8 @@
 		DD73115B1F68CD1900568833 /* Ridealong */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
 				A0F391501FAAB78000796EE5 /* realmInitalization.swift */,
 				135BDC5C1F7B396200449C08 /* ObjectModels */,
-=======
->>>>>>> acb8515b2b0008ef10e2a49df1c36145f3d726d3
 				DD73115C1F68CD1900568833 /* AppDelegate.swift */,
 				135BDC5C1F7B396200449C08 /* ObjectModels */,
 				DDC40EBC1F7A19D300A340AA /* Views */,
@@ -762,12 +759,9 @@
 			baseConfigurationReference = DEEF4DC02FBEA1A59BD8F1B5 /* Pods-Ridealong.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-<<<<<<< HEAD
+
 				DEVELOPMENT_TEAM = EA3U28S24C;
-=======
-				DEVELOPMENT_TEAM = 6XRGVQSWRU;
-				ENABLE_BITCODE = YES;
->>>>>>> acb8515b2b0008ef10e2a49df1c36145f3d726d3
+
 				INFOPLIST_FILE = Ridealong/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.CSUMB.Ridealong;
@@ -782,12 +776,9 @@
 			baseConfigurationReference = DF6718BA2747AA000E92A9B7 /* Pods-Ridealong.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-<<<<<<< HEAD
+
 				DEVELOPMENT_TEAM = EA3U28S24C;
-=======
-				DEVELOPMENT_TEAM = 6XRGVQSWRU;
-				ENABLE_BITCODE = YES;
->>>>>>> acb8515b2b0008ef10e2a49df1c36145f3d726d3
+
 				INFOPLIST_FILE = Ridealong/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"MTL_ENABLE_DEBUG_INFO[arch=*]" = NO;
