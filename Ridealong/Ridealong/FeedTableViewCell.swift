@@ -8,6 +8,7 @@
 
 import UIKit
 private let reuseIdentifier = "FeedCell"
+
 class FeedTableViewCell: UITableViewCell {
 
     @IBOutlet var lblDate: UILabel?

@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import TB
 
 class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        TB.info("Second View Controller")
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,4 +24,6 @@ class SecondViewController: UIViewController {
 
 
 }
+
+//
 
