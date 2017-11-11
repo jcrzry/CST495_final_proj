@@ -8,10 +8,9 @@
 
 
 import UIKit
-import Realm
 import RealmSwift
 
-
+	
 class Vehicle: Object {
     let types = ["s":"Sedan","t":"Truck","sv":"SUV","c":"Coupe"]
     //Properties
@@ -21,13 +20,6 @@ class Vehicle: Object {
     @objc var cylinder: Int = 0
     @objc dynamic var type: String = ""
     @objc var isDefault: Bool = false
-    
-//    required init(){
- //       self.make = "make"
-   //     self.model = "model"
-     //   self.year = 000
-       // self.isDefault = false
-    //}
     
     //Init
     convenience init?(make: String, model: String, year: Int, type: String, isDefault: Bool){

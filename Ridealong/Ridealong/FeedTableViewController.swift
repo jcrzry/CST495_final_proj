@@ -33,8 +33,9 @@ class FeedTableViewController: UITableViewController {
 //        items = (realm.objects(Ride.self).filter(test))
         items = (realm.objects(Ride.self))
 
-//        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "FeedCell") // [1]
-//        print(items[0].locations)
+
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "FeedCell") // [1]
+       // print(items[0].locations)
     }
     
     //reload the data to see the latest array fetched by allObjects()
@@ -48,9 +49,11 @@ class FeedTableViewController: UITableViewController {
         return Int(1)
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FeedCell")
-        let index = UInt(indexPath.row)
+    
+    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FeedCell", for: indexPath as IndexPath) as UITableViewCell
+        
+        //let index = UInt(indexPath.row)
         
         //fetch object from database at current index
         //  let ride = rides.objectAtIndex(index) as Ride

@@ -31,6 +31,6 @@ class LoginViewController: UIViewController{
     @IBAction func signUpButton(_ sender: Any) {
         performSegue(withIdentifier: "signUpPage", sender: nil)
     }
-    
+  
 
 }

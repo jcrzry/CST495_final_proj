@@ -37,7 +37,7 @@ class CalculatorViewController: UITableViewController, CLLocationManagerDelegate
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        initCommonRealm()
+        //initCommonRealm()
         hideKeyboardWhenTappedAround()
 //        locationManager.delegate = self
 //        locationManager.desiredAccuracy = kCLLocationAccuracyBest

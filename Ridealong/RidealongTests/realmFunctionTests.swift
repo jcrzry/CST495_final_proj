@@ -1,15 +1,14 @@
 //
-//  RidealongTests.swift
-//  RidealongTests
+//  realmFunctionTests.swift
+//  Ridealong
 //
-//  Created by Jonas Deichelmann on 12.09.17.
+//  Created by jcrzry on 11/10/17.
 //  Copyright © 2017 CSUMB. All rights reserved.
 //
 
 import XCTest
-@testable import Ridealong
 
-class RidealongTests: XCTestCase {
+class realmFunctionTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

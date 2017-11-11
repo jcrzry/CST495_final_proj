@@ -8,9 +8,6 @@ target 'Ridealong' do
   # Pods for Ridealong
 pod 'TB', :git => 'https://github.com/JonasDeichelmann/ToolBox.git'
 pod 'RealmSwift'
-pod 'Google/SignIn'
-pod 'FacebookCore'
-pod 'FacebookLogin'
 
   target 'RidealongTests' do
     inherit! :search_paths
