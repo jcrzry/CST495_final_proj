@@ -10,7 +10,7 @@ import UIKit
 import Realm
 import RealmSwift
 
-private let reuseIdentifier = "Cell"
+//private let reuseIdentifier = "Cell"
 
 class FeedTableViewController: UITableViewController {
 
@@ -29,17 +29,18 @@ class FeedTableViewController: UITableViewController {
         super.viewDidLoad()
 
         let realm = try! Realm()
-        let test = NSPredicate(format: "ride = %@", "title")
-        items = (realm.objects(Ride.self).filter(test))
+//        let test = NSPredicate(format: "ride = %@", "title")
+//        items = (realm.objects(Ride.self).filter(test))
+        items = (realm.objects(Ride.self))
 
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "FeedCell") // [1]
-        print(items[0].locations)
+//        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "FeedCell") // [1]
+//        print(items[0].locations)
     }
     
     //reload the data to see the latest array fetched by allObjects()
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        tableView.reloadData()
+//        tableView.reloadData()
     }
 
     //returns the number of how many cells the view should generate
@@ -47,19 +48,17 @@ class FeedTableViewController: UITableViewController {
         return Int(1)
     }
     
-    
-    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FeedCell", for: indexPath as IndexPath) as UITableViewCell
-        
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FeedCell")
         let index = UInt(indexPath.row)
         
         //fetch object from database at current index
-      //  let ride = rides.objectAtIndex(index) as Ride
-        cell.textLabel?.text = items.description
-
-        return cell
+        //  let ride = rides.objectAtIndex(index) as Ride
+        //        cell.textLabel?.text = items.description
+        cell!.textLabel?.text = "Test"
+        
+        return cell!
     }
-    
     
     
 }

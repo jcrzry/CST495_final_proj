@@ -17,6 +17,7 @@
 		13B95E701F9D6242009C142A /* AddRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B95E6F1F9D6242009C142A /* AddRideViewController.swift */; };
 		22278A721FA9755A00FAD2C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22278A711FA9755900FAD2C5 /* GoogleService-Info.plist */; };
 		22A5CD5F1F779B9B008F5E5D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A5CD5E1F779B9B008F5E5D /* LoginViewController.swift */; };
+		22FE32631FB54AB200B017D1 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FE32621FB54AB200B017D1 /* SignUpViewController.swift */; };
 		721BFB875881E20AF72E3898 /* Pods_RidealongUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AA4BE44488141C96D7221E0 /* Pods_RidealongUITests.framework */; };
 		9C512C0C9D9B87B14FB1A723 /* Pods_Ridealong.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8106CD4B3B5311508CC56A12 /* Pods_Ridealong.framework */; };
 		A051FF921F8ED22D007B5258 /* RealmConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A051FF911F8ED22D007B5258 /* RealmConfig.swift */; };
@@ -69,6 +70,7 @@
 		13B95E6F1F9D6242009C142A /* AddRideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRideViewController.swift; sourceTree = "<group>"; };
 		22278A711FA9755900FAD2C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		22A5CD5E1F779B9B008F5E5D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		22FE32621FB54AB200B017D1 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		2AA4BE44488141C96D7221E0 /* Pods_RidealongUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RidealongUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C16515354A766ADC23D9431 /* Pods-RidealongUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RidealongUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RidealongUITests/Pods-RidealongUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4954CD06798D50D6ADC78AA4 /* Pods-RidealongTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RidealongTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RidealongTests/Pods-RidealongTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -195,11 +197,7 @@
 		DD73115B1F68CD1900568833 /* Ridealong */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
 				A0F391501FAAB78000796EE5 /* realmInitalization.swift */,
-				135BDC5C1F7B396200449C08 /* ObjectModels */,
-=======
->>>>>>> acb8515b2b0008ef10e2a49df1c36145f3d726d3
 				DD73115C1F68CD1900568833 /* AppDelegate.swift */,
 				135BDC5C1F7B396200449C08 /* ObjectModels */,
 				DDC40EBC1F7A19D300A340AA /* Views */,
@@ -210,6 +208,7 @@
 				DD7311621F68CD1900568833 /* Main.storyboard */,
 				DDB7C9D41F71FB3500D5A7FD /* Login.storyboard */,
 				22A5CD5E1F779B9B008F5E5D /* LoginViewController.swift */,
+				22FE32621FB54AB200B017D1 /* SignUpViewController.swift */,
 				DD7311651F68CD1900568833 /* Assets.xcassets */,
 				DD7311671F68CD1900568833 /* LaunchScreen.storyboard */,
 				DD73116A1F68CD1900568833 /* Info.plist */,
@@ -344,7 +343,7 @@
 				TargetAttributes = {
 					DD7311581F68CD1900568833 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = EA3U28S24C;
+						DevelopmentTeam = T7L2FQY8CD;
 						ProvisioningStyle = Automatic;
 					};
 					DD73116E1F68CD1900568833 = {
@@ -599,6 +598,7 @@
 				135BDC591F7B30C100449C08 /* FeedTableViewController.swift in Sources */,
 				135BDC5B1F7B319F00449C08 /* FeedTableViewCell.swift in Sources */,
 				13B95E701F9D6242009C142A /* AddRideViewController.swift in Sources */,
+				22FE32631FB54AB200B017D1 /* SignUpViewController.swift in Sources */,
 				DDC40EBB1F7A19CC00A340AA /* ProfilViewController.swift in Sources */,
 				135BDC661F7DCCEA00449C08 /* Ride.swift in Sources */,
 				135BDC5E1F7B39A200449C08 /* User.swift in Sources */,
@@ -762,15 +762,11 @@
 			baseConfigurationReference = DEEF4DC02FBEA1A59BD8F1B5 /* Pods-Ridealong.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-<<<<<<< HEAD
-				DEVELOPMENT_TEAM = EA3U28S24C;
-=======
-				DEVELOPMENT_TEAM = 6XRGVQSWRU;
+				DEVELOPMENT_TEAM = T7L2FQY8CD;
 				ENABLE_BITCODE = YES;
->>>>>>> acb8515b2b0008ef10e2a49df1c36145f3d726d3
 				INFOPLIST_FILE = Ridealong/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.CSUMB.Ridealong;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.alftaurus.Ridealong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -782,17 +778,13 @@
 			baseConfigurationReference = DF6718BA2747AA000E92A9B7 /* Pods-Ridealong.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-<<<<<<< HEAD
-				DEVELOPMENT_TEAM = EA3U28S24C;
-=======
-				DEVELOPMENT_TEAM = 6XRGVQSWRU;
+				DEVELOPMENT_TEAM = T7L2FQY8CD;
 				ENABLE_BITCODE = YES;
->>>>>>> acb8515b2b0008ef10e2a49df1c36145f3d726d3
 				INFOPLIST_FILE = Ridealong/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"MTL_ENABLE_DEBUG_INFO[arch=*]" = NO;
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.CSUMB.Ridealong;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.alftaurus.Ridealong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;

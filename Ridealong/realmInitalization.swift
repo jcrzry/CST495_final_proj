@@ -20,15 +20,15 @@ func initCommonRealm(){
         if user != nil{
            let remoteConfig = Realm.Configuration(syncConfiguration: SyncConfiguration(user: user!, realmURL: crURL!))
             let sRealm = try! Realm(configuration: remoteConfig)
-            let perms = SyncPermissionValue(realmPath: commonUrlString, userID: "*", accessLevel: .read)
-            user?.applyPermission(perms){
+            let perms = SyncPermission(realmPath: commonUrlString, identity: "*", accessLevel: .read)
+            user?.apply(perms){
                 error in
                 if let error = error{
                     print(error)
                 }else{
                     print("read permissions enabled")
-                    let wperms = SyncPermissionValue(realmPath: commonUrlString, userID: "*", accessLevel: .write)
-                    user?.applyPermission(wperms){
+                    let wperms = SyncPermission(realmPath: commonUrlString, identity: "*", accessLevel: .write)
+                    user?.apply(wperms){
                         error in
                         if let error = error{
                             print(error)
