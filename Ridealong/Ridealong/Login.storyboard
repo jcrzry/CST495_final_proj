@@ -63,8 +63,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="facebookView" destination="657-We-3KT" id="16E-9w-cFD"/>
-                        <outlet property="googleView" destination="yVI-O5-KaG" id="Elt-ne-Tf7"/>
                         <segue destination="Q2D-a5-Q9c" kind="show" identifier="mainPage" id="sz3-Xa-xxG"/>
                     </connections>
                 </viewController>

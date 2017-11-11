@@ -17,7 +17,7 @@ class SimpleUser: Object{
     @objc dynamic var lastname: String = ""
     @objc dynamic var email: String = ""
     @objc dynamic var bio: String = ""
-    @objc dynamic var profileImage: UIImage?
+    @objc dynamic var profileImage: NSData?
     @objc dynamic var defaultVehicle: Vehicle?
     
     

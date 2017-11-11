@@ -15,7 +15,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //initCommonRealm()
+        //print("registering...")
+        //registerUser(username: "jcrzry", password: "anchor99")
         //creating button
         
         //***Facebook Info Above***

@@ -13,7 +13,7 @@ class User: Object {
     @objc dynamic var bio: String = ""
     @objc dynamic var phone: Int = 00000000
     @objc dynamic var defaultLocation: Locations?
-    @objc dynamic var userImage: NSData?
+    @objc dynamic var profileImage: NSData?
     var vehicles: List<Vehicle> = List<Vehicle>()
     @objc dynamic var defaultVehicle: Vehicle?
     var ratings: List<Rating> = List<Rating>()
@@ -68,6 +68,6 @@ class User: Object {
     
 
     func setUserImage(uimage: UIImage){
-        self.userImage = UIImagePNGRepresentation(uimage) as NSData?
+        self.profileImage = UIImagePNGRepresentation(uimage) as NSData?
     }
 }
