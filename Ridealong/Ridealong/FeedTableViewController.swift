@@ -33,7 +33,7 @@ class FeedTableViewController: UITableViewController {
         items = (realm.objects(Ride.self).filter(test))
 
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "FeedCell") // [1]
-        print(items[0].locations)
+       // print(items[0].locations)
     }
     
     //reload the data to see the latest array fetched by allObjects()
@@ -51,7 +51,7 @@ class FeedTableViewController: UITableViewController {
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FeedCell", for: indexPath as IndexPath) as UITableViewCell
         
-        let index = UInt(indexPath.row)
+        //let index = UInt(indexPath.row)
         
         //fetch object from database at current index
       //  let ride = rides.objectAtIndex(index) as Ride

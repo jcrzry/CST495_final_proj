@@ -9,11 +9,16 @@ class User: Object {
     @objc dynamic var firstname: String = ""
     @objc dynamic var lastname: String = ""
     @objc dynamic var email: String = ""
+    @objc dynamic var password: String = ""
     @objc dynamic var bio: String = ""
-    var profileImage: UIImage?
+    @objc dynamic var phone: Int = 00000000
+    @objc dynamic var defaultLocation: Locations?
+    @objc dynamic var userImage: NSData?
     var vehicles: List<Vehicle> = List<Vehicle>()
     @objc dynamic var defaultVehicle: Vehicle?
     var ratings: List<Rating> = List<Rating>()
+    @objc dynamic var simpleUser: SimpleUser?
+
     
     //Initializers
    convenience init?(username: String,firstname: String, lastname: String, email: String){
@@ -59,5 +64,10 @@ class User: Object {
             }
         }
         return nil
+    }
+    
+
+    func setUserImage(uimage: UIImage){
+        self.userImage = UIImagePNGRepresentation(uimage) as NSData?
     }
 }
