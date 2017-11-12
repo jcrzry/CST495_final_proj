@@ -58,9 +58,9 @@ class FeedTableViewController: UITableViewController {
         //fetch object from database at current index
         //  let ride = rides.objectAtIndex(index) as Ride
         //        cell.textLabel?.text = items.description
-        cell!.textLabel?.text = "Test"
+        cell.textLabel?.text = "Test"
         
-        return cell!
+        return cell
     }
     
     

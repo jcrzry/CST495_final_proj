@@ -25,6 +25,7 @@ class LoginViewController: UIViewController{
     
     }
     @IBAction func signInButton(_ sender: Any) {
+        
         performSegue(withIdentifier: "mainPage", sender: nil)
     }
     
