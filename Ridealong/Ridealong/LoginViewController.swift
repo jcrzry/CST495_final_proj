@@ -7,36 +7,30 @@
 //
 
 import UIKit
+import TB
 
-class LoginViewController: UIViewController, UITextFieldDelegate{
-    @IBOutlet weak var emailLabel: UILabel!
-    
-    var dict : [String : AnyObject]!
-    
+class LoginViewController: UIViewController{
+    @IBOutlet weak var usernameTF: UITextField!
+    @IBOutlet weak var passwordTF: UITextField!
+    @IBOutlet weak var userNameLabel: UILabel!
+    var userName:String = "Stranger!"
     override func viewDidLoad() {
         super.viewDidLoad()
-        //initCommonRealm()
-        //print("registering...")
-        //registerUser(username: "jcrzry", password: "anchor99")
-        //creating button
-        
-        //***Facebook Info Above***
-        //***Google Sign Info Below***
-        //error object
-        
-        //setting the error
-        
-        //if any error stop execution and print error
-        //adding the delegates
+        hideKeyboardWhenTappedAround()
+        userNameLabel.text = userName
+    }
 
-        
-        //getting the signin button and adding it to view
-
-    
-    //Used when sign in completes
-           //if success display the email on label
-    //when facebook login button clicked
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     
     }
+    @IBAction func signInButton(_ sender: Any) {
+        performSegue(withIdentifier: "mainPage", sender: nil)
+    }
+    
+    @IBAction func signUpButton(_ sender: Any) {
+        performSegue(withIdentifier: "signUpPage", sender: nil)
+    }
+  
 
 }

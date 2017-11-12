@@ -101,7 +101,7 @@ class AddViewController: UIViewController, UITextFieldDelegate {
        let realm = try! Realm()
         if (self.txtLocationFrom?.text?.characters.count)! > 0 {
             let newRide = Ride()
-          
+         
          //   newRide.date = self.txtLocationFrom!.text
             realm.add(newRide)
 
