@@ -11,7 +11,7 @@ class User: Object {
     @objc dynamic var email: String = ""
     @objc dynamic var password: String = ""
     @objc dynamic var bio: String = ""
-    @objc dynamic var phone: Int = 00000000
+    @objc dynamic var phone: String = ""
     @objc dynamic var defaultLocation: Locations?
     @objc dynamic var profileImage: NSData?
     var vehicles: List<Vehicle> = List<Vehicle>()
@@ -21,12 +21,13 @@ class User: Object {
 
     
     //Initializers
-   convenience init?(username: String,firstname: String, lastname: String, email: String){
+    convenience init?(username: String,firstname: String, lastname: String, email: String, phone: String){
         self.init()
         self.username = username
         self.firstname = firstname
         self.lastname = lastname
         self.email = email
+        self.phone = phone
         self.vehicles = List<Vehicle>()
         self.ratings = List<Rating>()
     }

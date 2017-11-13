@@ -27,10 +27,13 @@ class SignUpViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    //Using this before segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let loginVC = segue.destination as! LoginViewController
-        loginVC.userName = firstName.text!
-        loginVC.userName += "!"
+        if !retypePassword.text!.isEmpty && retypePassword.text! == password.text!{
+            loginVC.userName = firstName.text!
+            loginVC.userName += "!"
+        }
     }
     
     //After entering information the user goes back to login screen to log in
@@ -45,7 +48,13 @@ class SignUpViewController: UIViewController {
                         x=isValidPassword(testStr: password.text!)
                         if !password.text!.isEmpty && x==true {
                             if !retypePassword.text!.isEmpty && retypePassword.text! == password.text!{
-                                performSegue(withIdentifier: "loginPage", sender: nil)
+                                if  registerUser(username: username.text!, password: password.text!) == true{
+                                    //show error
+                                    createAlert(title: "User Exists", message: "Username already exists. Try another username.")
+                                }else{
+                                    performSegue(withIdentifier: "loginPage", sender: nil)
+                                }
+                                
                             }else{
                                 createAlert(title: "Invalid Password Entry",
                                             message: "Retype password does not equal password.")
@@ -71,7 +80,6 @@ class SignUpViewController: UIViewController {
             createAlert(title: "Invalid Name Entry",
                         message: "You didn't give us a full name. Stop being lazy and give us your full name.")
         }
-        
     }
     
     //User function to go back to login without signing up
