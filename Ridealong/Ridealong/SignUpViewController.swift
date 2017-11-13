@@ -36,6 +36,20 @@ class SignUpViewController: UIViewController {
         }
     }
     
+    
+    // handle notification
+    func getRegisterStatus(_ notification: Notification){
+        if let registerFailed = notification.userInfo?["registerStatus"] as? Bool {
+            if  registerFailed == true{
+                //show error
+                createAlert(title: "User Exists", message: "User with this email already exists. Try another or Login instead.")
+            }else{
+                performSegue(withIdentifier: "loginPage", sender: nil)
+            }
+        }else{
+        }
+    }
+    
     //After entering information the user goes back to login screen to log in
     @IBAction func enterInfo(_ sender: Any) {
         if !firstName.text!.isEmpty && !lastName.text!.isEmpty{
@@ -48,13 +62,9 @@ class SignUpViewController: UIViewController {
                         x=isValidPassword(testStr: password.text!)
                         if !password.text!.isEmpty && x==true {
                             if !retypePassword.text!.isEmpty && retypePassword.text! == password.text!{
-                                if  registerUser(username: username.text!, password: password.text!) == true{
-                                    //show error
-                                    createAlert(title: "User Exists", message: "Username already exists. Try another username.")
-                                }else{
-                                    performSegue(withIdentifier: "loginPage", sender: nil)
-                                }
-                                
+                            var me = User(username: username.text!, password: password.text!, firstname: firstName.text!, lastname: lastName.text!, email: email.text!, phone: phoneNumber.text!)
+                                registerUser(newUser: me!)
+                                NotificationCenter.default.addObserver(self, selector: #selector(self.getRegisterStatus(_:)), name: NSNotification.Name(rawValue: "registerFailed"), object: nil)
                             }else{
                                 createAlert(title: "Invalid Password Entry",
                                             message: "Retype password does not equal password.")

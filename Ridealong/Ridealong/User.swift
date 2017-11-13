@@ -21,7 +21,7 @@ class User: Object {
 
     
     //Initializers
-    convenience init?(username: String,firstname: String, lastname: String, email: String, phone: String){
+    convenience init?(username: String, password: String, firstname: String, lastname: String, email: String, phone: String){
         self.init()
         self.username = username
         self.firstname = firstname
@@ -66,9 +66,11 @@ class User: Object {
         }
         return nil
     }
-    
-
     func setUserImage(uimage: UIImage){
         self.profileImage = UIImagePNGRepresentation(uimage) as NSData?
+    }
+    
+    func toSimpleUser() -> SimpleUser{
+        return SimpleUser(username: self.username, firstname: self.firstname, lastname: self.lastname, email: self.email)!
     }
 }

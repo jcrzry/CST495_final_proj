@@ -13,12 +13,12 @@ func initCommonRealm(){
     //: Playground - noun: a place where people can play
     let creds = SyncCredentials.usernamePassword(username:"jocruz@csumb.edu",password:"ridealong")
     
-    SyncUser.logIn(with: creds, server: serv!){user,error in
+    SyncUser.logIn(with: creds, server: SERVER_PATH!){user,error in
         if user != nil{
 
-            let remoteConfig = Realm.Configuration(syncConfiguration: SyncConfiguration(user: user!, realmURL: crURL!), deleteRealmIfMigrationNeeded: true, objectTypes: [SimpleUser.self,Vehicle.self,Ride.self,Locations.self])
+            let remoteConfig = Realm.Configuration(syncConfiguration: SyncConfiguration(user: user!, realmURL: COMMON_REALM_PATH!), deleteRealmIfMigrationNeeded: true, objectTypes: [SimpleUser.self,Vehicle.self,Ride.self,Locations.self])
             _ = try! Realm(configuration: remoteConfig)
-            let perms = SyncPermission(realmPath: commonUrlString, identity: "*", accessLevel: .read)
+            let perms = SyncPermission(realmPath: COMMON_REALM_STRING, identity: "*", accessLevel: .read)
             user?.apply(perms){
                 error in
                 if let error = error{
@@ -26,7 +26,7 @@ func initCommonRealm(){
                 }else{
                     print("read permissions enabled")
 
-                    let wperms = SyncPermission(realmPath: commonUrlString, identity: "*", accessLevel: .write)	
+                    let wperms = SyncPermission(realmPath: COMMON_REALM_STRING, identity: "*", accessLevel: .write)
                     user?.apply(wperms){
                         error in
                         if let error = error{
