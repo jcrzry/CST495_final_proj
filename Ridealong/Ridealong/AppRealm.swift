@@ -13,7 +13,8 @@ let COMMON_REALM_PATH = URL(string: "realm://ec2-54-174-95-229.compute-1.amazona
 let COMMON_REALM_STRING = "http://ec2-54-174-95-229.compute-1.amazonaws.com:9080/CommonRealm"
 let SERVER_PATH = URL(string: "http://ec2-54-174-95-229.compute-1.amazonaws.com:9080")
 let PRIVATE_REALM_PATH = URL(string:"realm://ec2-54-174-95-229.compute-1.amazonaws.com:9080/~/PrivateRealm")
-
+let NC = NotificationCenter.default
+let registerStatus = Notification.Name(rawValue: "registerStatus")
 
 func setDefaultConfiguration(realmUser: SyncUser)    {
     let defaultConfig = Realm.Configuration(syncConfiguration:SyncConfiguration(user: realmUser, realmURL: PRIVATE_REALM_PATH!), deleteRealmIfMigrationNeeded: true,objectTypes:[User.self, SimpleUser.self,Vehicle.self,Ride.self,Locations.self,Rating.self])
@@ -22,7 +23,6 @@ func setDefaultConfiguration(realmUser: SyncUser)    {
     print("defaulf config updated")
 }
 
-var loginFailed = false
 func loginUser(username: String, password: String){
     let userCreds = SyncCredentials.usernamePassword(username: username, password: password, register: false)
     SyncUser.logIn(with: userCreds, server: SERVER_PATH!){
@@ -32,7 +32,7 @@ func loginUser(username: String, password: String){
         }else if let error = error{
             print(error)
             //if this is set, then user credentials are not correct
-            loginFailed = true
+            //loginFailed = true
         }
     }
     
@@ -54,14 +54,14 @@ func registerUser(newUser: User){
                 defaultRealm.add(newUser)
             }
             print("registered! User added to private Realm")
-            let registerStatus:[String: Bool] = ["loginFailed":true]
-            NotificationCenter.default.post(name:NSNotification.Name(rawValue:"registerFailed"),object:nil, userInfo: registerStatus)
+            let registerBool:[String: Bool] = ["loginFailed":false]
+            NotificationCenter.default.post(name:registerStatus,object:nil, userInfo: registerBool)
 
         }else if let error = error{
             print(error)
             //if this variable is set, then that means that a user already exists for given username
-            let registerStatus:[String: Bool] = ["loginFailed":true]
-            NotificationCenter.default.post(name:NSNotification.Name(rawValue:"registerFailed"),object:nil, userInfo: registerStatus)
+            let registerBool:[String: Bool] = ["loginFailed":true]
+            NotificationCenter.default.post(name:registerStatus,object:nil, userInfo: registerBool)
         }
     }
 }

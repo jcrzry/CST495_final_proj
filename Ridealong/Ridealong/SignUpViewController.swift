@@ -21,6 +21,7 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
+       
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,7 +39,7 @@ class SignUpViewController: UIViewController {
     
     
     // handle notification
-    func getRegisterStatus(_ notification: Notification){
+    func getRegisterStatus(notification: Notification) -> Void{
         if let registerFailed = notification.userInfo?["registerStatus"] as? Bool {
             if  registerFailed == true{
                 //show error
@@ -62,9 +63,11 @@ class SignUpViewController: UIViewController {
                         x=isValidPassword(testStr: password.text!)
                         if !password.text!.isEmpty && x==true {
                             if !retypePassword.text!.isEmpty && retypePassword.text! == password.text!{
-                            var me = User(username: username.text!, password: password.text!, firstname: firstName.text!, lastname: lastName.text!, email: email.text!, phone: phoneNumber.text!)
+                                print("inside valid entries")
+                                
+                                var me = User(username: username.text!, password: password.text!, firstname: firstName.text!, lastname: lastName.text!, email: email.text!, phone: phoneNumber.text!)
                                 registerUser(newUser: me!)
-                                NotificationCenter.default.addObserver(self, selector: #selector(self.getRegisterStatus(_:)), name: NSNotification.Name(rawValue: "registerFailed"), object: nil)
+                                NC.addObserver(forName: registerStatus, object:nil, queue:nil, using: getRegisterStatus)
                             }else{
                                 createAlert(title: "Invalid Password Entry",
                                             message: "Retype password does not equal password.")
