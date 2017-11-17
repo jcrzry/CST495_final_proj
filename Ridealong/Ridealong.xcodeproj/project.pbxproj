@@ -20,7 +20,6 @@
 		721BFB875881E20AF72E3898 /* Pods_RidealongUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AA4BE44488141C96D7221E0 /* Pods_RidealongUITests.framework */; };
 		9C512C0C9D9B87B14FB1A723 /* Pods_Ridealong.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8106CD4B3B5311508CC56A12 /* Pods_Ridealong.framework */; };
 		A0458F4A1FB66ED000FE59F1 /* realmFunctionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0458F491FB66ED000FE59F1 /* realmFunctionTests.swift */; };
-		A051FF921F8ED22D007B5258 /* RealmConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A051FF911F8ED22D007B5258 /* RealmConfig.swift */; };
 		A0557F4D1FB5A92D00FD2868 /* SimpleUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0557F4C1FB5A92D00FD2868 /* SimpleUser.swift */; };
 		A0F391511FAAB78000796EE5 /* realmInitalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F391501FAAB78000796EE5 /* realmInitalization.swift */; };
 		A0FA6E281F7DD124005BD7AF /* AppRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FA6E271F7DD124005BD7AF /* AppRealm.swift */; };
@@ -77,7 +76,6 @@
 		62622914A1907F6778756BDC /* Pods_RidealongTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RidealongTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8106CD4B3B5311508CC56A12 /* Pods_Ridealong.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ridealong.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0458F491FB66ED000FE59F1 /* realmFunctionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = realmFunctionTests.swift; sourceTree = "<group>"; };
-		A051FF911F8ED22D007B5258 /* RealmConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmConfig.swift; sourceTree = "<group>"; };
 		A0557F4C1FB5A92D00FD2868 /* SimpleUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleUser.swift; sourceTree = "<group>"; };
 		A0F391501FAAB78000796EE5 /* realmInitalization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = realmInitalization.swift; path = ../realmInitalization.swift; sourceTree = "<group>"; };
 		A0FA6E271F7DD124005BD7AF /* AppRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRealm.swift; sourceTree = "<group>"; };
@@ -146,7 +144,6 @@
 				135BDC651F7DCCEA00449C08 /* Ride.swift */,
 				135BDC671F7DD0C900449C08 /* Rating.swift */,
 				A0FA6E271F7DD124005BD7AF /* AppRealm.swift */,
-				A051FF911F8ED22D007B5258 /* RealmConfig.swift */,
 				A0557F4C1FB5A92D00FD2868 /* SimpleUser.swift */,
 				A0F391501FAAB78000796EE5 /* realmInitalization.swift */,
 			);
@@ -581,7 +578,6 @@
 				22A5CD5F1F779B9B008F5E5D /* LoginViewController.swift in Sources */,
 				A0557F4D1FB5A92D00FD2868 /* SimpleUser.swift in Sources */,
 				DD7311611F68CD1900568833 /* SecondViewController.swift in Sources */,
-				A051FF921F8ED22D007B5258 /* RealmConfig.swift in Sources */,
 				135BDC591F7B30C100449C08 /* FeedTableViewController.swift in Sources */,
 				135BDC5B1F7B319F00449C08 /* FeedTableViewCell.swift in Sources */,
 				13B95E701F9D6242009C142A /* AddRideViewController.swift in Sources */,
