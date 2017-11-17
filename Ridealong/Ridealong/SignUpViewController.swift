@@ -40,7 +40,7 @@ class SignUpViewController: UIViewController {
     
     // handle notification
     func getRegisterStatus(notification: Notification) -> Void{
-        if let registerFailed = notification.userInfo?["registerStatus"] as? Bool {
+        if let registerFailed = notification.userInfo?["loginFailed"] as? Bool {
             if  registerFailed == true{
                 //show error
                 createAlert(title: "User Exists", message: "User with this email already exists. Try another or Login instead.")
@@ -48,6 +48,7 @@ class SignUpViewController: UIViewController {
                 performSegue(withIdentifier: "loginPage", sender: nil)
             }
         }else{
+            print("message did not contain any information")
         }
     }
     
@@ -63,11 +64,11 @@ class SignUpViewController: UIViewController {
                         x=isValidPassword(testStr: password.text!)
                         if !password.text!.isEmpty && x==true {
                             if !retypePassword.text!.isEmpty && retypePassword.text! == password.text!{
+                                //critical section, will execute on click if all fields are correct.
                                 print("inside valid entries")
-                                
                                 let me = User(username: username.text!, password: password.text!, firstname: firstName.text!, lastname: lastName.text!, email: email.text!, phone: phoneNumber.text!)
                                 registerUser(newUser: me!)
-                                //NC.addObserver(forName: registerStatus, object:nil, queue:nil, using: getRegisterStatus)
+                                NC.addObserver(forName: registerStatus, object:nil, queue:nil, using: getRegisterStatus)
                             }else{
                                 createAlert(title: "Invalid Password Entry",
                                             message: "Retype password does not equal password.")

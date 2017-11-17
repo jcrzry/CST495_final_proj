@@ -61,7 +61,7 @@ func registerUser(newUser: User){
             print(error)
             //if this variable is set, then that means that a user already exists for given username
             let registerBool:[String: Bool] = ["loginFailed":true]
-            NotificationCenter.default.post(name:registerStatus,object:nil, userInfo: registerBool)
+            NC.post(name:registerStatus,object:nil, userInfo: registerBool)
         }
     }
 }
