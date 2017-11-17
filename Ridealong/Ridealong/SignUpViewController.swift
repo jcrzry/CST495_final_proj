@@ -2,7 +2,7 @@
 //  SignUpViewController.swift
 //  Ridealong
 //
-//  Created by Alfonso Torres on 11/9/17.
+//  Created by Alfonso Torres/Jcrzry on 11/9/17.
 //  Copyright © 2017 CSUMB. All rights reserved.
 //
 
@@ -38,9 +38,11 @@ class SignUpViewController: UIViewController {
     }
     
     
-    // handle notification
+    // handle notification for register status
     func getRegisterStatus(notification: Notification) -> Void{
-        if let registerFailed = notification.userInfo?["loginFailed"] as? Bool {
+        //get register status boolean
+        if let registerFailed = notification.userInfo?["registerFailed"] as? Bool {
+            //handle register failure
             if  registerFailed == true{
                 //show error
                 createAlert(title: "User Exists", message: "User with this email already exists. Try another or Login instead.")

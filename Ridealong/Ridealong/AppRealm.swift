@@ -15,6 +15,7 @@ let SERVER_PATH = URL(string: "http://ec2-54-174-95-229.compute-1.amazonaws.com:
 let PRIVATE_REALM_PATH = URL(string:"realm://ec2-54-174-95-229.compute-1.amazonaws.com:9080/~/PrivateRealm")
 let NC = NotificationCenter.default
 let registerStatus = Notification.Name(rawValue: "registerStatus")
+let loginStatus = Notification.Name(rawValue:"loginStatus")
 
 func setDefaultConfiguration(realmUser: SyncUser)    {
     let defaultConfig = Realm.Configuration(syncConfiguration:SyncConfiguration(user: realmUser, realmURL: PRIVATE_REALM_PATH!), deleteRealmIfMigrationNeeded: true,objectTypes:[User.self, SimpleUser.self,Vehicle.self,Ride.self,Locations.self,Rating.self])
@@ -29,10 +30,15 @@ func loginUser(username: String, password: String){
         user,error in
         if user != nil{
             print("login successful!")
+            //post message for successful login
+            let loginBool: [String:Bool] = ["loginFailed": false];
+            NC.post(name: loginStatus, object: nil, userInfo: loginBool)
         }else if let error = error{
             print(error)
             //if this is set, then user credentials are not correct
-            //loginFailed = true
+            //post message for failed login
+            let loginBool: [String:Bool] = ["loginFailed": true];
+            NC.post(name: loginStatus, object: nil, userInfo: loginBool)
         }
     }
     
@@ -54,13 +60,13 @@ func registerUser(newUser: User){
                 defaultRealm.add(newUser)
             }
             print("registered! User added to private Realm")
-            let registerBool:[String: Bool] = ["loginFailed":false]
+            let registerBool:[String: Bool] = ["registerFailed":false]
             NotificationCenter.default.post(name:registerStatus,object:nil, userInfo: registerBool)
 
         }else if let error = error{
             print(error)
             //if this variable is set, then that means that a user already exists for given username
-            let registerBool:[String: Bool] = ["loginFailed":true]
+            let registerBool:[String: Bool] = ["registerFailed":true]
             NC.post(name:registerStatus,object:nil, userInfo: registerBool)
         }
     }
