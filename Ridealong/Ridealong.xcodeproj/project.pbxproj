@@ -20,7 +20,6 @@
 		721BFB875881E20AF72E3898 /* Pods_RidealongUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AA4BE44488141C96D7221E0 /* Pods_RidealongUITests.framework */; };
 		9C512C0C9D9B87B14FB1A723 /* Pods_Ridealong.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8106CD4B3B5311508CC56A12 /* Pods_Ridealong.framework */; };
 		A0458F4A1FB66ED000FE59F1 /* realmFunctionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0458F491FB66ED000FE59F1 /* realmFunctionTests.swift */; };
-		A051FF921F8ED22D007B5258 /* RealmConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A051FF911F8ED22D007B5258 /* RealmConfig.swift */; };
 		A0557F4D1FB5A92D00FD2868 /* SimpleUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0557F4C1FB5A92D00FD2868 /* SimpleUser.swift */; };
 		A0F391511FAAB78000796EE5 /* realmInitalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F391501FAAB78000796EE5 /* realmInitalization.swift */; };
 		A0FA6E281F7DD124005BD7AF /* AppRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FA6E271F7DD124005BD7AF /* AppRealm.swift */; };
@@ -34,6 +33,10 @@
 		DD7311691F68CD1900568833 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD7311671F68CD1900568833 /* LaunchScreen.storyboard */; };
 		DD7311741F68CD1900568833 /* RidealongTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7311731F68CD1900568833 /* RidealongTests.swift */; };
 		DD73117F1F68CD1900568833 /* RidealongUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD73117E1F68CD1900568833 /* RidealongUITests.swift */; };
+		DD8221511FBE68F70037BA76 /* PlayerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD8221501FBE68F60037BA76 /* PlayerCell.xib */; };
+		DD8221531FBE691B0037BA76 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8221521FBE691B0037BA76 /* Cell.swift */; };
+		DD8221551FBE69980037BA76 /* collectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8221541FBE69980037BA76 /* collectionViewController.swift */; };
+		DD8221571FBE6BD90037BA76 /* demoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8221561FBE6BD90037BA76 /* demoData.swift */; };
 		DDB7C9D51F71FB3500D5A7FD /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB7C9D41F71FB3500D5A7FD /* Login.storyboard */; };
 		DDBE54711F7498B4004319E9 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDBE54701F7498B4004319E9 /* Feed.storyboard */; };
 		DDBE54731F74A1C2004319E9 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDBE54721F74A1C2004319E9 /* Settings.storyboard */; };
@@ -77,7 +80,6 @@
 		62622914A1907F6778756BDC /* Pods_RidealongTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RidealongTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8106CD4B3B5311508CC56A12 /* Pods_Ridealong.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ridealong.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0458F491FB66ED000FE59F1 /* realmFunctionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = realmFunctionTests.swift; sourceTree = "<group>"; };
-		A051FF911F8ED22D007B5258 /* RealmConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmConfig.swift; sourceTree = "<group>"; };
 		A0557F4C1FB5A92D00FD2868 /* SimpleUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleUser.swift; sourceTree = "<group>"; };
 		A0F391501FAAB78000796EE5 /* realmInitalization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = realmInitalization.swift; path = ../realmInitalization.swift; sourceTree = "<group>"; };
 		A0FA6E271F7DD124005BD7AF /* AppRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRealm.swift; sourceTree = "<group>"; };
@@ -99,6 +101,10 @@
 		DD73117A1F68CD1900568833 /* RidealongUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RidealongUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD73117E1F68CD1900568833 /* RidealongUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidealongUITests.swift; sourceTree = "<group>"; };
 		DD7311801F68CD1900568833 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD8221501FBE68F60037BA76 /* PlayerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerCell.xib; sourceTree = "<group>"; };
+		DD8221521FBE691B0037BA76 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		DD8221541FBE69980037BA76 /* collectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = collectionViewController.swift; sourceTree = "<group>"; };
+		DD8221561FBE6BD90037BA76 /* demoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = demoData.swift; sourceTree = "<group>"; };
 		DDB7C9D41F71FB3500D5A7FD /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		DDBE54701F7498B4004319E9 /* Feed.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		DDBE54721F74A1C2004319E9 /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -146,7 +152,6 @@
 				135BDC651F7DCCEA00449C08 /* Ride.swift */,
 				135BDC671F7DD0C900449C08 /* Rating.swift */,
 				A0FA6E271F7DD124005BD7AF /* AppRealm.swift */,
-				A051FF911F8ED22D007B5258 /* RealmConfig.swift */,
 				A0557F4C1FB5A92D00FD2868 /* SimpleUser.swift */,
 				A0F391501FAAB78000796EE5 /* realmInitalization.swift */,
 			);
@@ -207,7 +212,11 @@
 				DDC40EB71F7A110100A340AA /* ViewController */,
 				DDC40EB61F7A10F500A340AA /* Storyboards */,
 				DD7311621F68CD1900568833 /* Main.storyboard */,
+				DD8221521FBE691B0037BA76 /* Cell.swift */,
+				DD8221501FBE68F60037BA76 /* PlayerCell.xib */,
 				DDB7C9D41F71FB3500D5A7FD /* Login.storyboard */,
+				DD8221541FBE69980037BA76 /* collectionViewController.swift */,
+				DD8221561FBE6BD90037BA76 /* demoData.swift */,
 				DD73115E1F68CD1900568833 /* FirstViewController.swift */,
 				DD7311601F68CD1900568833 /* SecondViewController.swift */,
 				22A5CD5E1F779B9B008F5E5D /* LoginViewController.swift */,
@@ -346,7 +355,7 @@
 				TargetAttributes = {
 					DD7311581F68CD1900568833 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = T7L2FQY8CD;
+						DevelopmentTeam = 6XRGVQSWRU;
 						ProvisioningStyle = Automatic;
 					};
 					DD73116E1F68CD1900568833 = {
@@ -391,6 +400,7 @@
 				DDBE54711F7498B4004319E9 /* Feed.storyboard in Resources */,
 				DDB7C9D51F71FB3500D5A7FD /* Login.storyboard in Resources */,
 				DD7311691F68CD1900568833 /* LaunchScreen.storyboard in Resources */,
+				DD8221511FBE68F70037BA76 /* PlayerCell.xib in Resources */,
 				DDBE54731F74A1C2004319E9 /* Settings.storyboard in Resources */,
 				DDC40EBE1F7A1A2100A340AA /* Profil.storyboard in Resources */,
 				DD7311661F68CD1900568833 /* Assets.xcassets in Resources */,
@@ -579,9 +589,10 @@
 			files = (
 				135BDC601F7B3AD600449C08 /* Vehicle.swift in Sources */,
 				22A5CD5F1F779B9B008F5E5D /* LoginViewController.swift in Sources */,
+				DD8221531FBE691B0037BA76 /* Cell.swift in Sources */,
 				A0557F4D1FB5A92D00FD2868 /* SimpleUser.swift in Sources */,
+				DD8221551FBE69980037BA76 /* collectionViewController.swift in Sources */,
 				DD7311611F68CD1900568833 /* SecondViewController.swift in Sources */,
-				A051FF921F8ED22D007B5258 /* RealmConfig.swift in Sources */,
 				135BDC591F7B30C100449C08 /* FeedTableViewController.swift in Sources */,
 				135BDC5B1F7B319F00449C08 /* FeedTableViewCell.swift in Sources */,
 				13B95E701F9D6242009C142A /* AddRideViewController.swift in Sources */,
@@ -589,6 +600,7 @@
 				DDC40EBB1F7A19CC00A340AA /* ProfilViewController.swift in Sources */,
 				135BDC661F7DCCEA00449C08 /* Ride.swift in Sources */,
 				135BDC5E1F7B39A200449C08 /* User.swift in Sources */,
+				DD8221571FBE6BD90037BA76 /* demoData.swift in Sources */,
 				DD73115D1F68CD1900568833 /* AppDelegate.swift in Sources */,
 				DD73115F1F68CD1900568833 /* FirstViewController.swift in Sources */,
 				135BDC641F7B3C0700449C08 /* Locations.swift in Sources */,
@@ -750,7 +762,7 @@
 			baseConfigurationReference = DEEF4DC02FBEA1A59BD8F1B5 /* Pods-Ridealong.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = T7L2FQY8CD;
+				DEVELOPMENT_TEAM = 6XRGVQSWRU;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = Ridealong/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -766,7 +778,7 @@
 			baseConfigurationReference = DF6718BA2747AA000E92A9B7 /* Pods-Ridealong.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = T7L2FQY8CD;
+				DEVELOPMENT_TEAM = 6XRGVQSWRU;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = Ridealong/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

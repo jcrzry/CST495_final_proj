@@ -8,6 +8,7 @@
 
 import Foundation
 import RealmSwift
+
 //realm file paths and urls
 let COMMON_REALM_PATH = URL(string: "realm://ec2-54-174-95-229.compute-1.amazonaws.com:9080/CommonRealm")
 let COMMON_REALM_STRING = "http://ec2-54-174-95-229.compute-1.amazonaws.com:9080/CommonRealm"
