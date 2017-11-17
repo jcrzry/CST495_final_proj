@@ -427,7 +427,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="continueButton" destination="jFG-Qf-fsv" id="HCa-vh-uHq"/>
                         <outlet property="email" destination="4M8-uZ-h9I" id="8AU-4r-dhg"/>
                         <outlet property="firstName" destination="UP5-Jz-6Pn" id="DAN-76-A62"/>
                         <outlet property="lastName" destination="wJi-I5-o5M" id="gAc-cK-A5h"/>
