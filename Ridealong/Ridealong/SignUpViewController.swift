@@ -65,9 +65,9 @@ class SignUpViewController: UIViewController {
                             if !retypePassword.text!.isEmpty && retypePassword.text! == password.text!{
                                 print("inside valid entries")
                                 
-                                var me = User(username: username.text!, password: password.text!, firstname: firstName.text!, lastname: lastName.text!, email: email.text!, phone: phoneNumber.text!)
+                                let me = User(username: username.text!, password: password.text!, firstname: firstName.text!, lastname: lastName.text!, email: email.text!, phone: phoneNumber.text!)
                                 registerUser(newUser: me!)
-                                NC.addObserver(forName: registerStatus, object:nil, queue:nil, using: getRegisterStatus)
+                                //NC.addObserver(forName: registerStatus, object:nil, queue:nil, using: getRegisterStatus)
                             }else{
                                 createAlert(title: "Invalid Password Entry",
                                             message: "Retype password does not equal password.")
