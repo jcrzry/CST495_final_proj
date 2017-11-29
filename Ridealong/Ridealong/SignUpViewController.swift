@@ -2,7 +2,7 @@
 //  SignUpViewController.swift
 //  Ridealong
 //
-//  Created by Alfonso Torres on 11/9/17.
+//  Created by Alfonso Torres/Jcrzry on 11/9/17.
 //  Copyright © 2017 CSUMB. All rights reserved.
 //
 
@@ -17,11 +17,12 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var retypePassword: UITextField!
+    @IBOutlet weak var passwordReq: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
-       
+        passwordReq.isHidden = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,9 +39,11 @@ class SignUpViewController: UIViewController {
     }
     
     
-    // handle notification
+    // handle notification for register status
     func getRegisterStatus(notification: Notification) -> Void{
-        if let registerFailed = notification.userInfo?["registerStatus"] as? Bool {
+        //get register status boolean
+        if let registerFailed = notification.userInfo?["registerFailed"] as? Bool {
+            //handle register failure
             if  registerFailed == true{
                 //show error
                 createAlert(title: "User Exists", message: "User with this email already exists. Try another or Login instead.")
@@ -48,6 +51,7 @@ class SignUpViewController: UIViewController {
                 performSegue(withIdentifier: "loginPage", sender: nil)
             }
         }else{
+            print("message did not contain any information")
         }
     }
     
@@ -63,16 +67,17 @@ class SignUpViewController: UIViewController {
                         x=isValidPassword(testStr: password.text!)
                         if !password.text!.isEmpty && x==true {
                             if !retypePassword.text!.isEmpty && retypePassword.text! == password.text!{
+                                //critical section, will execute on click if all fields are correct.
                                 print("inside valid entries")
-                                
                                 let me = User(username: username.text!, password: password.text!, firstname: firstName.text!, lastname: lastName.text!, email: email.text!, phone: phoneNumber.text!)
                                 registerUser(newUser: me!)
-                                //NC.addObserver(forName: registerStatus, object:nil, queue:nil, using: getRegisterStatus)
+                                NC.addObserver(forName: registerStatus, object:nil, queue:nil, using: getRegisterStatus)
                             }else{
                                 createAlert(title: "Invalid Password Entry",
                                             message: "Retype password does not equal password.")
                             }
                         }else{
+                            passwordReq.isHidden = false
                             createAlert(title: "Invalid Password Entry",
                                         message: "Your password does not meet the recommended requirements.")
                         }

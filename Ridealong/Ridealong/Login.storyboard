@@ -431,6 +431,7 @@
                         <outlet property="firstName" destination="UP5-Jz-6Pn" id="DAN-76-A62"/>
                         <outlet property="lastName" destination="wJi-I5-o5M" id="gAc-cK-A5h"/>
                         <outlet property="password" destination="lbE-H5-iDR" id="tao-pL-L37"/>
+                        <outlet property="passwordReq" destination="KPR-Cm-DvZ" id="hie-gl-Uhh"/>
                         <outlet property="phoneNumber" destination="Pt8-5M-Hee" id="iyt-FP-hgR"/>
                         <outlet property="retypePassword" destination="zYX-zL-gLK" id="OLh-bf-p1c"/>
                         <outlet property="username" destination="pDh-2n-3hh" id="NiY-GB-Tde"/>
