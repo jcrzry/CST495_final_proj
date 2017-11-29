@@ -55,8 +55,7 @@ class AddRideViewController: UIViewController, UITextFieldDelegate {
     }
     func doneAction() {
         TB.temp("doneAction tapped")
-        let newViewController = collectionViewController()
-        self.navigationController?.pushViewController(newViewController, animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool { // [8]
         doneAction()
