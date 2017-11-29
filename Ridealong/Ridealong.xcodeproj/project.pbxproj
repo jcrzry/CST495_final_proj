@@ -26,6 +26,7 @@
 		DD0A74591F945A0100C673F2 /* Calculator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD0A74581F945A0100C673F2 /* Calculator.storyboard */; };
 		DD0A745B1F945A3F00C673F2 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0A745A1F945A3F00C673F2 /* CalculatorViewController.swift */; };
 		DD0C92A01FCE99FC00633189 /* AddRideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD0C929F1FCE99FC00633189 /* AddRideView.xib */; };
+		DD0C92A21FCE9A2A00633189 /* SeeRideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD0C92A11FCE9A2A00633189 /* SeeRideView.xib */; };
 		DD73115D1F68CD1900568833 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD73115C1F68CD1900568833 /* AppDelegate.swift */; };
 		DD73115F1F68CD1900568833 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD73115E1F68CD1900568833 /* FirstViewController.swift */; };
 		DD7311611F68CD1900568833 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7311601F68CD1900568833 /* SecondViewController.swift */; };
@@ -89,6 +90,7 @@
 		DD0A74581F945A0100C673F2 /* Calculator.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calculator.storyboard; sourceTree = "<group>"; };
 		DD0A745A1F945A3F00C673F2 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		DD0C929F1FCE99FC00633189 /* AddRideView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddRideView.xib; sourceTree = "<group>"; };
+		DD0C92A11FCE9A2A00633189 /* SeeRideView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeeRideView.xib; sourceTree = "<group>"; };
 		DD7311591F68CD1900568833 /* Ridealong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ridealong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD73115C1F68CD1900568833 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD73115E1F68CD1900568833 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 			children = (
 				DD8221501FBE68F60037BA76 /* FeedCell.xib */,
 				DD0C929F1FCE99FC00633189 /* AddRideView.xib */,
+				DD0C92A11FCE9A2A00633189 /* SeeRideView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 				DD0C92A01FCE99FC00633189 /* AddRideView.xib in Resources */,
 				DD7311661F68CD1900568833 /* Assets.xcassets in Resources */,
 				DD0A74591F945A0100C673F2 /* Calculator.storyboard in Resources */,
+				DD0C92A21FCE9A2A00633189 /* SeeRideView.xib in Resources */,
 				DD7311641F68CD1900568833 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
