@@ -10,7 +10,7 @@ import UIKit
 import Realm
 import RealmSwift
 
-class AddRideViewController: UIViewController, UITextFieldDelegate {
+class AddRideViewController: UITableViewController, UITextFieldDelegate {
     
     // MARK: Variables
     @IBOutlet var txtDate: UITextField!
@@ -109,4 +109,58 @@ class AddRideViewController: UIViewController, UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
+    // MARK: Override Table View Function to insert Date View Controller
+
+//    override func tableView(_ tableView: UITableView,
+//                            cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        if indexPath.section == 0 && indexPath.row == 3 {
+//            return datePickerCell
+//        } else {
+//            return super.tableView(tableView, cellForRowAt: indexPath)
+//        }
+//    }
+//    override func tableView(_ tableView: UITableView,
+//                            numberOfRowsInSection section: Int) -> Int {
+//        if section == 0 && datePickerVisible {
+//            return 4
+//        } else {
+//            return 3
+//        }
+//    }
+//    override func tableView(_ tableView: UITableView,
+//                            heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        if indexPath.section == 0 && indexPath.row == 3 {
+//            return 217
+//        } else {
+//            return super.tableView(tableView, heightForRowAt: indexPath)
+//        }
+//    }
+//    override func tableView(_ tableView: UITableView,
+//                            didSelectRowAt indexPath: IndexPath) {
+//        tableView.deselectRow(at: indexPath, animated: true)
+//        if indexPath.section == 0 && indexPath.row == 2 {
+//            if !datePickerVisible {
+//                showDatePicker()
+//            } else {
+//                hideDatePicker()
+//            }
+//        } }
+//    override func tableView(_ tableView: UITableView,
+//                            willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+//        if indexPath.section == 0 && indexPath.row == 2 {
+//            return indexPath
+//        } else {
+//            return nil
+//        }
+//    }
+//    override func tableView(_ tableView: UITableView,
+//                            indentationLevelForRowAt indexPath: IndexPath) -> Int {
+//        var newIndexPath = indexPath
+//        if indexPath.section == 0 && indexPath.row == 3 {
+//            newIndexPath = IndexPath(row: 0, section: indexPath.section)
+//        }
+//        return super.tableView(tableView,
+//                               indentationLevelForRowAt: newIndexPath)
+//    }
+
 }
