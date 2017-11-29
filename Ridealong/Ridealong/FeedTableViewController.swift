@@ -40,5 +40,7 @@ class FeedTableViewController: UITableViewController {
     }
     func addTapped(){
         TB.info("add tapped")
+        let newViewController = AddRideViewController()
+        self.navigationController?.pushViewController(newViewController, animated: true)
     }
 }

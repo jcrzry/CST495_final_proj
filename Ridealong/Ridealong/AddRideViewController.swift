@@ -21,14 +21,13 @@ class AddRideViewController: UIViewController, UITextFieldDelegate {
     var txtLocationTo: UITextField?
     var txtDescription: UITextField?
     
-    
+
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        AddRideViewController(nibName: "AddRideView", bundle: nil)
         view.backgroundColor = UIColor.white
-        setupTextField()
-        setupNavigationBar()
-    }
+         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(AddRideViewController.doneAction))    }
     
     override func viewDidAppear(_ animated: Bool) { // [2]
         super.viewDidAppear(animated)
@@ -91,11 +90,6 @@ class AddRideViewController: UIViewController, UITextFieldDelegate {
         view.addSubview(txtTime!)
         //May not be needed
         view.addSubview(txtDate!)
-    }
-    
-    //Done button
-    func setupNavigationBar() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(AddRideViewController.doneAction))
     }
     func doneAction() {
        let realm = try! Realm()

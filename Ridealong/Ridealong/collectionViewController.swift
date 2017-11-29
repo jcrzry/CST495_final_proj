@@ -32,25 +32,9 @@ class PlayersCollectionViewController: UICollectionViewController, UICollectionV
         longPress = UILongPressGestureRecognizer(target: self, action: #selector(PlayersCollectionViewController.handleLongPress(gesture:)))
         longPress.delegate = self
         collectionView!.addGestureRecognizer(longPress)
+        let add = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
+        navigationItem.rightBarButtonItems = [add]
 
-//        let savedPlayers = PlayerBO.playersQuery().resultSet()
-//        for playerItem in savedPlayers {
-//            let playerBO = PlayerBO(item: playerItem)
-//            var displayName = ""
-//            if let pBO = playerBO {
-//                displayName = pBO.firstName + " " + pBO.lastName
-//            }
-//            let player = PlayerData(
-//                id: playerBO?.id,
-//                image: playerBO?.image,
-//                imageId: playerBO?.imageId ?? "",
-//                firstName: playerBO?.firstName ?? "",
-//                lastName: playerBO?.lastName ?? "",
-//                displayName: displayName,
-//                clubName: playerBO?.clubName ?? "",
-//                reportIds: playerBO?.reportIds ?? [])
-//            demoPlayers.insert(player, at: 0)
-//        }
     }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -139,6 +123,11 @@ class PlayersCollectionViewController: UICollectionViewController, UICollectionV
     func addPlayer(_ player: PlayerData){
         demoPlayers.insert(player, at: 0)
         collectionView!.reloadData()
+    }
+    func addTapped(){
+        TB.info("add tapped")
+        let newViewController = AddRideViewController()
+        self.navigationController?.pushViewController(newViewController, animated: true)
     }
 }
 
