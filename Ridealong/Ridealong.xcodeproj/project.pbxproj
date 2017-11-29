@@ -223,10 +223,6 @@
 				DDC40EB61F7A10F500A340AA /* Storyboards */,
 				DD8221521FBE691B0037BA76 /* Cell.swift */,
 				DD8221561FBE6BD90037BA76 /* demoData.swift */,
-				DD73115E1F68CD1900568833 /* FirstViewController.swift */,
-				DD7311601F68CD1900568833 /* SecondViewController.swift */,
-				22A5CD5E1F779B9B008F5E5D /* LoginViewController.swift */,
-				22FE32621FB54AB200B017D1 /* SignUpViewController.swift */,
 				DD7311651F68CD1900568833 /* Assets.xcassets */,
 				DD73116A1F68CD1900568833 /* Info.plist */,
 			);
@@ -277,6 +273,10 @@
 				13B95E6F1F9D6242009C142A /* AddRideViewController.swift */,
 				DD0C92A51FCE9AEC00633189 /* SeeRideViewController.swift */,
 				DD8221541FBE69980037BA76 /* collectionViewController.swift */,
+				DD73115E1F68CD1900568833 /* FirstViewController.swift */,
+				DD7311601F68CD1900568833 /* SecondViewController.swift */,
+				22A5CD5E1F779B9B008F5E5D /* LoginViewController.swift */,
+				22FE32621FB54AB200B017D1 /* SignUpViewController.swift */,
 				DD0C92A71FCE9B1700633189 /* EditRideViewController.swift */,
 			);
 			name = ViewController;
