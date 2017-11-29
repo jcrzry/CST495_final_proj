@@ -10,7 +10,7 @@ import UIKit
 import Realm
 import RealmSwift
 
-class AddViewController: UIViewController, UITextFieldDelegate {
+class AddRideViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: Variables
     @IBOutlet var txtDate: UITextField!

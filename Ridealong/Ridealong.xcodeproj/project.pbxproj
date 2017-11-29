@@ -28,6 +28,7 @@
 		DD0C92A01FCE99FC00633189 /* AddRideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD0C929F1FCE99FC00633189 /* AddRideView.xib */; };
 		DD0C92A21FCE9A2A00633189 /* SeeRideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD0C92A11FCE9A2A00633189 /* SeeRideView.xib */; };
 		DD0C92A41FCE9A5A00633189 /* EditRideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD0C92A31FCE9A5A00633189 /* EditRideView.xib */; };
+		DD0C92A61FCE9AEC00633189 /* SeeRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0C92A51FCE9AEC00633189 /* SeeRideViewController.swift */; };
 		DD73115D1F68CD1900568833 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD73115C1F68CD1900568833 /* AppDelegate.swift */; };
 		DD73115F1F68CD1900568833 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD73115E1F68CD1900568833 /* FirstViewController.swift */; };
 		DD7311611F68CD1900568833 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7311601F68CD1900568833 /* SecondViewController.swift */; };
@@ -93,6 +94,7 @@
 		DD0C929F1FCE99FC00633189 /* AddRideView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddRideView.xib; sourceTree = "<group>"; };
 		DD0C92A11FCE9A2A00633189 /* SeeRideView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeeRideView.xib; sourceTree = "<group>"; };
 		DD0C92A31FCE9A5A00633189 /* EditRideView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditRideView.xib; sourceTree = "<group>"; };
+		DD0C92A51FCE9AEC00633189 /* SeeRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeRideViewController.swift; sourceTree = "<group>"; };
 		DD7311591F68CD1900568833 /* Ridealong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ridealong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD73115C1F68CD1900568833 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD73115E1F68CD1900568833 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 				135BDC5A1F7B319F00449C08 /* FeedTableViewCell.swift */,
 				DD0A745A1F945A3F00C673F2 /* CalculatorViewController.swift */,
 				13B95E6F1F9D6242009C142A /* AddRideViewController.swift */,
+				DD0C92A51FCE9AEC00633189 /* SeeRideViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -615,6 +618,7 @@
 				DD8221571FBE6BD90037BA76 /* demoData.swift in Sources */,
 				DD73115D1F68CD1900568833 /* AppDelegate.swift in Sources */,
 				DD73115F1F68CD1900568833 /* FirstViewController.swift in Sources */,
+				DD0C92A61FCE9AEC00633189 /* SeeRideViewController.swift in Sources */,
 				135BDC641F7B3C0700449C08 /* Locations.swift in Sources */,
 				DDC40EB51F7A10B700A340AA /* SettingsViewController.swift in Sources */,
 				DD0A745B1F945A3F00C673F2 /* CalculatorViewController.swift in Sources */,
