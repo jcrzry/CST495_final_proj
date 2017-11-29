@@ -65,7 +65,7 @@ class AddRideViewController: UIViewController, UITextFieldDelegate {
         timePicker.frame = CGRect(x: 0.0, y: (self.view.frame.height/2 + 60), width: self.view.frame.width, height: 150.0)
         timePicker.backgroundColor = UIColor.white
         self.view.addSubview(timePicker)
-        timePicker.addTarget(self, action: #selector(AddViewController.startTimeDiveChanged), for: UIControlEvents.valueChanged)
+        timePicker.addTarget(self, action: #selector(AddRideViewController.startTimeDiveChanged), for: UIControlEvents.valueChanged)
     }
     
     func startTimeDiveChanged(sender: UIDatePicker) {
@@ -95,7 +95,7 @@ class AddRideViewController: UIViewController, UITextFieldDelegate {
     
     //Done button
     func setupNavigationBar() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(AddViewController.doneAction))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(AddRideViewController.doneAction))
     }
     func doneAction() {
        let realm = try! Realm()
