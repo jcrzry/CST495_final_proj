@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-@objc protocol PlayerCellDelegate {
+@objc protocol FeedCellDelegate {
     func removeCellFromList()
 }
 
@@ -27,7 +27,7 @@ struct PlayerData {
 }
 
 
-class PlayerCell: UICollectionViewCell {
+class FeedCell: UICollectionViewCell {
 
     // MARK: - vars -
     private struct animationSpeed {
@@ -35,7 +35,7 @@ class PlayerCell: UICollectionViewCell {
         static let slow = 0.4
     }
     private var contentFrame: CGRect?
-    var delegate: PlayerCellDelegate?
+    var delegate: FeedCellDelegate?
 
 
     // MARK: - Outlets  -
@@ -73,7 +73,6 @@ class PlayerCell: UICollectionViewCell {
         clubName.text = player.clubName
         reportCount.text = String(player.reportIds.count)
     }
-
     func updatePlayerImage(image: UIImage) {
         DispatchQueue.main.async {
             self.playerImage.image = image

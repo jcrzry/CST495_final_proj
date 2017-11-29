@@ -9,15 +9,15 @@
 import Foundation
 import TB
 
-private let reuseIdentifier = "PlayerCell"
+private let reuseIdentifier = "FeedCell"
 
-class PlayersCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout, UIGestureRecognizerDelegate, PlayerCellDelegate{
+class PlayersCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout, UIGestureRecognizerDelegate, FeedCellDelegate{
 
     private let inset: CGFloat = 2
     private let cellHeight: CGFloat = 60
     private let cellLineSpacing: CGFloat = 0
     private var longPress: UILongPressGestureRecognizer!
-    private var longPressedCell: PlayerCell?
+    private var longPressedCell: FeedCell?
 
 
     // MARK: - overrides  -
@@ -26,7 +26,7 @@ class PlayersCollectionViewController: UICollectionViewController, UICollectionV
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
-        collectionView!.register(UINib(nibName: "PlayerCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
+        collectionView!.register(UINib(nibName: "FeedCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
         collectionView!.delegate = self
 
         longPress = UILongPressGestureRecognizer(target: self, action: #selector(PlayersCollectionViewController.handleLongPress(gesture:)))
@@ -87,7 +87,7 @@ class PlayersCollectionViewController: UICollectionViewController, UICollectionV
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! PlayerCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! FeedCell
         cell.setData(player: demoPlayers[indexPath.row])
         cell.unsetDeletion()
         cell.delegate = self
@@ -115,7 +115,7 @@ class PlayersCollectionViewController: UICollectionViewController, UICollectionV
 
         let point = gesture.location(in: self.collectionView)
         if let indexPath = collectionView!.indexPathForItem(at: point) {
-            let cell = (collectionView!.cellForItem(at: indexPath) as! PlayerCell)
+            let cell = (collectionView!.cellForItem(at: indexPath) as! FeedCell)
             if cell.doesProvideDeletion() {
                 return // already providing deletion options
             }
