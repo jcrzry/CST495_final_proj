@@ -29,7 +29,7 @@ class SeeRideViewController: UIViewController {
     }
     @IBAction func shotGunSeat(_ sender: Any) {
         TB.temp("shotGunSeat presed")
-        self.middleSeat.
+        self.shotGunSeat.backgroundColor = UIColor.blue
     }
     @IBAction func middleSeat(_ sender: Any) {
         TB.temp("middleSeat presed")
