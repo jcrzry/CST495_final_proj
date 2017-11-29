@@ -28,10 +28,12 @@ class AddRideViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         AddRideViewController(nibName: "AddRideView", bundle: nil)
         view.backgroundColor = UIColor.white
-         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(AddRideViewController.doneAction))    }
+         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(AddRideViewController.doneAction))
+    }
     
-    override func viewDidAppear(_ animated: Bool) { // [2]
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+
        //Keyboard pop up right after view load
         txtLocationFrom?.becomeFirstResponder()
     }
@@ -41,10 +43,9 @@ class AddRideViewController: UIViewController, UITextFieldDelegate {
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
         //button to click when done
-        let doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePick))
+        let doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(doneAction))
         toolbar.setItems([doneBtn], animated: false)
-        
-        //Yet to find out if you can load both in same func
+
         txtDate.inputAccessoryView = toolbar
         txtTime.inputAccessoryView = toolbar
         txtDate.inputView = datePicker
@@ -52,55 +53,10 @@ class AddRideViewController: UIViewController, UITextFieldDelegate {
         
         txtTime.inputView = timePicker
     }
-    func donePick(){
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        txtDate.text = dateFormatter.string(from: datePicker.date)
-        self.view.endEditing(true)
-    }
-    
-    func openTimePicker()  {
-        timePicker.datePickerMode = UIDatePickerMode.time
-        timePicker.frame = CGRect(x: 0.0, y: (self.view.frame.height/2 + 60), width: self.view.frame.width, height: 150.0)
-        timePicker.backgroundColor = UIColor.white
-        self.view.addSubview(timePicker)
-        timePicker.addTarget(self, action: #selector(AddRideViewController.startTimeDiveChanged), for: UIControlEvents.valueChanged)
-    }
-    
-    func startTimeDiveChanged(sender: UIDatePicker) {
-        let formatter = DateFormatter()
-        formatter.timeStyle = .short
-        txtTime.text = formatter.string(from: sender.date)
-    } 
-    func setupTextField() {
-        
-        txtLocationFrom?.placeholder = "From where are we driving?"
-        txtLocationTo?.placeholder = "To where are we going?"
-        txtDescription?.placeholder = "Where are we meeting?"
-        
-        //Set delegate to know when the user hits return key
-        txtLocationFrom?.delegate = self
-        txtLocationTo?.delegate = self
-        txtDescription?.delegate = self
-        txtDate?.delegate = self
-        view.addSubview(txtLocationFrom!)
-        view.addSubview(txtLocationTo!)
-        view.addSubview(txtDescription!)
-        view.addSubview(txtDate!)
-        view.addSubview(txtTime!)
-        //May not be needed
-        view.addSubview(txtDate!)
-    }
     func doneAction() {
-       let realm = try! Realm()
-        if (self.txtLocationFrom?.text?.characters.count)! > 0 {
-            let newRide = Ride()
-         //   newRide.date = self.txtLocationFrom!.text
-            realm.add(newRide)
-        }
-        // Go back to previous view
-        dismiss(animated: true, completion: nil)
+        TB.temp("doneAction tapped")
+        let newViewController = collectionViewController()
+        self.navigationController?.pushViewController(newViewController, animated: true)
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool { // [8]
         doneAction()
