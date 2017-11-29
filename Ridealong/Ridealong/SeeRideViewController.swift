@@ -11,7 +11,12 @@ import TB
 import UIKit
 
 class SeeRideViewController: UIViewController {
-
+    @IBOutlet var driversSeat: UIButton!
+    @IBOutlet var shotGunSeat: UIButton!
+    @IBOutlet var leftSeat: UIButton!
+    @IBOutlet var middleSeat: UIButton!
+    @IBOutlet var rightSeat: UIButton!
+    @IBOutlet var doneButton: UIButton!
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,4 +24,8 @@ class SeeRideViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
+    @IBAction func doneButton(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+
 }

@@ -82,7 +82,8 @@ class PlayersCollectionViewController: UICollectionViewController, UICollectionV
     // MARK: - UICollectionViewDelegate -
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         longPressedCell?.unsetDeletion()
-        performSegue(withIdentifier: "showPlayerDetails", sender: indexPath.row)
+        let newViewController = SeeRideViewController()
+        self.navigationController?.pushViewController(newViewController, animated: true)
     }
 
 
