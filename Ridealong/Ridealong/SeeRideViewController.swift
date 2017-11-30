@@ -34,6 +34,7 @@ class SeeRideViewController: UIViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .short
+        dateFormatter.locale = Locale(identifier: "en_US")
         rideDate.text = dateFormatter.string(from: (driver?.rideDate)!)
     }
     override func viewDidAppear(_ animated: Bool) {
