@@ -29,8 +29,8 @@ class FeedCell: UICollectionViewCell {
     @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var cellContent: UIView!
     @IBOutlet weak var placeholderImage: UIImageView!
-    @IBOutlet weak var playerImage: UIImageView!
-    @IBOutlet weak var playerName: UILabel!
+    @IBOutlet weak var driverImage: UIImageView!
+    @IBOutlet weak var driverName: UILabel!
     @IBOutlet weak var clubName: UILabel!
     @IBOutlet weak var reportCount: UILabel!
     @IBOutlet weak var chevron: UIImageView!
@@ -39,8 +39,8 @@ class FeedCell: UICollectionViewCell {
     // MARK: - overrides -
     override func awakeFromNib() {
         super.awakeFromNib()
-        playerImage.layer.cornerRadius = playerImage.frame.height / 2
-        playerImage.layer.masksToBounds = true
+        driverImage.layer.cornerRadius = driverImage.frame.height / 2
+        driverImage.layer.masksToBounds = true
         deleteButton.alpha = 0
     }
 
@@ -48,23 +48,22 @@ class FeedCell: UICollectionViewCell {
     // MARK: - setup  -
     func setData(player: driverData) {
         if let image = player.image {
-            playerImage.image = image
-            playerImage.alpha = 1.0
+            driverImage.image = image
+            driverImage.alpha = 1.0
             placeholderImage.isHidden = true
         } else {
             placeholderImage.isHidden = false
-            playerImage.image = nil
-            playerImage.alpha = 0.0
+            driverImage.image = nil
+            driverImage.alpha = 0.0
         }
-        playerName.text = player.displayName
-        clubName.text = player.clubName
-        reportCount.text = String(player.reportIds.count)
+        driverName.text = player.displayName
+        clubName.text = player.from + " " + player.to
     }
     func updatePlayerImage(image: UIImage) {
         DispatchQueue.main.async {
-            self.playerImage.image = image
+            self.driverImage.image = image
             UIView.animate(withDuration: 0.4, animations: {
-                self.playerImage.alpha = 1.0
+                self.driverImage.alpha = 1.0
             }) { (didFinish) in
                 self.placeholderImage.isHidden = didFinish
             }

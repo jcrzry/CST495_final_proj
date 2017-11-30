@@ -67,12 +67,12 @@ class PlayersCollectionViewController: UICollectionViewController, UICollectionV
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return demoPlayers.count
+        return demoDrivers.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! FeedCell
-        cell.setData(player: demoPlayers[indexPath.row])
+        cell.setData(player: demoDrivers[indexPath.row])
         cell.unsetDeletion()
         cell.delegate = self
         return cell
@@ -83,7 +83,7 @@ class PlayersCollectionViewController: UICollectionViewController, UICollectionV
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         longPressedCell?.unsetDeletion()
         let newViewController = SeeRideViewController()
-        newViewController.setData(player: demoPlayers[indexPath.row])
+        newViewController.setData(player: demoDrivers[indexPath.row])
         self.navigationController?.pushViewController(newViewController, animated: true)
     }
 
@@ -114,7 +114,7 @@ class PlayersCollectionViewController: UICollectionViewController, UICollectionV
     func removeCellFromList() {
         let indexPath = collectionView!.indexPath(for: longPressedCell!)
         if let path = indexPath {
-            demoPlayers.remove(at: path.row)
+            demoDrivers.remove(at: path.row)
             collectionView!.deleteItems(at: [path])
         }
         longPressedCell = nil
@@ -123,7 +123,7 @@ class PlayersCollectionViewController: UICollectionViewController, UICollectionV
 
     // MARK: - Set Data -
     func addPlayer(_ player: driverData){
-        demoPlayers.insert(player, at: 0)
+        demoDrivers.insert(player, at: 0)
         collectionView!.reloadData()
     }
     func addTapped(){

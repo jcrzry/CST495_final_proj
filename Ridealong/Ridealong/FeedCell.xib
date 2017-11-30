@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -102,9 +98,9 @@
                 <outlet property="chevron" destination="BHx-ZJ-DbC" id="f27-WU-uff"/>
                 <outlet property="clubName" destination="aVw-Xi-6Bx" id="1JA-8l-tg6"/>
                 <outlet property="deleteButton" destination="cK4-A2-xuo" id="cgG-sA-E5O"/>
+                <outlet property="driverImage" destination="Fmj-3q-bI6" id="TyF-Xc-6lq"/>
+                <outlet property="driverName" destination="4Mg-kp-t47" id="OGi-0V-YYG"/>
                 <outlet property="placeholderImage" destination="RqX-Wt-4RP" id="jZa-Tz-Ng0"/>
-                <outlet property="playerImage" destination="Fmj-3q-bI6" id="TyF-Xc-6lq"/>
-                <outlet property="playerName" destination="4Mg-kp-t47" id="OGi-0V-YYG"/>
                 <outlet property="reportCount" destination="48N-Mm-5VQ" id="NOf-fX-gmi"/>
             </connections>
             <point key="canvasLocation" x="-549" y="-453.5"/>

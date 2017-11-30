@@ -22,15 +22,19 @@ class SeeRideViewController: UIViewController {
     @IBOutlet weak var destinationLocation: UILabel!
     @IBOutlet weak var notes: UITextView!
     private var driver: driverData?
+    @IBOutlet weak var rideDate: UILabel!
 
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         driversName.text = driver?.displayName
-        position.text = details?.position
-        height.text = details?.height
-        weight.text = details?.weight
-
+        startLocaton.text = driver?.from
+        destinationLocation.text = driver?.to
+        notes.text = driver?.notes
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .short
+        rideDate.text = dateFormatter.string(from: (driver?.rideDate)!)
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)

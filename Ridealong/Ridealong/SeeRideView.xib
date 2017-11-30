@@ -21,6 +21,7 @@
                 <outlet property="leftSeat" destination="ZEF-Xx-3yH" id="Zxg-xP-4KR"/>
                 <outlet property="middleSeat" destination="0Ar-sN-geb" id="GIk-hX-MZ0"/>
                 <outlet property="notes" destination="UT4-Jp-buf" id="iJN-mS-PDC"/>
+                <outlet property="rideDate" destination="71t-hK-229" id="hRk-ZH-lCX"/>
                 <outlet property="rightSeat" destination="GAP-QD-0Ap" id="r5n-NN-QN5"/>
                 <outlet property="shotGunSeat" destination="Ave-8h-SiA" id="h4Q-d6-WXm"/>
                 <outlet property="startLocaton" destination="LC1-j8-gq6" id="vp4-81-00n"/>
