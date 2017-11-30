@@ -21,7 +21,7 @@ class SeeRideViewController: UIViewController {
     @IBOutlet weak var startLocaton: UILabel!
     @IBOutlet weak var destinationLocation: UILabel!
     @IBOutlet weak var notes: UITextView!
-    private var driver: PlayerData?
+    private var driver: driverData?
 
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -36,7 +36,7 @@ class SeeRideViewController: UIViewController {
         super.viewDidAppear(animated)
     }
     // MARK: -Setup
-    func setData(player: PlayerData) {
+    func setData(player: driverData) {
         self.driver = player
     }
 

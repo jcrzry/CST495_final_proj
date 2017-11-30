@@ -46,7 +46,7 @@ class FeedCell: UICollectionViewCell {
 
 
     // MARK: - setup  -
-    func setData(player: PlayerData) {
+    func setData(player: driverData) {
         if let image = player.image {
             playerImage.image = image
             playerImage.alpha = 1.0

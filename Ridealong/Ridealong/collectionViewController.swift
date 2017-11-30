@@ -122,7 +122,7 @@ class PlayersCollectionViewController: UICollectionViewController, UICollectionV
 
 
     // MARK: - Set Data -
-    func addPlayer(_ player: PlayerData){
+    func addPlayer(_ player: driverData){
         demoPlayers.insert(player, at: 0)
         collectionView!.reloadData()
     }

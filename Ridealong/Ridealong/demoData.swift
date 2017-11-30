@@ -11,7 +11,7 @@ import UIKit
 import TB
 
 // MARK: - Data structure -
-struct PlayerData {
+struct driverData {
     let id: String!
     let image: UIImage?
     let imageId: String
@@ -20,37 +20,37 @@ struct PlayerData {
     let displayName: String
     let from: String
     let to: String
-    let reportIds: [String]
+    let notes: String
 }
 
 
-let demoPlayer1 = PlayerData(
+let demoPlayer1 = driverData(
     id: "D1",
     image: nil,
     imageId: "I1",
-    firstName: "John",
-    lastName: "Doe",
-    displayName: "John Doe",
-    from: "To: San Francisco",
-    to: "TO: San Diego",
-    reportIds: ["R1", "R2"]
+    firstName: "Ryan",
+    lastName: "Cruz",
+    displayName: "Ryan Cruz",
+    from: "From: CSUMB",
+    to: "TO: Monterey",
+    notes: "Hey, I want to hear cool music during the ride"
 )
 
-let demoPlayer2 = PlayerData(
+let demoPlayer2 = driverData(
     id: "D2",
     image: nil,
     imageId: "I2",
-    firstName: "Jane",
-    lastName: "Doe",
+    firstName: "Alfonso",
+    lastName: "Torres",
     displayName: "Alfonso Torres",
-    from: "TO: San Diego",
-    to: "TO: San Diego",
-    reportIds: ["R3"]
+    from: "From: CSUMB",
+    to: "TO: San Francisco",
+    notes: "Hey, I want to meet new cool people"
 )
 
 var demoPlayers = [demoPlayer1, demoPlayer2]
 
-func search(name: String) -> PlayerData? {
+func search(name: String) -> driverData? {
     for player in demoPlayers {
         if name == player.firstName || name == player.lastName {
             return player
