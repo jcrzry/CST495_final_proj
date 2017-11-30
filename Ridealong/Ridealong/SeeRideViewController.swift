@@ -17,14 +17,31 @@ class SeeRideViewController: UIViewController {
     @IBOutlet var middleSeat: UIButton!
     @IBOutlet var rightSeat: UIButton!
     @IBOutlet var doneButton: UIButton!
+    @IBOutlet weak var driversName: UILabel!
+    @IBOutlet weak var startLocaton: UILabel!
+    @IBOutlet weak var destinationLocation: UILabel!
+    @IBOutlet weak var notes: UITextView!
+    private var driver: PlayerData?
+
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        driversName.text = driver?.displayName
+        position.text = details?.position
+        height.text = details?.height
+        weight.text = details?.weight
+
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
+    // MARK: -Setup
+    func setData(player: PlayerData) {
+        self.driver = player
+    }
+
     @IBAction func doneButton(_ sender: Any) {
+        joinFunction()
         self.navigationController?.popViewController(animated: true)
     }
     @IBAction func shotGunSeat(_ sender: Any) {
@@ -33,11 +50,17 @@ class SeeRideViewController: UIViewController {
     }
     @IBAction func middleSeat(_ sender: Any) {
         TB.temp("middleSeat presed")
+        self.middleSeat.backgroundColor = UIColor.blue
     }
     @IBAction func rightSeat(_ sender: Any) {
         TB.temp("rightSeat presed")
+        self.rightSeat.backgroundColor = UIColor.blue
     }
     @IBAction func leftSeat(_ sender: Any) {
         TB.temp("leftleftSeat presed")
+        self.leftSeat.backgroundColor = UIColor.blue
+    }
+    func joinFunction(){
+        TB.info("User wants to join the ride")
     }
 }

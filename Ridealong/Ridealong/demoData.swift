@@ -10,6 +10,20 @@ import Foundation
 import UIKit
 import TB
 
+// MARK: - Data structure -
+struct PlayerData {
+    let id: String!
+    let image: UIImage?
+    let imageId: String
+    let firstName: String
+    let lastName: String
+    let displayName: String
+    let from: String
+    let to: String
+    let reportIds: [String]
+}
+
+
 let demoPlayer1 = PlayerData(
     id: "D1",
     image: nil,
@@ -17,7 +31,8 @@ let demoPlayer1 = PlayerData(
     firstName: "John",
     lastName: "Doe",
     displayName: "John Doe",
-    clubName: "To: San Francisco",
+    from: "To: San Francisco",
+    to: "TO: San Diego",
     reportIds: ["R1", "R2"]
 )
 
@@ -27,8 +42,9 @@ let demoPlayer2 = PlayerData(
     imageId: "I2",
     firstName: "Jane",
     lastName: "Doe",
-    displayName: "Jane Doe",
-    clubName: "TO: San Diego",
+    displayName: "Alfonso Torres",
+    from: "TO: San Diego",
+    to: "TO: San Diego",
     reportIds: ["R3"]
 )
 

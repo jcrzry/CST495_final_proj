@@ -14,19 +14,6 @@ import UIKit
 }
 
 
-// MARK: - Data structure -
-struct PlayerData {
-    let id: String!
-    let image: UIImage?
-    let imageId: String
-    let firstName: String
-    let lastName: String
-    let displayName: String
-    let clubName: String
-    let reportIds: [String]
-}
-
-
 class FeedCell: UICollectionViewCell {
 
     // MARK: - vars -

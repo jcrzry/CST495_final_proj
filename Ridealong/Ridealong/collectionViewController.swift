@@ -83,6 +83,7 @@ class PlayersCollectionViewController: UICollectionViewController, UICollectionV
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         longPressedCell?.unsetDeletion()
         let newViewController = SeeRideViewController()
+        newViewController.setData(player: demoPlayers[indexPath.row])
         self.navigationController?.pushViewController(newViewController, animated: true)
     }
 

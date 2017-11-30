@@ -14,12 +14,16 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SeeRideViewController" customModule="Ridealong" customModuleProvider="target">
             <connections>
+                <outlet property="destinationLocation" destination="sYj-6t-L3l" id="X3E-Cf-muo"/>
                 <outlet property="doneButton" destination="PjD-42-cng" id="Z76-hv-cwI"/>
+                <outlet property="driversName" destination="PP4-fD-evx" id="gDM-un-5gm"/>
                 <outlet property="driversSeat" destination="nrw-MG-y3f" id="ILG-Iy-IdB"/>
                 <outlet property="leftSeat" destination="ZEF-Xx-3yH" id="Zxg-xP-4KR"/>
                 <outlet property="middleSeat" destination="0Ar-sN-geb" id="GIk-hX-MZ0"/>
+                <outlet property="notes" destination="UT4-Jp-buf" id="iJN-mS-PDC"/>
                 <outlet property="rightSeat" destination="GAP-QD-0Ap" id="r5n-NN-QN5"/>
                 <outlet property="shotGunSeat" destination="Ave-8h-SiA" id="h4Q-d6-WXm"/>
+                <outlet property="startLocaton" destination="LC1-j8-gq6" id="vp4-81-00n"/>
                 <outlet property="view" destination="akS-jN-b30" id="1bZ-yY-rYB"/>
             </connections>
         </placeholder>
