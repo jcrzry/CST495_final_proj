@@ -56,11 +56,12 @@ class CalculatorViewController: UITableViewController, CLLocationManagerDelegate
 
     }
     @IBAction func calculate(_ sender: Any) {
-        if gasCost == 0.0 {
-            let alert = UIAlertController(title: "Please Choose Gas", message: "Please choose a Gas for calculation.", preferredStyle: UIAlertControllerStyle.alert)
+        if gasCost == 0.0 || averageLiter.text == "" || averageMilliliter.text == "" || neededKilometer.text == ""{
+            let alert = UIAlertController(title: "Fields are empty", message: "Please fill out all fields.", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
-        }else{
+        }
+        else{
             averageGas = Double("\(String(describing: averageLiter.text!))"+"."+"\(String(describing: averageMilliliter.text!))")!
             neededGas.text = String(Double(neededKilometer.text!)! / 100 * Double(averageGas))
             neededCosts.text = String(Double(neededGas.text!)!*gasCost)

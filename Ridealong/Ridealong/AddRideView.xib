@@ -12,6 +12,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddRideViewController" customModule="Ridealong" customModuleProvider="target">
             <connections>
+                <outlet property="destinationLocation" destination="7dq-5V-k4p" id="Gkr-qJ-ohQ"/>
+                <outlet property="notes" destination="l3n-6w-Pz9" id="Gje-hc-6SG"/>
+                <outlet property="startDate" destination="9LW-Vr-7rC" id="B7u-JQ-N27"/>
+                <outlet property="startLocation" destination="e44-ca-k8g" id="2Bv-3B-YKv"/>
                 <outlet property="view" destination="rGu-ZF-qAS" id="I9l-gq-3gG"/>
             </connections>
         </placeholder>

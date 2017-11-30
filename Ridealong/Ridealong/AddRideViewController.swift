@@ -22,7 +22,12 @@ class AddRideViewController: UIViewController, UITextFieldDelegate {
     var txtLocationTo: UITextField?
     var txtDescription: UITextField?
     
+    @IBOutlet weak var startDate: UIDatePicker!
+    @IBOutlet weak var startLocation: UITextField!
 
+    @IBOutlet weak var destinationLocation: UITextField!
+    
+    @IBOutlet weak var notes: UITextView!
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
