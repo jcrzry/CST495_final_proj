@@ -97,6 +97,8 @@
 		DD0C92A31FCE9A5A00633189 /* EditRideView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditRideView.xib; sourceTree = "<group>"; };
 		DD0C92A51FCE9AEC00633189 /* SeeRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeRideViewController.swift; sourceTree = "<group>"; };
 		DD0C92A71FCE9B1700633189 /* EditRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRideViewController.swift; sourceTree = "<group>"; };
+		DD0F72641FD0E88B00592BC2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		DD0F72651FD0E88B00592BC2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		DD7311591F68CD1900568833 /* Ridealong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ridealong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD73115C1F68CD1900568833 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD73115E1F68CD1900568833 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -684,6 +686,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				DD7311631F68CD1900568833 /* Base */,
+				DD0F72641FD0E88B00592BC2 /* de */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -692,6 +695,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				DD7311681F68CD1900568833 /* Base */,
+				DD0F72651FD0E88B00592BC2 /* de */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -703,6 +707,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -753,6 +758,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
