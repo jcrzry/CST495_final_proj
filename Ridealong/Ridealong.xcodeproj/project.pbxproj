@@ -30,6 +30,10 @@
 		DD0C92A41FCE9A5A00633189 /* EditRideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD0C92A31FCE9A5A00633189 /* EditRideView.xib */; };
 		DD0C92A61FCE9AEC00633189 /* SeeRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0C92A51FCE9AEC00633189 /* SeeRideViewController.swift */; };
 		DD0C92A81FCE9B1700633189 /* EditRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0C92A71FCE9B1700633189 /* EditRideViewController.swift */; };
+		DD0F72761FD104F800592BC2 /* driverData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0F72751FD104F800592BC2 /* driverData.swift */; };
+		DD0F72781FD1050900592BC2 /* seatData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0F72771FD1050900592BC2 /* seatData.swift */; };
+		DD0F727A1FD1051E00592BC2 /* rideData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0F72791FD1051E00592BC2 /* rideData.swift */; };
+		DD0F727C1FD1052D00592BC2 /* seatOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0F727B1FD1052D00592BC2 /* seatOption.swift */; };
 		DD73115D1F68CD1900568833 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD73115C1F68CD1900568833 /* AppDelegate.swift */; };
 		DD7311641F68CD1900568833 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD7311621F68CD1900568833 /* Main.storyboard */; };
 		DD7311661F68CD1900568833 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD7311651F68CD1900568833 /* Assets.xcassets */; };
@@ -97,6 +101,10 @@
 		DD0C92A71FCE9B1700633189 /* EditRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRideViewController.swift; sourceTree = "<group>"; };
 		DD0F72641FD0E88B00592BC2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		DD0F72651FD0E88B00592BC2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		DD0F72751FD104F800592BC2 /* driverData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = driverData.swift; sourceTree = "<group>"; };
+		DD0F72771FD1050900592BC2 /* seatData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = seatData.swift; sourceTree = "<group>"; };
+		DD0F72791FD1051E00592BC2 /* rideData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rideData.swift; sourceTree = "<group>"; };
+		DD0F727B1FD1052D00592BC2 /* seatOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = seatOption.swift; sourceTree = "<group>"; };
 		DD7311591F68CD1900568833 /* Ridealong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ridealong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD73115C1F68CD1900568833 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD7311631F68CD1900568833 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -160,6 +168,9 @@
 				135BDC651F7DCCEA00449C08 /* Ride.swift */,
 				135BDC671F7DD0C900449C08 /* Rating.swift */,
 				A0FA6E271F7DD124005BD7AF /* AppRealm.swift */,
+				DD8221561FBE6BD90037BA76 /* demoData.swift */,
+				DD0F727E1FD1058100592BC2 /* enum */,
+				DD0F727D1FD1057100592BC2 /* struct */,
 				A0557F4C1FB5A92D00FD2868 /* SimpleUser.swift */,
 				A0F391501FAAB78000796EE5 /* realmInitalization.swift */,
 			);
@@ -209,6 +220,35 @@
 			name = TabbarViews;
 			sourceTree = "<group>";
 		};
+		DD0F727D1FD1057100592BC2 /* struct */ = {
+			isa = PBXGroup;
+			children = (
+				DD0F72791FD1051E00592BC2 /* rideData.swift */,
+				DD0F72771FD1050900592BC2 /* seatData.swift */,
+				DD0F72751FD104F800592BC2 /* driverData.swift */,
+			);
+			name = struct;
+			sourceTree = "<group>";
+		};
+		DD0F727E1FD1058100592BC2 /* enum */ = {
+			isa = PBXGroup;
+			children = (
+				DD0F727B1FD1052D00592BC2 /* seatOption.swift */,
+			);
+			name = enum;
+			sourceTree = "<group>";
+		};
+		DD0F727F1FD105A800592BC2 /* xib */ = {
+			isa = PBXGroup;
+			children = (
+				DD8221501FBE68F60037BA76 /* FeedCell.xib */,
+				DD0C929F1FCE99FC00633189 /* AddRideView.xib */,
+				DD0C92A11FCE9A2A00633189 /* SeeRideView.xib */,
+				DD0C92A31FCE9A5A00633189 /* EditRideView.xib */,
+			);
+			name = xib;
+			sourceTree = "<group>";
+		};
 		DD7311501F68CD1900568833 = {
 			isa = PBXGroup;
 			children = (
@@ -239,8 +279,6 @@
 				DDC40EBC1F7A19D300A340AA /* Views */,
 				DDC40EB71F7A110100A340AA /* ViewController */,
 				DDC40EB61F7A10F500A340AA /* Storyboards */,
-				DD8221521FBE691B0037BA76 /* Cell.swift */,
-				DD8221561FBE6BD90037BA76 /* demoData.swift */,
 				DD7311651F68CD1900568833 /* Assets.xcassets */,
 				DD73116A1F68CD1900568833 /* Info.plist */,
 			);
@@ -297,10 +335,8 @@
 		DDC40EBC1F7A19D300A340AA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DD8221501FBE68F60037BA76 /* FeedCell.xib */,
-				DD0C929F1FCE99FC00633189 /* AddRideView.xib */,
-				DD0C92A11FCE9A2A00633189 /* SeeRideView.xib */,
-				DD0C92A31FCE9A5A00633189 /* EditRideView.xib */,
+				DD8221521FBE691B0037BA76 /* Cell.swift */,
+				DD0F727F1FD105A800592BC2 /* xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -634,6 +670,7 @@
 			files = (
 				135BDC601F7B3AD600449C08 /* Vehicle.swift in Sources */,
 				22A5CD5F1F779B9B008F5E5D /* LoginViewController.swift in Sources */,
+				DD0F727A1FD1051E00592BC2 /* rideData.swift in Sources */,
 				DD8221531FBE691B0037BA76 /* Cell.swift in Sources */,
 				A0557F4D1FB5A92D00FD2868 /* SimpleUser.swift in Sources */,
 				DD8221551FBE69980037BA76 /* collectionViewController.swift in Sources */,
@@ -642,11 +679,14 @@
 				13B95E701F9D6242009C142A /* AddRideViewController.swift in Sources */,
 				22FE32631FB54AB200B017D1 /* SignUpViewController.swift in Sources */,
 				DDC40EBB1F7A19CC00A340AA /* ProfilViewController.swift in Sources */,
+				DD0F72761FD104F800592BC2 /* driverData.swift in Sources */,
 				135BDC661F7DCCEA00449C08 /* Ride.swift in Sources */,
+				DD0F727C1FD1052D00592BC2 /* seatOption.swift in Sources */,
 				135BDC5E1F7B39A200449C08 /* User.swift in Sources */,
 				DD8221571FBE6BD90037BA76 /* demoData.swift in Sources */,
 				DD73115D1F68CD1900568833 /* AppDelegate.swift in Sources */,
 				DD0C92A81FCE9B1700633189 /* EditRideViewController.swift in Sources */,
+				DD0F72781FD1050900592BC2 /* seatData.swift in Sources */,
 				DD0C92A61FCE9AEC00633189 /* SeeRideViewController.swift in Sources */,
 				135BDC641F7B3C0700449C08 /* Locations.swift in Sources */,
 				DDC40EB51F7A10B700A340AA /* SettingsViewController.swift in Sources */,

@@ -10,37 +10,6 @@ import Foundation
 import UIKit
 import TB
 
-// MARK: - Data structure -
-struct driverData {
-    let id: String!
-    let image: UIImage?
-    let imageId: String
-    let firstName: String
-    let lastName: String
-    let displayName: String
-}
-enum seatOption {
-    case reserved
-    case open
-    case unavailable
-}
-struct seatData {
-    let driversSeat: seatOption
-    let shotGunSeat: seatOption
-    let leftSeat: seatOption
-    let middleSeat: seatOption
-    let rightSeat: seatOption
-    let leftBackSeat: seatOption
-    let rightBackSeat: seatOption
-}
-struct rideData {
-    let rideDate: Date
-    let from: String
-    let to: String
-    let notes: String
-    let seats: seatData
-}
-
 let demoDriver1 = driverData(
     id: "D1",
     image: nil,
