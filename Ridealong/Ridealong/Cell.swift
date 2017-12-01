@@ -35,7 +35,7 @@ class FeedCell: UICollectionViewCell {
     @IBOutlet weak var reportCount: UILabel!
     @IBOutlet weak var chevron: UIImageView!
 
-    private var ride: rideData?
+    private var ride: [rideData] = []
 
 
     // MARK: - overrides -
@@ -60,6 +60,12 @@ class FeedCell: UICollectionViewCell {
         }
         clubName.text = player.displayName
         ride = rideForDriver(withId: player.rideID)
+        for eachRide in ride{
+            setData(ride: eachRide)
+        }
+
+    }
+    func setData(ride: rideData) {
         driverName.text = "From: " + ride.from + " " + "To:" + ride.to
     }
     func updatePlayerImage(image: UIImage) {
@@ -125,5 +131,6 @@ class FeedCell: UICollectionViewCell {
         }
         return rides
     }
+
 }
 

@@ -57,7 +57,7 @@ class PlayersCollectionViewController: UICollectionViewController, UICollectionV
         return 1
     }
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return demoDrivers.count
+        return demoRides.count
     }
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! FeedCell
@@ -70,7 +70,7 @@ class PlayersCollectionViewController: UICollectionViewController, UICollectionV
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         longPressedCell?.unsetDeletion()
         let newViewController = SeeRideViewController()
-        newViewController.setData(player: demoDrivers[indexPath.row])
+        newViewController.setData(ride: demoRides[indexPath.row])
         self.navigationController?.pushViewController(newViewController, animated: true)
     }
     // MARK: - navigation

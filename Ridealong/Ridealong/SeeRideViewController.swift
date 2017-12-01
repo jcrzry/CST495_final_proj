@@ -11,6 +11,8 @@ import TB
 import UIKit
 
 class SeeRideViewController: UIViewController {
+
+    //    MARK: Variables
     @IBOutlet var driversSeat: UIButton!
     @IBOutlet var shotGunSeat: UIButton!
     @IBOutlet var leftSeat: UIButton!
@@ -21,40 +23,58 @@ class SeeRideViewController: UIViewController {
     @IBOutlet weak var startLocaton: UILabel!
     @IBOutlet weak var destinationLocation: UILabel!
     @IBOutlet weak var notes: UITextView!
-    private var driver: driverData?
     @IBOutlet weak var rideDate: UILabel!
-    var isShotGunSeatSelected: Bool!
-    var isShotGunSeatSelectedPermanently: Bool!
-    var isLeftSeatSelected: Bool!
-    var isLeftSeatSelectedPermanently: Bool!
-    var isMiddleSeatSelected: Bool!
-    var isMiddleSeatSelectedPermanently: Bool!
-    var isRightSeatSelected: Bool!
-    var isRightSeatSelectedPermanently: Bool!
+//    var isShotGunSeatSelected: Bool!
+//    var isShotGunSeatSelectedPermanently: Bool!
+//    var isLeftSeatSelected: Bool!
+//    var isLeftSeatSelectedPermanently: Bool!
+//    var isMiddleSeatSelected: Bool!
+//    var isMiddleSeatSelectedPermanently: Bool!
+//    var isRightSeatSelected: Bool!
+//    var isRightSeatSelectedPermanently: Bool!
+    private var driver: driverData?
+    private var ride: rideData?
+    private var seats: seatData?
+
 
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         driversName.text = driver?.displayName
-        startLocaton.text = driver?.from
-        destinationLocation.text = driver?.to
-        notes.text = driver?.notes
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        dateFormatter.timeStyle = .short
-        dateFormatter.locale = Locale(identifier: "en_US")
-        rideDate.text = dateFormatter.string(from: (driver?.rideDate)!)
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
-    // MARK: -Setup
-    func setData(driver: driverData) {
-        self.driver = driver
-        setUpSeats(seats: driver[seatData])
+    // MARK: Setup
+    func setData(ride: rideData) {
+        self.ride = ride
+        setUpSeats(seats: ride.seats)
+        startLocaton?.text = ride.from
+        destinationLocation?.text = ride.to
+        notes?.text = ride.notes
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .short
+        dateFormatter.locale = Locale(identifier: "en_US")
+        rideDate?.text = dateFormatter.string(from: (ride.rideDate))
+        self.driver = rideForDriver(ride: ride)
     }
     func setUpSeats(seats: seatData){
-        <#function body#>
+
+    }
+    func rideForDriver(ride: rideData) -> driverData {
+        var driver = driverData()
+        for ride in demoRides {
+            for eachDriver in demoDrivers {
+                for eachRide in eachDriver.rideID{
+                    if ride.id == eachRide{
+                        driver = eachDriver
+                        break
+                    }
+                }
+            }
+        }
+        return driver
     }
     @IBAction func doneButton(_ sender: Any) {
         joinFunction()

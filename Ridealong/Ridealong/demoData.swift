@@ -17,7 +17,7 @@ let demoDriver1 = driverData(
     firstName: "Ryan",
     lastName: "Cruz",
     displayName: "Ryan Cruz",
-    rideId: ["r1"]
+    rideID: ["r1"]
 )
 
 let demoDriver2 = driverData(
@@ -27,7 +27,7 @@ let demoDriver2 = driverData(
     firstName: "Alfonso",
     lastName: "Torres",
     displayName: "Alfonso Torres",
-    rideId: ["r2"]
+    rideID: ["r2"]
 )
 let demoSeats1 = seatData(
     driversSeat: .reserved,

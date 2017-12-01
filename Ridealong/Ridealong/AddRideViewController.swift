@@ -57,7 +57,8 @@ class AddRideViewController: UIViewController, UITextFieldDelegate {
         txtTime.inputView = timePicker
     }
     func doneAction() {
-        let driver = driverData(id: "3", image: nil, imageId: "", firstName: "Simon", lastName: "Nielson", displayName: "Simon Nielson", rideDate: startDate.date, from: (startLocation.text!), to: (destinationLocation.text!), notes: (notes.text!))
+        let driver = driverData(id: "3", image: nil, imageId: "", firstName: "Simon", lastName: "Nielson", displayName: "Simon Nielson", rideID: ["1"])
+        //, rideDate: startDate.date, from: (startLocation.text!), to: (destinationLocation.text!), notes: (notes.text!)
         demoDrivers.append(driver)
         self.navigationController?.popViewController(animated: true)
     }
