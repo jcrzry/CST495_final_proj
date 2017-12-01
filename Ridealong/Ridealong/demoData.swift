@@ -51,7 +51,6 @@ let demoRide2 = rideData(
     notes: "Hey, I want to hear cool music during the ride",
     seats: demoSeats1
 )
-
 func search(name: String) -> driverData? {
     for driver in demoDrivers {
         if name == driver.firstName || name == driver.lastName {

@@ -51,8 +51,9 @@ class SeeRideViewController: UIViewController {
     // MARK: -Setup
     func setData(driver: driverData) {
         self.driver = driver
+        setUpSeats(seats: driver[seatData])
     }
-    func setUpSeats(seats: ){
+    func setUpSeats(seats: seatData){
         <#function body#>
     }
     @IBAction func doneButton(_ sender: Any) {
