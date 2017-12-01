@@ -45,6 +45,10 @@ class PlayersCollectionViewController: UICollectionViewController, UICollectionV
         super.viewDidDisappear(animated)
         longPressedCell?.unsetDeletion()
     }
+    override func viewDidAppear(_ animated: Bool) {
+        longPressedCell?.unsetDeletion()
+        collectionView!.reloadData()
+    }
 
 
     // MARK: - UICollectionViewFlowLayout -

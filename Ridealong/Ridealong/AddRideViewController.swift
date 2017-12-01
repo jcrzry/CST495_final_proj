@@ -50,16 +50,15 @@ class AddRideViewController: UIViewController, UITextFieldDelegate {
         //button to click when done
         let doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(doneAction))
         toolbar.setItems([doneBtn], animated: false)
-
         txtDate.inputAccessoryView = toolbar
         txtTime.inputAccessoryView = toolbar
         txtDate.inputView = datePicker
         self.timePicker.datePickerMode = .time
-        
         txtTime.inputView = timePicker
     }
     func doneAction() {
-        TB.temp("doneAction tapped")
+        let driver = driverData(id: "3", image: nil, imageId: "", firstName: "Simon", lastName: "Nielson", displayName: "Simon Nielson", rideDate: startDate.date, from: (startLocation.text!), to: (destinationLocation.text!), notes: (notes.text!))
+        demoDrivers.append(driver)
         self.navigationController?.popViewController(animated: true)
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool { // [8]

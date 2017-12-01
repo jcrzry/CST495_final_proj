@@ -28,7 +28,6 @@ class FeedTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
-
     //returns the number of how many cells the view should generate
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Int(1)
