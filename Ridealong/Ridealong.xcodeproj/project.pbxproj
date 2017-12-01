@@ -31,8 +31,6 @@
 		DD0C92A61FCE9AEC00633189 /* SeeRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0C92A51FCE9AEC00633189 /* SeeRideViewController.swift */; };
 		DD0C92A81FCE9B1700633189 /* EditRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0C92A71FCE9B1700633189 /* EditRideViewController.swift */; };
 		DD73115D1F68CD1900568833 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD73115C1F68CD1900568833 /* AppDelegate.swift */; };
-		DD73115F1F68CD1900568833 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD73115E1F68CD1900568833 /* FirstViewController.swift */; };
-		DD7311611F68CD1900568833 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7311601F68CD1900568833 /* SecondViewController.swift */; };
 		DD7311641F68CD1900568833 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD7311621F68CD1900568833 /* Main.storyboard */; };
 		DD7311661F68CD1900568833 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD7311651F68CD1900568833 /* Assets.xcassets */; };
 		DD7311691F68CD1900568833 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD7311671F68CD1900568833 /* LaunchScreen.storyboard */; };
@@ -101,8 +99,6 @@
 		DD0F72651FD0E88B00592BC2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		DD7311591F68CD1900568833 /* Ridealong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ridealong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD73115C1F68CD1900568833 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DD73115E1F68CD1900568833 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		DD7311601F68CD1900568833 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		DD7311631F68CD1900568833 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DD7311651F68CD1900568833 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD7311681F68CD1900568833 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -193,6 +189,26 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		DD0F726A1FD0F10D00592BC2 /* RydeViews */ = {
+			isa = PBXGroup;
+			children = (
+				13B95E6F1F9D6242009C142A /* AddRideViewController.swift */,
+				DD0C92A51FCE9AEC00633189 /* SeeRideViewController.swift */,
+				DD0C92A71FCE9B1700633189 /* EditRideViewController.swift */,
+			);
+			name = RydeViews;
+			sourceTree = "<group>";
+		};
+		DD0F726B1FD0F17300592BC2 /* TabbarViews */ = {
+			isa = PBXGroup;
+			children = (
+				DDC40EB41F7A10B700A340AA /* SettingsViewController.swift */,
+				DD0A745A1F945A3F00C673F2 /* CalculatorViewController.swift */,
+				DD8221541FBE69980037BA76 /* collectionViewController.swift */,
+			);
+			name = TabbarViews;
+			sourceTree = "<group>";
+		};
 		DD7311501F68CD1900568833 = {
 			isa = PBXGroup;
 			children = (
@@ -267,19 +283,13 @@
 		DDC40EB71F7A110100A340AA /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				DDC40EB41F7A10B700A340AA /* SettingsViewController.swift */,
+				DD0F726B1FD0F17300592BC2 /* TabbarViews */,
 				DDC40EBA1F7A19CC00A340AA /* ProfilViewController.swift */,
 				135BDC581F7B30C100449C08 /* FeedTableViewController.swift */,
 				135BDC5A1F7B319F00449C08 /* FeedTableViewCell.swift */,
-				DD0A745A1F945A3F00C673F2 /* CalculatorViewController.swift */,
-				13B95E6F1F9D6242009C142A /* AddRideViewController.swift */,
-				DD0C92A51FCE9AEC00633189 /* SeeRideViewController.swift */,
-				DD8221541FBE69980037BA76 /* collectionViewController.swift */,
-				DD73115E1F68CD1900568833 /* FirstViewController.swift */,
-				DD7311601F68CD1900568833 /* SecondViewController.swift */,
+				DD0F726A1FD0F10D00592BC2 /* RydeViews */,
 				22A5CD5E1F779B9B008F5E5D /* LoginViewController.swift */,
 				22FE32621FB54AB200B017D1 /* SignUpViewController.swift */,
-				DD0C92A71FCE9B1700633189 /* EditRideViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -627,7 +637,6 @@
 				DD8221531FBE691B0037BA76 /* Cell.swift in Sources */,
 				A0557F4D1FB5A92D00FD2868 /* SimpleUser.swift in Sources */,
 				DD8221551FBE69980037BA76 /* collectionViewController.swift in Sources */,
-				DD7311611F68CD1900568833 /* SecondViewController.swift in Sources */,
 				135BDC591F7B30C100449C08 /* FeedTableViewController.swift in Sources */,
 				135BDC5B1F7B319F00449C08 /* FeedTableViewCell.swift in Sources */,
 				13B95E701F9D6242009C142A /* AddRideViewController.swift in Sources */,
@@ -637,7 +646,6 @@
 				135BDC5E1F7B39A200449C08 /* User.swift in Sources */,
 				DD8221571FBE6BD90037BA76 /* demoData.swift in Sources */,
 				DD73115D1F68CD1900568833 /* AppDelegate.swift in Sources */,
-				DD73115F1F68CD1900568833 /* FirstViewController.swift in Sources */,
 				DD0C92A81FCE9B1700633189 /* EditRideViewController.swift in Sources */,
 				DD0C92A61FCE9AEC00633189 /* SeeRideViewController.swift in Sources */,
 				135BDC641F7B3C0700449C08 /* Locations.swift in Sources */,
