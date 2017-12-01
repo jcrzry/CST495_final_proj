@@ -62,8 +62,3 @@ func search(name: String) -> driverData? {
     return nil
 }
 
-extension Date {
-    func add(minutes: Int) -> Date {
-        return Calendar(identifier: .gregorian).date(byAdding: .minute, value: minutes, to: self)!
-    }
-}
