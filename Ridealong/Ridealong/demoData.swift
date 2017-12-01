@@ -33,8 +33,8 @@ let demoDriver1 = driverData(
     lastName: "Cruz",
     displayName: "Ryan Cruz",
     rideDate: Date().add(minutes: 60),
-    from: "From: CSUMB",
-    to: "TO: Monterey",
+    from: "CSUMB",
+    to: "Monterey",
     notes: "Hey, I want to hear cool music during the ride"
 )
 
@@ -46,11 +46,10 @@ let demoDriver2 = driverData(
     lastName: "Torres",
     displayName: "Alfonso Torres",
     rideDate: Date().add(minutes: 30),
-    from: "From: CSUMB",
-    to: "TO: San Francisco",
+    from: "CSUMB",
+    to: "San Francisco",
     notes: "Hey, I want to meet new cool people"
 )
-
 var demoDrivers = [demoDriver1, demoDriver2]
 
 func search(name: String) -> driverData? {
@@ -61,4 +60,3 @@ func search(name: String) -> driverData? {
     }
     return nil
 }
-

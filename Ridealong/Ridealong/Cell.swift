@@ -56,8 +56,8 @@ class FeedCell: UICollectionViewCell {
             driverImage.image = nil
             driverImage.alpha = 0.0
         }
-        driverName.text = player.displayName
-        clubName.text = player.from + " " + player.to
+        clubName.text = player.displayName
+        driverName.text = "From: " + player.from + " " + "To:" + player.to
     }
     func updatePlayerImage(image: UIImage) {
         DispatchQueue.main.async {
