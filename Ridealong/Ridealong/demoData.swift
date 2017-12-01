@@ -18,12 +18,28 @@ struct driverData {
     let firstName: String
     let lastName: String
     let displayName: String
+}
+enum seatOption {
+    case reserved
+    case open
+    case unavailable
+}
+struct seatData {
+    let driversSeat: seatOption
+    let shotGunSeat: seatOption
+    let leftSeat: seatOption
+    let middleSeat: seatOption
+    let rightSeat: seatOption
+    let leftBackSeat: seatOption
+    let rightBackSeat: seatOption
+}
+struct rideData {
     let rideDate: Date
     let from: String
     let to: String
     let notes: String
+    let seats: seatData
 }
-
 
 let demoDriver1 = driverData(
     id: "D1",
@@ -31,11 +47,7 @@ let demoDriver1 = driverData(
     imageId: "I1",
     firstName: "Ryan",
     lastName: "Cruz",
-    displayName: "Ryan Cruz",
-    rideDate: Date().add(minutes: 60),
-    from: "CSUMB",
-    to: "Monterey",
-    notes: "Hey, I want to hear cool music during the ride"
+    displayName: "Ryan Cruz"
 )
 
 let demoDriver2 = driverData(
@@ -44,13 +56,32 @@ let demoDriver2 = driverData(
     imageId: "I2",
     firstName: "Alfonso",
     lastName: "Torres",
-    displayName: "Alfonso Torres",
+    displayName: "Alfonso Torres"
+)
+let demoSeats1 = seatData(
+    driversSeat: .reserved,
+    shotGunSeat: .open,
+    leftSeat: .open,
+    middleSeat: .open,
+    rightSeat: .open,
+    leftBackSeat: .unavailable,
+    rightBackSeat: .unavailable
+)
+var demoDrivers = [demoDriver1, demoDriver2]
+let demoRide1 = rideData(
     rideDate: Date().add(minutes: 30),
     from: "CSUMB",
     to: "San Francisco",
-    notes: "Hey, I want to meet new cool people"
+    notes: "Hey, I want to meet new cool people",
+    seats: demoSeats1
 )
-var demoDrivers = [demoDriver1, demoDriver2]
+let demoRide2 = rideData(
+    rideDate: Date().add(minutes: 60),
+    from: "CSUMB",
+    to: "Monterey",
+    notes: "Hey, I want to hear cool music during the ride",
+    seats: demoSeats1
+)
 
 func search(name: String) -> driverData? {
     for driver in demoDrivers {

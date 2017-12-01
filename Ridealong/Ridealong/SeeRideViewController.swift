@@ -23,6 +23,14 @@ class SeeRideViewController: UIViewController {
     @IBOutlet weak var notes: UITextView!
     private var driver: driverData?
     @IBOutlet weak var rideDate: UILabel!
+    var isShotGunSeatSelected: Bool!
+    var isShotGunSeatSelectedPermanently: Bool!
+    var isLeftSeatSelected: Bool!
+    var isLeftSeatSelectedPermanently: Bool!
+    var isMiddleSeatSelected: Bool!
+    var isMiddleSeatSelectedPermanently: Bool!
+    var isRightSeatSelected: Bool!
+    var isRightSeatSelectedPermanently: Bool!
 
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -41,10 +49,12 @@ class SeeRideViewController: UIViewController {
         super.viewDidAppear(animated)
     }
     // MARK: -Setup
-    func setData(player: driverData) {
-        self.driver = player
+    func setData(driver: driverData) {
+        self.driver = driver
     }
-
+    func setUpSeats(seats: ){
+        <#function body#>
+    }
     @IBAction func doneButton(_ sender: Any) {
         joinFunction()
         self.navigationController?.popViewController(animated: true)

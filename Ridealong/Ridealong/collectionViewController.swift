@@ -19,16 +19,11 @@ class PlayersCollectionViewController: UICollectionViewController, UICollectionV
     private var longPress: UILongPressGestureRecognizer!
     private var longPressedCell: FeedCell?
 
-
     // MARK: - overrides  -
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
         collectionView!.register(UINib(nibName: "FeedCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
         collectionView!.delegate = self
-
         longPress = UILongPressGestureRecognizer(target: self, action: #selector(PlayersCollectionViewController.handleLongPress(gesture:)))
         longPress.delegate = self
         collectionView!.addGestureRecognizer(longPress)
@@ -36,11 +31,9 @@ class PlayersCollectionViewController: UICollectionViewController, UICollectionV
         navigationItem.rightBarButtonItems = [add]
 
     }
-
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         collectionView!.reloadData()
     }
-
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         longPressedCell?.unsetDeletion()
@@ -49,31 +42,23 @@ class PlayersCollectionViewController: UICollectionViewController, UICollectionV
         longPressedCell?.unsetDeletion()
         collectionView!.reloadData()
     }
-
-
     // MARK: - UICollectionViewFlowLayout -
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width - (2 * inset), height: cellHeight)
     }
-
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: inset, bottom: 0, right: inset)
     }
-
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return cellLineSpacing
     }
-
-
     // MARK: - UICollectionViewDataSource -
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
-
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return demoDrivers.count
     }
-
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! FeedCell
         cell.setData(player: demoDrivers[indexPath.row])
@@ -81,8 +66,6 @@ class PlayersCollectionViewController: UICollectionViewController, UICollectionV
         cell.delegate = self
         return cell
     }
-
-
     // MARK: - UICollectionViewDelegate -
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         longPressedCell?.unsetDeletion()
@@ -90,19 +73,14 @@ class PlayersCollectionViewController: UICollectionViewController, UICollectionV
         newViewController.setData(player: demoDrivers[indexPath.row])
         self.navigationController?.pushViewController(newViewController, animated: true)
     }
-
-
     // MARK: - navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     }
-
-
     // MARK: - Gestures -
     func handleLongPress(gesture: UILongPressGestureRecognizer) {
         guard gesture.state == .began else {
             return
         }
-
         let point = gesture.location(in: self.collectionView)
         if let indexPath = collectionView!.indexPathForItem(at: point) {
             let cell = (collectionView!.cellForItem(at: indexPath) as! FeedCell)
@@ -114,7 +92,6 @@ class PlayersCollectionViewController: UICollectionViewController, UICollectionV
             longPressedCell!.provideDeletion()
         }
     }
-
     func removeCellFromList() {
         let indexPath = collectionView!.indexPath(for: longPressedCell!)
         if let path = indexPath {
@@ -123,8 +100,6 @@ class PlayersCollectionViewController: UICollectionViewController, UICollectionV
         }
         longPressedCell = nil
     }
-
-
     // MARK: - Set Data -
     func addPlayer(_ player: driverData){
         demoDrivers.insert(player, at: 0)
