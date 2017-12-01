@@ -16,7 +16,8 @@ let demoDriver1 = driverData(
     imageId: "I1",
     firstName: "Ryan",
     lastName: "Cruz",
-    displayName: "Ryan Cruz"
+    displayName: "Ryan Cruz",
+    rideId: ["r1"]
 )
 
 let demoDriver2 = driverData(
@@ -25,7 +26,8 @@ let demoDriver2 = driverData(
     imageId: "I2",
     firstName: "Alfonso",
     lastName: "Torres",
-    displayName: "Alfonso Torres"
+    displayName: "Alfonso Torres",
+    rideId: ["r2"]
 )
 let demoSeats1 = seatData(
     driversSeat: .reserved,
@@ -39,6 +41,7 @@ let demoSeats1 = seatData(
 var demoDrivers = [demoDriver1, demoDriver2]
 let demoRide1 = rideData(
     rideDate: Date().add(minutes: 30),
+    id: "r1",
     from: "CSUMB",
     to: "San Francisco",
     notes: "Hey, I want to meet new cool people",
@@ -46,11 +49,14 @@ let demoRide1 = rideData(
 )
 let demoRide2 = rideData(
     rideDate: Date().add(minutes: 60),
+    id: "r2",
     from: "CSUMB",
     to: "Monterey",
     notes: "Hey, I want to hear cool music during the ride",
     seats: demoSeats1
 )
+let demoRides = [demoRide1, demoRide2]
+
 func search(name: String) -> driverData? {
     for driver in demoDrivers {
         if name == driver.firstName || name == driver.lastName {

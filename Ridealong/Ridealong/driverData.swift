@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import UIKit
+
 struct driverData {
     let id: String!
     let image: UIImage?
@@ -14,4 +16,5 @@ struct driverData {
     let firstName: String
     let lastName: String
     let displayName: String
+    let rideID: [String]
 }

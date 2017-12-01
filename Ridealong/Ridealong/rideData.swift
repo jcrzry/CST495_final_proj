@@ -9,6 +9,7 @@
 import Foundation
 struct rideData {
     let rideDate: Date
+    let id: String
     let from: String
     let to: String
     let notes: String

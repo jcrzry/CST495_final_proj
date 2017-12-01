@@ -35,6 +35,8 @@ class FeedCell: UICollectionViewCell {
     @IBOutlet weak var reportCount: UILabel!
     @IBOutlet weak var chevron: UIImageView!
 
+    private var ride: rideData?
+
 
     // MARK: - overrides -
     override func awakeFromNib() {
@@ -57,7 +59,8 @@ class FeedCell: UICollectionViewCell {
             driverImage.alpha = 0.0
         }
         clubName.text = player.displayName
-        driverName.text = "From: " + player[rideData].from + " " + "To:" + player[rideData].to
+        ride = rideForDriver(withId: player.rideID)
+        driverName.text = "From: " + ride.from + " " + "To:" + ride.to
     }
     func updatePlayerImage(image: UIImage) {
         DispatchQueue.main.async {
@@ -109,6 +112,18 @@ class FeedCell: UICollectionViewCell {
 
     func doesProvideDeletion() -> Bool {
         return deleteButton.alpha > 0
+    }
+    private func rideForDriver(withId ids: [String]) -> [rideData] {
+        var rides = [rideData]()
+        for ride in demoRides {
+            for id in ids {
+                if ride.id == id{
+                    rides.append(ride)
+                    break
+                }
+            }
+        }
+        return rides
     }
 }
 
