@@ -24,7 +24,6 @@ class FeedCell: UICollectionViewCell {
     private var contentFrame: CGRect?
     var delegate: FeedCellDelegate?
 
-
     // MARK: - Outlets  -
     @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var cellContent: UIView!
@@ -46,10 +45,9 @@ class FeedCell: UICollectionViewCell {
         deleteButton.alpha = 0
     }
 
-
     // MARK: - setup  -
-    func setData(player: driverData) {
-        if let image = player.image {
+    func setData(driver: driverData) {
+        if let image = driver.image {
             driverImage.image = image
             driverImage.alpha = 1.0
             placeholderImage.isHidden = true
@@ -58,8 +56,8 @@ class FeedCell: UICollectionViewCell {
             driverImage.image = nil
             driverImage.alpha = 0.0
         }
-        clubName.text = player.displayName
-        ride = rideForDriver(withId: player.rideID)
+        clubName.text = driver.displayName
+        ride = rideForDriver(withId: driver.rideID)
         for eachRide in ride{
             setData(ride: eachRide)
         }
@@ -68,7 +66,7 @@ class FeedCell: UICollectionViewCell {
     func setData(ride: rideData) {
         driverName.text = "From: " + ride.from + " " + "To:" + ride.to
     }
-    func updatePlayerImage(image: UIImage) {
+    func updateDriverImage(image: UIImage) {
         DispatchQueue.main.async {
             self.driverImage.image = image
             UIView.animate(withDuration: 0.4, animations: {

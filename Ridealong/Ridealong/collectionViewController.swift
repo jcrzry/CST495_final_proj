@@ -11,7 +11,7 @@ import TB
 
 private let reuseIdentifier = "FeedCell"
 
-class PlayersCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout, UIGestureRecognizerDelegate, FeedCellDelegate{
+class FeedCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout, UIGestureRecognizerDelegate, FeedCellDelegate{
 
     private let inset: CGFloat = 2
     private let cellHeight: CGFloat = 60
@@ -24,7 +24,7 @@ class PlayersCollectionViewController: UICollectionViewController, UICollectionV
         super.viewDidLoad()
         collectionView!.register(UINib(nibName: "FeedCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
         collectionView!.delegate = self
-        longPress = UILongPressGestureRecognizer(target: self, action: #selector(PlayersCollectionViewController.handleLongPress(gesture:)))
+        longPress = UILongPressGestureRecognizer(target: self, action: #selector(FeedCollectionViewController.handleLongPress(gesture:)))
         longPress.delegate = self
         collectionView!.addGestureRecognizer(longPress)
         let add = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
@@ -61,7 +61,7 @@ class PlayersCollectionViewController: UICollectionViewController, UICollectionV
     }
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! FeedCell
-        cell.setData(player: demoDrivers[indexPath.row])
+        cell.setData(driver: demoDrivers[indexPath.row])
         cell.unsetDeletion()
         cell.delegate = self
         return cell
@@ -101,8 +101,8 @@ class PlayersCollectionViewController: UICollectionViewController, UICollectionV
         longPressedCell = nil
     }
     // MARK: - Set Data -
-    func addPlayer(_ player: driverData){
-        demoDrivers.insert(player, at: 0)
+    func addRide(_ ride: driverData){
+        demoDrivers.insert(ride, at: 0)
         collectionView!.reloadData()
     }
     func addTapped(){
