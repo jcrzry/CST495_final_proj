@@ -16,6 +16,8 @@ class LoginViewController: UIViewController{
     var userName:String = "Stranger!"
     override func viewDidLoad() {
         super.viewDidLoad()
+        //initCommonRealm()
+        //AddUsers()
         hideKeyboardWhenTappedAround()
         userNameLabel.text = userName
     }

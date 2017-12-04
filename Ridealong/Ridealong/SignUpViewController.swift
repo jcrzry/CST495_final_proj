@@ -47,7 +47,18 @@ class SignUpViewController: UIViewController {
                 //show error
                 createAlert(title: "User Exists", message: "User with this email already exists. Try another or Login instead.")
             }else{
-                performSegue(withIdentifier: "loginPage", sender: nil)
+                let commonRealm = getCommonRealm()
+                if let selfUser = notification.userInfo?["user"] as? User{
+                    //var simUser = selfUser.toSimpleUser()
+                    try! commonRealm.write{
+                       // commonRealm.add(simUser)
+ 
+                    }
+                    performSegue(withIdentifier: "loginPage", sender: nil)
+                }else{
+                    print("no user passed")
+                }
+                
             }
         }else{
             print("message did not contain any information")
@@ -66,9 +77,9 @@ class SignUpViewController: UIViewController {
                         if !password.text!.isEmpty && x==true {
                             if !retypePassword.text!.isEmpty && retypePassword.text! == password.text!{
                                 //critical section, will execute on click if all fields are correct.
-                                print("inside valid entries")
-                                // add user here "let me ="
-                                //registerUser(newUser: me!)
+                                print("inside valid entries")=
+                                let me = User(firstname: firstName.text!, lastname: lastName.text!, email: email.text!, password: password.text!, phone: phoneNumber.text!)
+                                registerUser(newUser: me!)
                                 NC.addObserver(forName: registerStatus, object:nil, queue:nil, using: getRegisterStatus)
                             }else{
                                 createAlert(title: "Invalid Password Entry",

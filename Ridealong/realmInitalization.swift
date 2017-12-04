@@ -16,7 +16,7 @@ func initCommonRealm(){
     SyncUser.logIn(with: creds, server: SERVER_PATH!){user,error in
         if user != nil{
 
-            let remoteConfig = Realm.Configuration(syncConfiguration: SyncConfiguration(user: user!, realmURL: COMMON_REALM_PATH!), deleteRealmIfMigrationNeeded: true, objectTypes: [SimpleUser.self,Vehicle.self,Ride.self,Locations.self])
+            let remoteConfig = Realm.Configuration(syncConfiguration: SyncConfiguration(user: user!, realmURL: COMMON_REALM_PATH!), deleteRealmIfMigrationNeeded: true, objectTypes: [SimpleUser.self,Vehicle.self,Ride.self,Locations.self,User.self,Rating.self])
             _ = try! Realm(configuration: remoteConfig)
             let perms = SyncPermission(realmPath: COMMON_REALM_STRING, identity: "*", accessLevel: .read)
             user?.apply(perms){
@@ -45,3 +45,18 @@ func initCommonRealm(){
     
 }
 
+
+func adminLogin(){
+    let creds = SyncCredentials.usernamePassword(username:"jocruz@csumb.edu",password:"ridealong")
+    
+    SyncUser.logIn(with: creds, server: SERVER_PATH!){user,error in
+        if user != nil{
+//            let remoteConfig = Realm.Configuration(syncConfiguration: SyncConfiguration(user: user!, realmURL: COMMON_REALM_PATH!), deleteRealmIfMigrationNeeded: true, objectTypes: [SimpleUser.self,Vehicle.self,Ride.self,Locations.self,User.self,Rating.self])
+//            _ = try! Realm(configuration: remoteConfig)
+//            let perms = SyncPermission(realmPath: COMMON_REALM_STRING, identity: "*", accessLevel: .read)
+        }else{
+            print(error ?? "No user found")
+        }
+    }
+    
+}
