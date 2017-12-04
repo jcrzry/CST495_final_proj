@@ -12,7 +12,6 @@ import RealmSwift
 
 // Properties
 class SimpleUser: Object{
-    @objc dynamic var username: String = ""
     @objc dynamic var firstname: String = ""
     @objc dynamic var lastname: String = ""
     @objc dynamic var email: String = ""
@@ -22,17 +21,19 @@ class SimpleUser: Object{
     
     
     //Initializers
-    convenience init?(username: String,firstname: String, lastname: String, email: String){
+    convenience init?(firstname: String, lastname: String, email: String, bio: String?, profileImage: NSData?, defaultVehicle: Vehicle?){
         self.init()
-        self.username = username
         self.firstname = firstname
         self.lastname = lastname
         self.email = email
+        self.bio = bio!
+        self.profileImage = profileImage!
+        self.defaultVehicle = defaultVehicle!
     }
     
     
     override static func primaryKey() -> String?{
-        return "username"
+        return "email"
     }
     
 }

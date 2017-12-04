@@ -15,7 +15,9 @@ class Rating: Object{
     @objc dynamic var rideDescription : String = " "
     var user_rated: User?
     var user_rating: User?
+    @objc dynamic var headline: String = " "
     @objc dynamic var date: Date = Date(timeIntervalSinceNow: 1)
+    dynamic var key: String? = " "
     //RATING FUNCTIONS
     
     /*
@@ -31,6 +33,14 @@ class Rating: Object{
         self.user_rated = user_rated
         self.rating = rating
         self.rideDescription = rideDescription
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-MM-yyyyHH:mm:ss"
+        var datestring = formatter.string(from: self.date)
+        self.key = self.user_rated!.email + self.user_rating!.email + datestring
+    }
+    
+    override static func primaryKey() -> String?{
+        return "key"
     }
     
     func authorizeUserToRate(){

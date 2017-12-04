@@ -5,7 +5,7 @@ import RealmSwift
 class User: Object {
     
     // Properties
-    @objc dynamic var username: String = ""
+   // @objc dynamic var username: String = ""
     @objc dynamic var firstname: String = ""
     @objc dynamic var lastname: String = ""
     @objc dynamic var email: String = ""
@@ -17,24 +17,28 @@ class User: Object {
     var vehicles: List<Vehicle> = List<Vehicle>()
     @objc dynamic var defaultVehicle: Vehicle?
     var ratings: List<Rating> = List<Rating>()
+    var rides: List<Ride> = List<Ride>()
     @objc dynamic var simpleUser: SimpleUser?
 
     
     //Initializers
-    convenience init?(username: String, password: String, firstname: String, lastname: String, email: String, phone: String){
+    convenience init?(firstname: String, lastname: String, email: String,password: String, phone: String){
         self.init()
-        self.username = username
+        //self.username = username
         self.firstname = firstname
         self.lastname = lastname
         self.email = email
+        self.password = password
         self.phone = phone
         self.vehicles = List<Vehicle>()
         self.ratings = List<Rating>()
+        self.rides = List<Ride>()
+        //self.token = token
     }
     
 
     override static func primaryKey() -> String?{
-        return "username"
+        return "email"
     }
     
     func addVehicle(name: String, vehicle: Vehicle) -> Bool{
@@ -69,8 +73,8 @@ class User: Object {
     func setUserImage(uimage: UIImage){
         self.profileImage = UIImagePNGRepresentation(uimage) as NSData?
     }
-    
+
     func toSimpleUser() -> SimpleUser{
-        return SimpleUser(username: self.username, firstname: self.firstname, lastname: self.lastname, email: self.email)!
+        return SimpleUser(firstname: self.firstname, lastname: self.lastname, email: self.email, bio: self.bio, profileImage: self.profileImage!, defaultVehicle: self.defaultVehicle!)!
     }
 }

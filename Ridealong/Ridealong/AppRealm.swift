@@ -10,17 +10,17 @@ import Foundation
 import RealmSwift
 
 //realm file paths and urls
-let COMMON_REALM_PATH = URL(string: "realm://ec2-54-174-95-229.compute-1.amazonaws.com:9080/CommonRealm")
-let COMMON_REALM_STRING = "http://ec2-54-174-95-229.compute-1.amazonaws.com:9080/CommonRealm"
-let SERVER_PATH = URL(string: "http://ec2-54-174-95-229.compute-1.amazonaws.com:9080")
-let PRIVATE_REALM_PATH = URL(string:"realm://ec2-54-174-95-229.compute-1.amazonaws.com:9080/~/PrivateRealm")
+let COMMON_REALM_PATH = URL(string: "realm://ec2-34-203-249-199.compute-1.amazonaws.com:9080/CommonRealm")
+let COMMON_REALM_STRING = "http://ec2-34-203-249-199.compute-1.amazonaws.com:9080/CommonRealm"
+let SERVER_PATH = URL(string: "http://ec2-34-203-249-199.compute-1.amazonaws.com:9080")
+let PRIVATE_REALM_PATH = URL(string:"realm://ec2-34-203-249-199.compute-1.amazonaws.com:9080/~/PrivateRealm")
 let NC = NotificationCenter.default
 let registerStatus = Notification.Name(rawValue: "registerStatus")
 let loginStatus = Notification.Name(rawValue:"loginStatus")
 
 func setDefaultConfiguration(realmUser: SyncUser)    {
     let defaultConfig = Realm.Configuration(syncConfiguration:SyncConfiguration(user: realmUser, realmURL: PRIVATE_REALM_PATH!), deleteRealmIfMigrationNeeded: true,objectTypes:[User.self, SimpleUser.self,Vehicle.self,Ride.self,Locations.self,Rating.self])
-    //set de    fault realm as privaterealm
+    //set default realm as privaterealm
     Realm.Configuration.defaultConfiguration = defaultConfig
     print("defaulf config updated")
 }
@@ -61,7 +61,7 @@ func registerUser(newUser: User){
                 defaultRealm.add(newUser)
             }
             print("registered! User added to private Realm")
-            let registerBool:[String: Bool] = ["registerFailed":false]
+            let registerBool:[String: Any] = ["registerFailed":false, "user": newUser]
             NotificationCenter.default.post(name:registerStatus,object:nil, userInfo: registerBool)
 
         }else if let error = error{
@@ -79,14 +79,21 @@ func registerUser(newUser: User){
 // todo things that are neccessary when login is completed.
 
 func getCommonRealm() -> Realm{
-    print(SyncUser.current!)
+    //print(SyncUser.current!)
     let common_config = Realm.Configuration(syncConfiguration: SyncConfiguration(user: SyncUser.current!, realmURL: COMMON_REALM_PATH!))
     let commonRealm = try! Realm(configuration: common_config)
     return commonRealm
 }
 
 func getPrivateRealm()->Realm{
-    
-    
     return try! Realm()
+}
+
+
+func getRidesforUser(user: User){
+    
+}
+
+func getAllRides(){
+    getCommonRealm()
 }
