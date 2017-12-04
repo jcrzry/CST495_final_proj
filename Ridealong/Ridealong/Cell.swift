@@ -9,25 +9,12 @@
 import Foundation
 import UIKit
 
-@objc protocol PlayerCellDelegate {
+@objc protocol FeedCellDelegate {
     func removeCellFromList()
 }
 
 
-// MARK: - Data structure -
-struct PlayerData {
-    let id: String!
-    let image: UIImage?
-    let imageId: String
-    let firstName: String
-    let lastName: String
-    let displayName: String
-    let clubName: String
-    let reportIds: [String]
-}
-
-
-class PlayerCell: UICollectionViewCell {
+class FeedCell: UICollectionViewCell {
 
     // MARK: - vars -
     private struct animationSpeed {
@@ -35,50 +22,55 @@ class PlayerCell: UICollectionViewCell {
         static let slow = 0.4
     }
     private var contentFrame: CGRect?
-    var delegate: PlayerCellDelegate?
-
+    var delegate: FeedCellDelegate?
 
     // MARK: - Outlets  -
     @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var cellContent: UIView!
     @IBOutlet weak var placeholderImage: UIImageView!
-    @IBOutlet weak var playerImage: UIImageView!
-    @IBOutlet weak var playerName: UILabel!
+    @IBOutlet weak var driverImage: UIImageView!
+    @IBOutlet weak var driverName: UILabel!
     @IBOutlet weak var clubName: UILabel!
     @IBOutlet weak var reportCount: UILabel!
     @IBOutlet weak var chevron: UIImageView!
+
+    private var ride: [rideData] = []
 
 
     // MARK: - overrides -
     override func awakeFromNib() {
         super.awakeFromNib()
-        playerImage.layer.cornerRadius = playerImage.frame.height / 2
-        playerImage.layer.masksToBounds = true
+        driverImage.layer.cornerRadius = driverImage.frame.height / 2
+        driverImage.layer.masksToBounds = true
         deleteButton.alpha = 0
     }
 
-
     // MARK: - setup  -
-    func setData(player: PlayerData) {
-        if let image = player.image {
-            playerImage.image = image
-            playerImage.alpha = 1.0
+    func setData(driver: driverData) {
+        if let image = driver.image {
+            driverImage.image = image
+            driverImage.alpha = 1.0
             placeholderImage.isHidden = true
         } else {
             placeholderImage.isHidden = false
-            playerImage.image = nil
-            playerImage.alpha = 0.0
+            driverImage.image = nil
+            driverImage.alpha = 0.0
         }
-        playerName.text = player.displayName
-        clubName.text = player.clubName
-        reportCount.text = String(player.reportIds.count)
-    }
+        clubName.text = driver.displayName
+        ride = rideForDriver(withId: driver.rideID)
+        for eachRide in ride{
+            setData(ride: eachRide)
+        }
 
-    func updatePlayerImage(image: UIImage) {
+    }
+    func setData(ride: rideData) {
+        driverName.text = "From: " + ride.from + " " + "To:" + ride.to
+    }
+    func updateDriverImage(image: UIImage) {
         DispatchQueue.main.async {
-            self.playerImage.image = image
+            self.driverImage.image = image
             UIView.animate(withDuration: 0.4, animations: {
-                self.playerImage.alpha = 1.0
+                self.driverImage.alpha = 1.0
             }) { (didFinish) in
                 self.placeholderImage.isHidden = didFinish
             }
@@ -125,5 +117,18 @@ class PlayerCell: UICollectionViewCell {
     func doesProvideDeletion() -> Bool {
         return deleteButton.alpha > 0
     }
+    private func rideForDriver(withId ids: [String]) -> [rideData] {
+        var rides = [rideData]()
+        for ride in demoRides {
+            for id in ids {
+                if ride.id == id{
+                    rides.append(ride)
+                    break
+                }
+            }
+        }
+        return rides
+    }
+
 }
 

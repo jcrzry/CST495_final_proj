@@ -14,14 +14,14 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var lastName: UITextField!
     @IBOutlet weak var phoneNumber: UITextField!
     @IBOutlet weak var email: UITextField!
-    @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var retypePassword: UITextField!
+    @IBOutlet weak var passwordReq: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
-       
+        passwordReq.isHidden = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -61,29 +61,24 @@ class SignUpViewController: UIViewController {
                 var x:Bool
                 x=isValid(email.text!)
                 if !email.text!.isEmpty && x==true{
-                    if !username.text!.isEmpty && username.text!.count >= 6 {
                         x=false
                         x=isValidPassword(testStr: password.text!)
                         if !password.text!.isEmpty && x==true {
                             if !retypePassword.text!.isEmpty && retypePassword.text! == password.text!{
                                 //critical section, will execute on click if all fields are correct.
                                 print("inside valid entries")
-                                let me = User(username: username.text!, password: password.text!, firstname: firstName.text!, lastname: lastName.text!, email: email.text!, phone: phoneNumber.text!)
-                                registerUser(newUser: me!)
+                                // add user here "let me ="
+                                //registerUser(newUser: me!)
                                 NC.addObserver(forName: registerStatus, object:nil, queue:nil, using: getRegisterStatus)
                             }else{
                                 createAlert(title: "Invalid Password Entry",
                                             message: "Retype password does not equal password.")
                             }
                         }else{
+                            passwordReq.isHidden = false
                             createAlert(title: "Invalid Password Entry",
                                         message: "Your password does not meet the recommended requirements.")
                         }
-                    }else{
-                        createAlert(title: "Invalid Username Entry",
-                                    message: "Make sure you username exceeds 6 characters.")
-                    }
-                    
                 }else{
                     createAlert(title: "Invalid Email Entry",
                                 message: "We need the correct email format.")

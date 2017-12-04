@@ -21,23 +21,18 @@ class ProfilViewController: UITableViewController{
         // Do any additional setup after loading the view, typically from a nib.
         tableView.reloadData()
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
     @IBAction func BackButton(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Settings", bundle: nil)
         let viewController = storyboard.instantiateInitialViewController()
         self.present(viewController!, animated: true)
-
     }
-
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
-
     override func tableView(_ tableView: UITableView,
                             numberOfRowsInSection section: Int) -> Int {
         return Int(settings.count)
@@ -54,7 +49,6 @@ class ProfilViewController: UITableViewController{
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as UITableViewCell
         cell.textLabel?.text = settings[indexPath.row]
-
         return cell
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
