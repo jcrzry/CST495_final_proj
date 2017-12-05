@@ -19,10 +19,9 @@
 		22FE32631FB54AB200B017D1 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FE32621FB54AB200B017D1 /* SignUpViewController.swift */; };
 		721BFB875881E20AF72E3898 /* Pods_RidealongUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AA4BE44488141C96D7221E0 /* Pods_RidealongUITests.framework */; };
 		9C512C0C9D9B87B14FB1A723 /* Pods_Ridealong.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8106CD4B3B5311508CC56A12 /* Pods_Ridealong.framework */; };
-		A04235521FD51CAB00B309A3 /* realmTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04235511FD51CAB00B309A3 /* realmTest.swift */; };
+		A00249D31FD60F0D00AF70CA /* dummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00249D21FD60F0D00AF70CA /* dummyData.swift */; };
 		A0458F4A1FB66ED000FE59F1 /* realmFunctionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0458F491FB66ED000FE59F1 /* realmFunctionTests.swift */; };
 		A0557F4D1FB5A92D00FD2868 /* SimpleUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0557F4C1FB5A92D00FD2868 /* SimpleUser.swift */; };
-		A066B8321FD4BBA900581858 /* dummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A066B8311FD4BBA900581858 /* dummyData.swift */; };
 		A0F391511FAAB78000796EE5 /* realmInitalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F391501FAAB78000796EE5 /* realmInitalization.swift */; };
 		A0FA6E281F7DD124005BD7AF /* AppRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FA6E271F7DD124005BD7AF /* AppRealm.swift */; };
 		DD0A74591F945A0100C673F2 /* Calculator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD0A74581F945A0100C673F2 /* Calculator.storyboard */; };
@@ -88,10 +87,9 @@
 		4954CD06798D50D6ADC78AA4 /* Pods-RidealongTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RidealongTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RidealongTests/Pods-RidealongTests.release.xcconfig"; sourceTree = "<group>"; };
 		62622914A1907F6778756BDC /* Pods_RidealongTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RidealongTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8106CD4B3B5311508CC56A12 /* Pods_Ridealong.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ridealong.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A04235511FD51CAB00B309A3 /* realmTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = realmTest.swift; sourceTree = "<group>"; };
+		A00249D21FD60F0D00AF70CA /* dummyData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dummyData.swift; sourceTree = "<group>"; };
 		A0458F491FB66ED000FE59F1 /* realmFunctionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = realmFunctionTests.swift; sourceTree = "<group>"; };
 		A0557F4C1FB5A92D00FD2868 /* SimpleUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleUser.swift; sourceTree = "<group>"; };
-		A066B8311FD4BBA900581858 /* dummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummyData.swift; sourceTree = "<group>"; };
 		A0F391501FAAB78000796EE5 /* realmInitalization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = realmInitalization.swift; path = ../realmInitalization.swift; sourceTree = "<group>"; };
 		A0FA6E271F7DD124005BD7AF /* AppRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRealm.swift; sourceTree = "<group>"; };
 		B91F3C9AEF7172AA6D616B41 /* Pods-RidealongUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RidealongUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RidealongUITests/Pods-RidealongUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -166,18 +164,18 @@
 		135BDC5C1F7B396200449C08 /* ObjectModels */ = {
 			isa = PBXGroup;
 			children = (
+				A00249D21FD60F0D00AF70CA /* dummyData.swift */,
 				135BDC5D1F7B39A200449C08 /* User.swift */,
 				135BDC5F1F7B3AD600449C08 /* Vehicle.swift */,
 				135BDC631F7B3C0700449C08 /* Locations.swift */,
+				135BDC651F7DCCEA00449C08 /* Ride.swift */,
 				135BDC671F7DD0C900449C08 /* Rating.swift */,
 				A0FA6E271F7DD124005BD7AF /* AppRealm.swift */,
 				DD8221561FBE6BD90037BA76 /* demoData.swift */,
 				DD0F727E1FD1058100592BC2 /* enum */,
 				DD0F727D1FD1057100592BC2 /* struct */,
 				A0557F4C1FB5A92D00FD2868 /* SimpleUser.swift */,
-				135BDC651F7DCCEA00449C08 /* Ride.swift */,
 				A0F391501FAAB78000796EE5 /* realmInitalization.swift */,
-				A066B8311FD4BBA900581858 /* dummyData.swift */,
 			);
 			name = ObjectModels;
 			sourceTree = "<group>";
@@ -284,12 +282,6 @@
 				DDC40EBC1F7A19D300A340AA /* Views */,
 				DDC40EB71F7A110100A340AA /* ViewController */,
 				DDC40EB61F7A10F500A340AA /* Storyboards */,
-				DD7311621F68CD1900568833 /* Main.storyboard */,
-				DD8221521FBE691B0037BA76 /* Cell.swift */,
-				DD8221501FBE68F60037BA76 /* FeedCell.xib */,
-				DDB7C9D41F71FB3500D5A7FD /* Login.storyboard */,
-				DD8221541FBE69980037BA76 /* collectionViewController.swift */,
-				DD8221561FBE6BD90037BA76 /* demoData.swift */,
 				DD7311651F68CD1900568833 /* Assets.xcassets */,
 				DD73116A1F68CD1900568833 /* Info.plist */,
 			);
@@ -302,7 +294,6 @@
 				DD7311731F68CD1900568833 /* RidealongTests.swift */,
 				DD7311751F68CD1900568833 /* Info.plist */,
 				A0458F491FB66ED000FE59F1 /* realmFunctionTests.swift */,
-				A04235511FD51CAB00B309A3 /* realmTest.swift */,
 			);
 			path = RidealongTests;
 			sourceTree = "<group>";
@@ -324,6 +315,7 @@
 				DD7311671F68CD1900568833 /* LaunchScreen.storyboard */,
 				DDBE54701F7498B4004319E9 /* Feed.storyboard */,
 				DDBE54721F74A1C2004319E9 /* Settings.storyboard */,
+				DDC40EBD1F7A1A2100A340AA /* Profil.storyboard */,
 				DD0A74581F945A0100C673F2 /* Calculator.storyboard */,
 			);
 			name = Storyboards;
@@ -331,17 +323,14 @@
 		};
 		DDC40EB71F7A110100A340AA /* ViewController */ = {
 			isa = PBXGroup;
-			children = (=
-				22A5CD5E1F779B9B008F5E5D /* LoginViewController.swift */,
-				DDC40EB41F7A10B700A340AA /* SettingsViewController.swift */,
+			children = (
+				DD0F726B1FD0F17300592BC2 /* TabbarViews */,
 				DDC40EBA1F7A19CC00A340AA /* ProfilViewController.swift */,
 				135BDC581F7B30C100449C08 /* FeedTableViewController.swift */,
 				135BDC5A1F7B319F00449C08 /* FeedTableViewCell.swift */,
-				13B95E6F1F9D6242009C142A /* AddRideViewController.swift */,
-				DD73115E1F68CD1900568833 /* FirstViewController.swift */,
-				DD7311601F68CD1900568833 /* SecondViewController.swift */,
+				DD0F726A1FD0F10D00592BC2 /* RydeViews */,
+				22A5CD5E1F779B9B008F5E5D /* LoginViewController.swift */,
 				22FE32621FB54AB200B017D1 /* SignUpViewController.swift */,
-				DD0A745A1F945A3F00C673F2 /* CalculatorViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -697,13 +686,12 @@
 				135BDC661F7DCCEA00449C08 /* Ride.swift in Sources */,
 				DD0F727C1FD1052D00592BC2 /* seatOption.swift in Sources */,
 				135BDC5E1F7B39A200449C08 /* User.swift in Sources */,
+				A00249D31FD60F0D00AF70CA /* dummyData.swift in Sources */,
 				DD8221571FBE6BD90037BA76 /* demoData.swift in Sources */,
 				DD73115D1F68CD1900568833 /* AppDelegate.swift in Sources */,
 				DD0C92A81FCE9B1700633189 /* EditRideViewController.swift in Sources */,
 				DD0F72781FD1050900592BC2 /* seatData.swift in Sources */,
 				DD0C92A61FCE9AEC00633189 /* SeeRideViewController.swift in Sources */,
-				A066B8321FD4BBA900581858 /* dummyData.swift in Sources */,
-				DD73115F1F68CD1900568833 /* FirstViewController.swift in Sources */,
 				135BDC641F7B3C0700449C08 /* Locations.swift in Sources */,
 				DDC40EB51F7A10B700A340AA /* SettingsViewController.swift in Sources */,
 				DD0A745B1F945A3F00C673F2 /* CalculatorViewController.swift in Sources */,
@@ -717,7 +705,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A04235521FD51CAB00B309A3 /* realmTest.swift in Sources */,
 				DD7311741F68CD1900568833 /* RidealongTests.swift in Sources */,
 				A0458F4A1FB66ED000FE59F1 /* realmFunctionTests.swift in Sources */,
 			);
@@ -872,7 +859,7 @@
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = Ridealong/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jcrzry.Ridealong;
+				PRODUCT_BUNDLE_IDENTIFIER = com.deichelmann.rydeAlong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -890,8 +877,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"MTL_ENABLE_DEBUG_INFO[arch=*]" = NO;
 				ONLY_ACTIVE_ARCH = NO;
-
-				PRODUCT_BUNDLE_IDENTIFIER = com.jcrzry.Ridealong;
+				PRODUCT_BUNDLE_IDENTIFIER = com.deichelmann.rydeAlong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;

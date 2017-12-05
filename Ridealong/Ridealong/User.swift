@@ -19,7 +19,7 @@ class User: Object {
     var ratings: List<Rating> = List<Rating>()
     var rides: List<Ride> = List<Ride>()
     @objc dynamic var simpleUser: SimpleUser?
-
+    
     
     //Initializers
     convenience init?(firstname: String, lastname: String, email: String,password: String, phone: String){
@@ -36,40 +36,26 @@ class User: Object {
         //self.token = token
     }
     
-
     override static func primaryKey() -> String?{
         return "email"
     }
     
-    func addVehicle(name: String, vehicle: Vehicle) -> Bool{
-        if self.vehicles.value(forKey: name) == nil{
-            vehicles.append(vehicle)
-            return true
-        }
-        return false
+    func addVehicle(vehicle: Vehicle){
+       self.vehicles.append(vehicle)
     }
-    
-    
+    func removeVehicle(vehicle: Vehicle){
+        self.vehicles.remove(at: self.vehicles.index(of:vehicle)!)
+    }
     //returns default vehicle if one exists
     func getDefaultVehicle() -> Vehicle?{
-        for v in self.vehicles{
-            if v.isDefault == true{
-                return v
-            }
-        }
-        return nil
+        return self.defaultVehicle
     }
     
     //sets default vehicle and and returns vehicle object
-    func setDefaultVehicle(vehicle: Vehicle) -> Vehicle?{
-        for v in self.vehicles{
-            if v == vehicle{
-                v.isDefault = true
-                return v
-            }
-        }
-        return nil
+    func setDefaultVehicle(vehicle: Vehicle){
+       self.defaultVehicle = vehicle
     }
+    
     func setUserImage(uimage: UIImage){
         self.profileImage = UIImagePNGRepresentation(uimage) as NSData?
     }

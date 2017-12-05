@@ -11,42 +11,78 @@ import Foundation
 import RealmSwift
 
 class Ride: Object {
-    
-    dynamic var creator: User?
-    dynamic var key: String?
-    dynamic var start: Locations?
-    dynamic var destination: Locations?
-    var vehicle:	 Vehicle?
-    var date: Date = Date(timeIntervalSinceNow: 1)
+    @objc dynamic var creator: User?
+    @objc dynamic var rideID: String?
+    @objc dynamic var start: Locations?
+    @objc dynamic var destination: Locations?
+    @objc dynamic var vehicle: Vehicle?
+    @objc dynamic var date: Date = Date(timeIntervalSinceNow: 1)
     var riders: List<User> = List<User>()
+    @objc dynamic var notes: String = " "
+    var seatsAvailable: List<Bool> = List<Bool>()
+    
     convenience init?(creator: User, start: Locations, destination: Locations){
-    self.init()
+        self.init()
         self.creator = creator
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-MM-yyyyHH:mm:ss"
+        let datestring = formatter.string(from: self.date)
+        self.rideID = self.creator!.email + datestring
         self.start = start
         self.destination = destination
         self.vehicle = creator.defaultVehicle!
         self.date = Date(timeIntervalSinceNow: 1)
         self.riders = List<User>()
-        let formatter = DateFormatter()
-        formatter.dateFormat = "dd-MM-yyyyHH:mm:ss"
-        var datestring = formatter.string(from: self.date)
-        self.key = self.creator!.email + datestring
+        //first seat is taken by driver
+        self.seatsAvailable.append(false)
+        for _ in 1..<(self.vehicle?.seats)!{
+            self.seatsAvailable.append(true)
+//            self.riders.append(User())
+        }
+        
     }
-    
     override static func primaryKey() -> String?{
-        return "key"
+        return "rideID"
+    }
+  
+    //func to reserve seat in car, updates the list with a boolean. Will take an int or seat name as a parameter
+    func reserveSeat(seatName: String?, seatNum: Int?,rider: User){
+        var seatNames: [String] = Array()
+        if (self.vehicle?.seats)! == 2{
+            seatNames = ["drivers","passengers"]
+        }
+        else if (self.vehicle?.seats)! == 5{
+            seatNames = ["drivers","passengers", "rear left", "rear middle", "rear right"]
+        }else if (self.vehicle?.seats)! > 6{
+            seatNames = ["drivers","passengers", "middle left", "middle middle","middle right","rear left", "rear middle", "rear right"]
+        }
+        if seatName != nil{
+            self.seatsAvailable.replace(index: (seatNames.index(of: seatName!)!), object: false)
+            self.riders.insert(rider, at: seatNames.index(of: seatName!)!)
+        }
+        if seatNum != nil{
+            self.seatsAvailable.replace(index: (seatNum!-1), object: false)
+            self.riders.insert(rider, at: seatNames.index(of: seatName!)!)
+        }
     }
     
-    func addRider(rider: User){
-        self.riders.append(rider)
+    func unreserveSeat(seatName: String?, seatNum: Int?, rider: User){
+        var seatNames: [String] = Array()
+        if (self.vehicle?.seats)! == 2{
+            seatNames = ["drivers","passengers"]
+        }
+        else if (self.vehicle?.seats)! == 5{
+            seatNames = ["drivers","passengers", "rear left", "rear middle", "rear right"]
+        }else if (self.vehicle?.seats)! > 6{
+            seatNames = ["drivers","passengers", "middle left", "middle middle","middle right","rear left", "rear middle", "rear right"]
+        }
+        if seatName != nil{
+            self.seatsAvailable.replace(index: (seatNames.index(of: seatName!)!), object: true)
+        }
+        if seatNum != nil{
+            self.seatsAvailable.replace(index: (seatNum!-1), object: true)
+        }
     }
-    
-    func remove(rider: User){
-        let remove_index = self.riders.index(of: rider)
-        self.riders.remove(at: remove_index!)
-    }
-    
-    
     
  }
 

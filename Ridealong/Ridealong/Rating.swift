@@ -13,13 +13,13 @@ class Rating: Object{
     
     @objc dynamic var rating : Int = 0
     @objc dynamic var rideDescription : String = " "
-    var user_rated: User?
-    var user_rating: User?
+    @objc dynamic var user_rated: User?
+    @objc dynamic var user_rating: User?
     @objc dynamic var headline: String = " "
     @objc dynamic var date: Date = Date(timeIntervalSinceNow: 1)
-    dynamic var key: String? = " "
-    //RATING FUNCTIONS
+    @objc dynamic var ratingID: String? = " "
     
+    //RATING FUNCTIONS
     /*
      1. We would want to allow users to give others users a rating 2 hours after an accepted ride.
      2. We want to present the rating with pictures of stars.
@@ -35,12 +35,12 @@ class Rating: Object{
         self.rideDescription = rideDescription
         let formatter = DateFormatter()
         formatter.dateFormat = "dd-MM-yyyyHH:mm:ss"
-        var datestring = formatter.string(from: self.date)
-        self.key = self.user_rated!.email + self.user_rating!.email + datestring
+        let datestring = formatter.string(from: self.date)
+        self.ratingID = self.user_rated!.email + self.user_rating!.email + datestring
     }
     
     override static func primaryKey() -> String?{
-        return "key"
+        return "ratingID"
     }
     
     func authorizeUserToRate(){

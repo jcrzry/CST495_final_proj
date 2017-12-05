@@ -34,6 +34,7 @@ func loginUser(username: String, password: String){
             //post message for successful login
             let loginBool: [String:Bool] = ["loginFailed": false];
             NC.post(name: loginStatus, object: nil, userInfo: loginBool)
+            selfUser = (getPrivateRealm().objects(User.self).toArray()[0] as? User)!
         }else if let error = error{
             print(error)
             //if this is set, then user credentials are not correct
@@ -60,6 +61,7 @@ func registerUser(newUser: User){
             try! defaultRealm.write{
                 defaultRealm.add(newUser)
             }
+            selfUser = newUser
             print("registered! User added to private Realm")
             let registerBool:[String: Any] = ["registerFailed":false, "user": newUser]
             NotificationCenter.default.post(name:registerStatus,object:nil, userInfo: registerBool)
@@ -86,14 +88,37 @@ func getCommonRealm() -> Realm{
 }
 
 func getPrivateRealm()->Realm{
-    return try! Realm()
+    let private_config = Realm.Configuration(syncConfiguration: SyncConfiguration(user: SyncUser.current!, realmURL: PRIVATE_REALM_PATH!))
+    let privateRealm = try! Realm(configuration: private_config)
+    return privateRealm
+}
+
+//returns all rides for driver
+func getRidesforDriver(user: User) -> Results<Ride>{
+    let cRealm = getCommonRealm()
+    return cRealm.objects(Ride.self).filter("creator.email == \(user.email)")
+}
+
+func getAllRidesAsArray() -> [Any]{
+    //returns as an array of ride objects.
+    let cRealm = getCommonRealm()
+    return cRealm.objects(Ride.self).toArray()
+}
+
+func getAllRidesAsResults() -> Results<Ride>{
+    let crealm = getCommonRealm()
+    return crealm.objects(Ride.self)
 }
 
 
-func getRidesforUser(user: User){
-    
+extension Results{
+    func toArray() -> [Any]{
+        return self.map{$0}
+    }
 }
 
-func getAllRides(){
-    getCommonRealm()
+extension List{
+    func toArray() -> [Any]{
+        return self.map{$0}
+    }
 }
