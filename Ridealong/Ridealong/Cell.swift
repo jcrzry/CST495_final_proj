@@ -34,7 +34,8 @@ class FeedCell: UICollectionViewCell {
     @IBOutlet weak var reportCount: UILabel!
     @IBOutlet weak var chevron: UIImageView!
 
-    private var ride: [rideData] = []
+    private var demoride: [rideData] = []
+    private var ride: [Ride] = []
 
 
     // MARK: - overrides -
@@ -57,8 +58,8 @@ class FeedCell: UICollectionViewCell {
             driverImage.alpha = 0.0
         }
         clubName.text = driver.displayName
-        ride = rideForDriver(withId: driver.rideID)
-        for eachRide in ride{
+        demoride = rideForDriver(withId: driver.rideID)
+        for eachRide in demoride{
             setData(ride: eachRide)
         }
 

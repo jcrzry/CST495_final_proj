@@ -51,7 +51,7 @@ let demoRide2 = rideData(
     rideDate: Date().add(minutes: 60),
     id: "r2",
     from: "CSUMB",
-    to: "Monterey",
+    to: "Montrey",
     notes: "Hey, I want to hear cool music during the ride",
     seats: demoSeats1
 )
