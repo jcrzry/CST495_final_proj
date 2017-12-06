@@ -62,10 +62,12 @@ class FeedCell: UICollectionViewCell {
         for eachRide in demoride{
             setData(ride: eachRide)
         }
-
     }
-    func setData(ride: rideData) {
-        driverName.text = "From: " + ride.from + " " + "To:" + ride.to
+//    func setData(ride: rideData) {
+//        driverName.text = "From: " + ride.from + " " + "To:" + ride.to
+//    }
+    func setData(ride: Ride) {
+        driverName.text = "From: " + ride.start?.name + " " + "To:" + ride.destination?.name
     }
     func updateDriverImage(image: UIImage) {
         DispatchQueue.main.async {
