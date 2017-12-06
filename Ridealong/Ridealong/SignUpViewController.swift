@@ -77,7 +77,7 @@ class SignUpViewController: UIViewController {
                         if !password.text!.isEmpty && x==true {
                             if !retypePassword.text!.isEmpty && retypePassword.text! == password.text!{
                                 //critical section, will execute on click if all fields are correct.
-                                print("inside valid entries")=
+                                print("inside valid entries")
                                 let me = User(firstname: firstName.text!, lastname: lastName.text!, email: email.text!, password: password.text!, phone: phoneNumber.text!)
                                 registerUser(newUser: me!)
                                 NC.addObserver(forName: registerStatus, object:nil, queue:nil, using: getRegisterStatus)

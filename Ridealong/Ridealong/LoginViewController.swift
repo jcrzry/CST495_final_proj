@@ -8,7 +8,7 @@
 
 import UIKit
 import TB
-
+var selfUser = User()
 class LoginViewController: UIViewController{
     @IBOutlet weak var usernameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
