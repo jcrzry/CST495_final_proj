@@ -25,7 +25,7 @@
   * Uses ScrollView in the CalculatorViewController
 
 ## Extra Credit  
-- [x] Uses pods for external libraries	5
+- [x] Uses pods for external libraries	5  
   * [ToolBox](https://github.com/JonasDeichelmann/ToolBox)
   * [Realm](http://realm.io)
   * [RealmSwift](http://realm.io)
