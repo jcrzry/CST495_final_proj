@@ -34,9 +34,8 @@ class FeedCell: UICollectionViewCell {
     @IBOutlet weak var reportCount: UILabel!
     @IBOutlet weak var chevron: UIImageView!
 
-    private var demoride: [rideData] = []
+    private var demoride: [rideData] = demoRides
     private var ride: [Ride] = []
-
 
     // MARK: - overrides -
     override func awakeFromNib() {
@@ -63,12 +62,12 @@ class FeedCell: UICollectionViewCell {
             setData(ride: eachRide)
         }
     }
-//    func setData(ride: rideData) {
-//        driverName.text = "From: " + ride.from + " " + "To:" + ride.to
-//    }
-    func setData(ride: Ride) {
-        driverName.text = "From: " + ride.start?.name + " " + "To:" + ride.destination?.name
+    func setData(ride: rideData) {
+        driverName.text = "From: " + ride.from + " " + "To:" + ride.to
     }
+//    func setData(ride: Ride) {
+//        driverName.text = "From: " + ride.start?.name + " " + "To:" + ride.destination?.name
+//    }
     func updateDriverImage(image: UIImage) {
         DispatchQueue.main.async {
             self.driverImage.image = image
