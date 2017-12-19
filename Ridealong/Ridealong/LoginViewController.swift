@@ -8,7 +8,7 @@
 
 import UIKit
 import TB
-
+var selfUser = User()
 class LoginViewController: UIViewController{
     @IBOutlet weak var usernameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
@@ -47,6 +47,11 @@ class LoginViewController: UIViewController{
             }
             else{
                 // handle success
+                if let me = notification.userInfo?["user"] as! User!{
+                    selfUser = me
+                }else{
+                    print("no user passed")
+                }
                 performSegue(withIdentifier: "mainPage", sender: nil)
             }
         }

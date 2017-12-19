@@ -31,7 +31,6 @@ class AddRideViewController: UIViewController, UITextFieldDelegate {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        AddRideViewController(nibName: "AddRideView", bundle: nil)
         view.backgroundColor = UIColor.white
          navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(AddRideViewController.doneAction))
     }

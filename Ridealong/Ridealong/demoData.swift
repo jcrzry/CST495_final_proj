@@ -40,16 +40,15 @@ let demoSeats1 = seatData(
 )
 var demoDrivers = [demoDriver1, demoDriver2]
 let demoRide1 = rideData(
-    rideDate: Date().add(minutes: 30),
-    id: "r1",
+    rideDate: Date(), id: "r1",
     from: "CSUMB",
     to: "San Francisco",
     notes: "Hey, I want to meet new cool people",
     seats: demoSeats1
 )
 let demoRide2 = rideData(
-    rideDate: Date().add(minutes: 60),
-    id: "r2",
+   // rideDate: Date().add(minutes: 60),
+    rideDate: Date(), id: "r2",
     from: "CSUMB",
     to: "Monterey",
     notes: "Hey, I want to hear cool music during the ride",
