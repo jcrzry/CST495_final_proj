@@ -13,62 +13,38 @@
         <scene sceneID="MHJ-Nl-qi6">
             <objects>
                 <viewControllerPlaceholder storyboardName="Calculator" referencedIdentifier="CalcID" id="PBK-5L-aHZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="N9D-Xq-TWk"/>
+                    <tabBarItem key="tabBarItem" title="Calculator" image="pfeil" landscapeImage="pfeil" largeContentSizeImage="pfeil" selectedImage="calc" id="N9D-Xq-TWk"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W4V-II-2ZU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="561" y="-222"/>
+            <point key="canvasLocation" x="648" y="-219"/>
         </scene>
         <!--FeedID-->
         <scene sceneID="6bJ-PO-5Fl">
             <objects>
                 <viewControllerPlaceholder storyboardIdentifier="Feed" storyboardName="Feed" referencedIdentifier="FeedID" id="IhJ-3F-zT1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="bbO-Se-MwV"/>
+                    <tabBarItem key="tabBarItem" systemItem="contacts" id="bbO-Se-MwV"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s6l-GD-MdW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="647" y="-109"/>
         </scene>
-        <!--Item-->
-        <scene sceneID="tnQ-pn-c2M">
-            <objects>
-                <navigationController id="MPl-uO-JJw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="TLz-1a-q76"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3be-0x-VG5">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="9Rw-tY-RZR" kind="relationship" relationship="rootViewController" id="TFb-t9-2Ws"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="G4b-cT-54i" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1012" y="-421"/>
-        </scene>
-        <!--MyRides-->
+        <!--MyRidesID-->
         <scene sceneID="UXQ-Of-PhZ">
             <objects>
-                <viewControllerPlaceholder storyboardName="MyRides" id="9Rw-tY-RZR" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="MyRides" referencedIdentifier="MyRidesID" id="9Rw-tY-RZR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="topRated" id="T1K-wT-c9s"/>
                     <navigationItem key="navigationItem" id="mgk-lL-ayb"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LvF-pB-zTx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tabBarItem systemItem="topRated" id="Ydm-RM-wMQ"/>
             </objects>
-            <point key="canvasLocation" x="1609" y="-572"/>
+            <point key="canvasLocation" x="646" y="-1"/>
         </scene>
-        <!--Settings-->
-        <scene sceneID="3o3-eD-NPt">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Settings" referencedIdentifier="Settings" id="gbq-j1-lP9" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="LZC-MU-nBl"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="90D-1E-fNg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1610" y="316"/>
-        </scene>
-        <!--Tab Bar Controller-->
+        <!--TabBar-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                <tabBarController title="TabBar" id="49e-Tb-3d3" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
@@ -78,31 +54,28 @@
                     <connections>
                         <segue destination="IhJ-3F-zT1" kind="relationship" relationship="viewControllers" id="QbN-6G-hxc"/>
                         <segue destination="PBK-5L-aHZ" kind="relationship" relationship="viewControllers" id="ij2-11-cNc"/>
-                        <segue destination="QeM-aw-Gw7" kind="relationship" relationship="viewControllers" id="sUX-Ca-Oo0"/>
-                        <segue destination="MPl-uO-JJw" kind="relationship" relationship="viewControllers" id="Ccj-iT-ACb"/>
+                        <segue destination="9Rw-tY-RZR" kind="relationship" relationship="viewControllers" id="jfF-Ui-6g9"/>
+                        <segue destination="ADm-oH-AVd" kind="relationship" relationship="viewControllers" id="bYs-IA-ayI"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--Item-->
-        <scene sceneID="qWR-6D-s1N">
+        <!--SettingsID-->
+        <scene sceneID="1k6-Ba-lhN">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QeM-aw-Gw7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="8nN-B3-1fM"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="56S-NN-Jgh">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="gbq-j1-lP9" kind="relationship" relationship="rootViewController" id="OdK-54-K3J"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sIS-kZ-SO9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Settings" referencedIdentifier="SettingsID" id="ADm-oH-AVd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="more" id="0tc-HD-Gdg"/>
+                    <navigationItem key="navigationItem" id="fB6-ZX-pqn"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9XI-xG-5ve" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1012" y="300"/>
+            <point key="canvasLocation" x="646" y="71"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="calc" width="25" height="25"/>
+        <image name="pfeil" width="30" height="30"/>
+    </resources>
 </document>

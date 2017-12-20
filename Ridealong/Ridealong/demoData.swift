@@ -46,6 +46,14 @@ let demoRide1 = rideData(
     notes: "Hey, I want to meet new cool people",
     seats: demoSeats1
 )
+func getDemoArrayData() -> [rideData]{
+    var log: [rideData] = []
+    log.append(demoRide1)
+    log.append(demoRide2)
+    log.append(demoRide2)
+    
+    return log
+}
 let demoRide2 = rideData(
    // rideDate: Date().add(minutes: 60),
     rideDate: Date(), id: "r2",

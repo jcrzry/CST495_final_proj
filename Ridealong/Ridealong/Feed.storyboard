@@ -47,7 +47,6 @@
         <!--Navigation Controller-->
         <scene sceneID="VjG-Vg-L68">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="c5i-DJ-7tK" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="z9Z-MH-caE" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="6MH-tO-gYq"/>
                     <toolbarItems/>
@@ -60,8 +59,9 @@
                         <segue destination="pJZ-gG-9iC" kind="relationship" relationship="rootViewController" id="l7J-2g-lkW"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c5i-DJ-7tK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1759.2" y="-305.39730134932535"/>
+            <point key="canvasLocation" x="1644" y="-882"/>
         </scene>
     </scenes>
 </document>
