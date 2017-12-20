@@ -22,7 +22,7 @@ Using CoreLocation and MapKIT to locate the users location and showing the route
 In the calculator-controller the user will be able to calculate his gas price. With the [Tankerkönig API](http://www.tankerkoenig.de) the user is able to calculate the price from the next gasstation. This feature is currently only available in Germany.
 
 ## Authors
-[Simon Nielsen](https://github.com/simonmartinnielsen), Web: http://www.soloisyolo.com  
+[Simon Nielsen](https://github.com/simonmartinnielsen) 
 [Ryan Cruz](https://github.com/jcrzry)  
 [Alfonso Torres](https://github.com/AlfonsoTorrez)  
 [Jonas Deichelmann](https://github.com/JonasDeichelmann), Mail: developing@deichelmann.com, Web: www.Deichelmann.com
