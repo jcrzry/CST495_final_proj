@@ -19,15 +19,15 @@ class MyRidesCell: UICollectionViewCell {
     // MARK: - vars -
  
     private var contentFrame: CGRect?
-    var delegate: FeedCellDelegate?
+    var delegate: MyRidesCellDelegate?
     
     // MARK: - Outlets  -
-     @IBOutlet weak var cellContent: UIView!
+    @IBOutlet weak var cellContent: UIView!
     @IBOutlet weak var placeholderImage: UIImageView!
-    @IBOutlet weak var driverImage: UIImageView!
+  //  @IBOutlet weak var driverImage: UIImageView!
     @IBOutlet weak var driverName: UILabel!
-    @IBOutlet weak var clubName: UILabel!
-    @IBOutlet weak var chevron: UIImageView!
+    @IBOutlet weak var destinationLabel: UILabel!
+    @IBOutlet weak var arrowBtn: UIImageView!
     
     private var ride: [rideData] = []
     
@@ -35,22 +35,23 @@ class MyRidesCell: UICollectionViewCell {
     // MARK: - overrides -
     override func awakeFromNib() {
         super.awakeFromNib()
-        driverImage.layer.cornerRadius = driverImage.frame.height / 2
-        driverImage.layer.masksToBounds = true
+       // driverImage.layer.cornerRadius = driverImage.frame.height / 2
+     //  driverImage.layer.masksToBounds = true
     }
     
     // MARK: - setup  -
     func setData(driver: driverData) {
         if let image = driver.image {
-            driverImage.image = image
-            driverImage.alpha = 1.0
+   //         driverImage.image = image
+     //       driverImage.alpha = 1.0
             placeholderImage.isHidden = true
         } else {
+           
             placeholderImage.isHidden = false
-            driverImage.image = nil
-            driverImage.alpha = 0.0
+    //        driverImage.image = nil
+      //      driverImage.alpha = 0.0
         }
-        clubName.text = driver.displayName
+        destinationLabel.text = driver.displayName
         ride = rideForDriver(withId: driver.rideID)
         for eachRide in ride{
             setData(ride: eachRide)
@@ -62,9 +63,9 @@ class MyRidesCell: UICollectionViewCell {
     }
     func updateDriverImage(image: UIImage) {
         DispatchQueue.main.async {
-            self.driverImage.image = image
+        //    self.driverImage.image = image
             UIView.animate(withDuration: 0.4, animations: {
-                self.driverImage.alpha = 1.0
+      //          self.driverImage.alpha = 1.0
             }) { (didFinish) in
                 self.placeholderImage.isHidden = didFinish
             }
