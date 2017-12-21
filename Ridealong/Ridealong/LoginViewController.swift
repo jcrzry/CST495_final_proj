@@ -8,16 +8,16 @@
 
 import UIKit
 import TB
-
+var selfUser = User()
 class LoginViewController: UIViewController{
     @IBOutlet weak var usernameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var userNameLabel: UILabel!
     var userName:String = "Stranger!"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //initCommonRealm()
-        //AddUsers()
+       
         hideKeyboardWhenTappedAround()
         userNameLabel.text = userName
     }
@@ -47,6 +47,15 @@ class LoginViewController: UIViewController{
             }
             else{
                 // handle success
+                if let me = notification.userInfo?["user"] as! User!{
+                    selfUser = me
+                }else{
+                    print("no user passed")
+                }
+                let allRides = getAllRidesAsResults()
+                for r in allRides{
+                    print(r.rideID!)
+                }
                 performSegue(withIdentifier: "mainPage", sender: nil)
             }
         }

@@ -106,8 +106,15 @@ func getAllRidesAsArray() -> [Any]{
 }
 
 func getAllRidesAsResults() -> Results<Ride>{
-    let crealm = getCommonRealm()
-    return crealm.objects(Ride.self)
+    let cRealm = getCommonRealm()
+    return cRealm.objects(Ride.self)
+}
+
+func getRidesforRider(rider: User)->Results<Ride>{
+    let cRealm = getCommonRealm()
+    let rides = cRealm.objects(Ride.self).filter("riders.User.email == \(rider.email)")
+    print(rides)
+    return rides
 }
 
 

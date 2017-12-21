@@ -19,8 +19,7 @@ class FeedTableViewController: UITableViewController {
     //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        let realm = try! Realm()
-        items = (realm.objects(Ride.self))
+        items = getAllRidesAsResults()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "FeedCell")
         let add = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
         navigationItem.rightBarButtonItems = [add]
