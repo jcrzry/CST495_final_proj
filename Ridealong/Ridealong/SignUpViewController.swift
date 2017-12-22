@@ -48,7 +48,7 @@ class SignUpViewController: UIViewController {
                 createAlert(title: "User Exists", message: "User with this email already exists. Try another or Login instead.")
             }else{
                 let commonRealm = getCommonRealm()
-                if let selfUser = notification.userInfo?["user"] as? User{
+                if (notification.userInfo?["user"] as? User) != nil{
                     //var simUser = selfUser.toSimpleUser()
                     try! commonRealm.write{
                        // commonRealm.add(simUser)

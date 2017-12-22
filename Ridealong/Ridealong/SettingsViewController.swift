@@ -12,6 +12,9 @@ import TB
 
 class SettingsViewController: UITableViewController{
     var settings = ["Profile", "Feedback" ,"Contact" ,"Licences"]
+  
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,9 +39,11 @@ class SettingsViewController: UITableViewController{
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as UITableViewCell
-
+        if (indexPath.row == 0){
         cell.textLabel?.text = settings[indexPath.row]
-
+        } else {
+       // cell.textLabel?.text = rideLog[indexPath.row]
+        }
         return cell
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

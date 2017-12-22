@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17A264c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="O3a-tk-ZnA">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Calculator-->
+        <!--Calculator View Controller-->
         <scene sceneID="2J9-u7-bHp">
             <objects>
                 <tableViewController storyboardIdentifier="CalcID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dVW-gv-0Ej" customClass="CalculatorViewController" customModule="Ridealong" customModuleProvider="target" sceneMemberID="viewController">
@@ -89,7 +89,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="1.39" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GqL-sH-IqE">
-                                                    <rect key="frame" x="328" y="12" width="32" height="20.5"/>
+                                                    <rect key="frame" x="327" y="12" width="32" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -113,7 +113,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="1.37" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oyU-De-cwI">
-                                                    <rect key="frame" x="329" y="12" width="31" height="20.5"/>
+                                                    <rect key="frame" x="328" y="12" width="31" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -137,7 +137,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="3.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jpc-Bg-8bY">
-                                                    <rect key="frame" x="336" y="12" width="24" height="20.5"/>
+                                                    <rect key="frame" x="335" y="12" width="24" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -310,7 +310,7 @@
                             <outlet property="delegate" destination="dVW-gv-0Ej" id="aKY-Ad-j7g"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Calculator" image="calc" id="hHP-6L-Qos"/>
+                    <navigationItem key="navigationItem" id="usf-rM-ij3"/>
                     <connections>
                         <outlet property="averageLiter" destination="tyl-PH-dJI" id="E2u-6a-GXa"/>
                         <outlet property="averageMilliliter" destination="KMP-tW-3Pu" id="oX7-PB-kSL"/>
@@ -327,25 +327,26 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B24-uB-eTS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2470" y="74"/>
+            <point key="canvasLocation" x="2808.8000000000002" y="73.313343328335833"/>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="ijo-5C-GHn">
+        <!--Calculator-->
+        <scene sceneID="qW1-3j-EOw">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="pWU-pi-zEz" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="O3a-tk-ZnA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Calculator" image="calc" id="hHP-6L-Qos"/>
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="LtO-d3-XaN">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="b9i-va-WEW">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="dVW-gv-0Ej" kind="relationship" relationship="viewControllers" id="ABM-oB-dUd"/>
+                        <segue destination="dVW-gv-0Ej" kind="relationship" relationship="rootViewController" id="05O-EE-DbT"/>
                     </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5q4-wK-7Ko" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fiZ-KT-2bW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1439" y="140"/>
+            <point key="canvasLocation" x="1969" y="73"/>
         </scene>
     </scenes>
     <resources>

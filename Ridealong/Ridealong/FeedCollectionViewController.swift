@@ -1,5 +1,5 @@
 //
-//  collectionViewController.swift
+//  FeedCollectionViewController.swift
 //  Ridealong
 //
 //  Created by Jonas Deichelmann on 16.11.17.

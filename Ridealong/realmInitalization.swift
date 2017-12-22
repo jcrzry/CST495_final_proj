@@ -38,7 +38,7 @@ func initCommonRealm(){
                 }
             }
             
-        }else{
+        } else {
             print(error ?? "No user found")
         }
     }

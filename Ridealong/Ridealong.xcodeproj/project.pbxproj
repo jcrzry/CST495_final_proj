@@ -19,7 +19,6 @@
 		22FE32631FB54AB200B017D1 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FE32621FB54AB200B017D1 /* SignUpViewController.swift */; };
 		721BFB875881E20AF72E3898 /* Pods_RidealongUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AA4BE44488141C96D7221E0 /* Pods_RidealongUITests.framework */; };
 		9C512C0C9D9B87B14FB1A723 /* Pods_Ridealong.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8106CD4B3B5311508CC56A12 /* Pods_Ridealong.framework */; };
-		A00249D31FD60F0D00AF70CA /* dummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00249D21FD60F0D00AF70CA /* dummyData.swift */; };
 		A0458F4A1FB66ED000FE59F1 /* realmFunctionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0458F491FB66ED000FE59F1 /* realmFunctionTests.swift */; };
 		A0557F4D1FB5A92D00FD2868 /* SimpleUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0557F4C1FB5A92D00FD2868 /* SimpleUser.swift */; };
 		A0F391511FAAB78000796EE5 /* realmInitalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F391501FAAB78000796EE5 /* realmInitalization.swift */; };
@@ -42,8 +41,8 @@
 		DD7311741F68CD1900568833 /* RidealongTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7311731F68CD1900568833 /* RidealongTests.swift */; };
 		DD73117F1F68CD1900568833 /* RidealongUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD73117E1F68CD1900568833 /* RidealongUITests.swift */; };
 		DD8221511FBE68F70037BA76 /* FeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD8221501FBE68F60037BA76 /* FeedCell.xib */; };
-		DD8221531FBE691B0037BA76 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8221521FBE691B0037BA76 /* Cell.swift */; };
-		DD8221551FBE69980037BA76 /* collectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8221541FBE69980037BA76 /* collectionViewController.swift */; };
+		DD8221531FBE691B0037BA76 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8221521FBE691B0037BA76 /* FeedCell.swift */; };
+		DD8221551FBE69980037BA76 /* FeedCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8221541FBE69980037BA76 /* FeedCollectionViewController.swift */; };
 		DD8221571FBE6BD90037BA76 /* demoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8221561FBE6BD90037BA76 /* demoData.swift */; };
 		DDB7C9D51F71FB3500D5A7FD /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB7C9D41F71FB3500D5A7FD /* Login.storyboard */; };
 		DDBE54711F7498B4004319E9 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDBE54701F7498B4004319E9 /* Feed.storyboard */; };
@@ -52,6 +51,12 @@
 		DDC40EBB1F7A19CC00A340AA /* ProfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC40EBA1F7A19CC00A340AA /* ProfilViewController.swift */; };
 		DDC40EBE1F7A1A2100A340AA /* Profil.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDC40EBD1F7A1A2100A340AA /* Profil.storyboard */; };
 		E5B276452470A1F7AC915227 /* Pods_RidealongTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62622914A1907F6778756BDC /* Pods_RidealongTests.framework */; };
+		F471F3AA1FD0EF2400348B9E /* MyRides.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F471F3A91FD0EF2400348B9E /* MyRides.storyboard */; };
+		F47DF8A21FE928030066FFC4 /* MyRidesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47DF8A11FE928030066FFC4 /* MyRidesCell.swift */; };
+		F47DF8A41FE928760066FFC4 /* MyRidesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F47DF8A31FE928760066FFC4 /* MyRidesCell.xib */; };
+		F47DF8A71FE934290066FFC4 /* MyRidesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47DF8A51FE934290066FFC4 /* MyRidesCollectionViewController.swift */; };
+		F47DF8A81FE934290066FFC4 /* MyRidesCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F47DF8A61FE934290066FFC4 /* MyRidesCollectionViewController.xib */; };
+		F47DF8AA1FE937EC0066FFC4 /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47DF8A91FE937EC0066FFC4 /* RatingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,8 +125,8 @@
 		DD73117E1F68CD1900568833 /* RidealongUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidealongUITests.swift; sourceTree = "<group>"; };
 		DD7311801F68CD1900568833 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD8221501FBE68F60037BA76 /* FeedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedCell.xib; sourceTree = "<group>"; };
-		DD8221521FBE691B0037BA76 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
-		DD8221541FBE69980037BA76 /* collectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = collectionViewController.swift; sourceTree = "<group>"; };
+		DD8221521FBE691B0037BA76 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		DD8221541FBE69980037BA76 /* FeedCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCollectionViewController.swift; sourceTree = "<group>"; };
 		DD8221561FBE6BD90037BA76 /* demoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = demoData.swift; sourceTree = "<group>"; };
 		DDB7C9D41F71FB3500D5A7FD /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		DDBE54701F7498B4004319E9 /* Feed.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
@@ -131,6 +136,14 @@
 		DDC40EBD1F7A1A2100A340AA /* Profil.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profil.storyboard; sourceTree = "<group>"; };
 		DEEF4DC02FBEA1A59BD8F1B5 /* Pods-Ridealong.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ridealong.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ridealong/Pods-Ridealong.debug.xcconfig"; sourceTree = "<group>"; };
 		DF6718BA2747AA000E92A9B7 /* Pods-Ridealong.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ridealong.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ridealong/Pods-Ridealong.release.xcconfig"; sourceTree = "<group>"; };
+		F471F3A91FD0EF2400348B9E /* MyRides.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyRides.storyboard; sourceTree = "<group>"; };
+		F47DF89F1FE8C3360066FFC4 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/Main.strings; sourceTree = "<group>"; };
+		F47DF8A01FE8C3360066FFC4 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		F47DF8A11FE928030066FFC4 /* MyRidesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRidesCell.swift; sourceTree = "<group>"; };
+		F47DF8A31FE928760066FFC4 /* MyRidesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyRidesCell.xib; sourceTree = "<group>"; };
+		F47DF8A51FE934290066FFC4 /* MyRidesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRidesCollectionViewController.swift; sourceTree = "<group>"; };
+		F47DF8A61FE934290066FFC4 /* MyRidesCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyRidesCollectionViewController.xib; sourceTree = "<group>"; };
+		F47DF8A91FE937EC0066FFC4 /* RatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,8 +185,8 @@
 				135BDC671F7DD0C900449C08 /* Rating.swift */,
 				A0FA6E271F7DD124005BD7AF /* AppRealm.swift */,
 				DD8221561FBE6BD90037BA76 /* demoData.swift */,
-				DD0F727E1FD1058100592BC2 /* enum */,
-				DD0F727D1FD1057100592BC2 /* struct */,
+				DD0F727E1FD1058100592BC2 /* Enum */,
+				DD0F727D1FD1057100592BC2 /* Struct */,
 				A0557F4C1FB5A92D00FD2868 /* SimpleUser.swift */,
 				A0F391501FAAB78000796EE5 /* realmInitalization.swift */,
 			);
@@ -203,47 +216,50 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		DD0F726A1FD0F10D00592BC2 /* RydeViews */ = {
+		DD0F726A1FD0F10D00592BC2 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				13B95E6F1F9D6242009C142A /* AddRideViewController.swift */,
 				DD0C92A51FCE9AEC00633189 /* SeeRideViewController.swift */,
-				DD0C92A71FCE9B1700633189 /* EditRideViewController.swift */,
+				F47DF8A91FE937EC0066FFC4 /* RatingViewController.swift */,
 			);
-			name = RydeViews;
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
-		DD0F726B1FD0F17300592BC2 /* TabbarViews */ = {
+		DD0F726B1FD0F17300592BC2 /* TabViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				DDC40EB41F7A10B700A340AA /* SettingsViewController.swift */,
 				DD0A745A1F945A3F00C673F2 /* CalculatorViewController.swift */,
-				DD8221541FBE69980037BA76 /* collectionViewController.swift */,
+				DD8221541FBE69980037BA76 /* FeedCollectionViewController.swift */,
+				F47DF8A51FE934290066FFC4 /* MyRidesCollectionViewController.swift */,
+				F47DF8A61FE934290066FFC4 /* MyRidesCollectionViewController.xib */,
 			);
-			name = TabbarViews;
+			name = TabViewControllers;
 			sourceTree = "<group>";
 		};
-		DD0F727D1FD1057100592BC2 /* struct */ = {
+		DD0F727D1FD1057100592BC2 /* Struct */ = {
 			isa = PBXGroup;
 			children = (
 				DD0F72791FD1051E00592BC2 /* rideData.swift */,
 				DD0F72771FD1050900592BC2 /* seatData.swift */,
 				DD0F72751FD104F800592BC2 /* driverData.swift */,
 			);
-			name = struct;
+			name = Struct;
 			sourceTree = "<group>";
 		};
-		DD0F727E1FD1058100592BC2 /* enum */ = {
+		DD0F727E1FD1058100592BC2 /* Enum */ = {
 			isa = PBXGroup;
 			children = (
 				DD0F727B1FD1052D00592BC2 /* seatOption.swift */,
 			);
-			name = enum;
+			name = Enum;
 			sourceTree = "<group>";
 		};
 		DD0F727F1FD105A800592BC2 /* xib */ = {
 			isa = PBXGroup;
 			children = (
+				F47DF8A31FE928760066FFC4 /* MyRidesCell.xib */,
 				DD8221501FBE68F60037BA76 /* FeedCell.xib */,
 				DD0C929F1FCE99FC00633189 /* AddRideView.xib */,
 				DD0C92A11FCE9A2A00633189 /* SeeRideView.xib */,
@@ -279,7 +295,7 @@
 			children = (
 				DD73115C1F68CD1900568833 /* AppDelegate.swift */,
 				135BDC5C1F7B396200449C08 /* ObjectModels */,
-				DDC40EBC1F7A19D300A340AA /* Views */,
+				DDC40EBC1F7A19D300A340AA /* Cells */,
 				DDC40EB71F7A110100A340AA /* ViewController */,
 				DDC40EB61F7A10F500A340AA /* Storyboards */,
 				DD7311651F68CD1900568833 /* Assets.xcassets */,
@@ -317,6 +333,7 @@
 				DDBE54721F74A1C2004319E9 /* Settings.storyboard */,
 				DDC40EBD1F7A1A2100A340AA /* Profil.storyboard */,
 				DD0A74581F945A0100C673F2 /* Calculator.storyboard */,
+				F471F3A91FD0EF2400348B9E /* MyRides.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -324,24 +341,26 @@
 		DDC40EB71F7A110100A340AA /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				DD0F726B1FD0F17300592BC2 /* TabbarViews */,
+				DD0F726B1FD0F17300592BC2 /* TabViewControllers */,
 				DDC40EBA1F7A19CC00A340AA /* ProfilViewController.swift */,
 				135BDC581F7B30C100449C08 /* FeedTableViewController.swift */,
 				135BDC5A1F7B319F00449C08 /* FeedTableViewCell.swift */,
-				DD0F726A1FD0F10D00592BC2 /* RydeViews */,
+				DD0F726A1FD0F10D00592BC2 /* ViewControllers */,
 				22A5CD5E1F779B9B008F5E5D /* LoginViewController.swift */,
 				22FE32621FB54AB200B017D1 /* SignUpViewController.swift */,
+				DD0C92A71FCE9B1700633189 /* EditRideViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
 		};
-		DDC40EBC1F7A19D300A340AA /* Views */ = {
+		DDC40EBC1F7A19D300A340AA /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				DD8221521FBE691B0037BA76 /* Cell.swift */,
+				DD8221521FBE691B0037BA76 /* FeedCell.swift */,
+				F47DF8A11FE928030066FFC4 /* MyRidesCell.swift */,
 				DD0F727F1FD105A800592BC2 /* xib */,
 			);
-			name = Views;
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -417,7 +436,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = CSUMB;
 				TargetAttributes = {
 					DD7311581F68CD1900568833 = {
@@ -473,7 +492,10 @@
 				DD0C92A41FCE9A5A00633189 /* EditRideView.xib in Resources */,
 				DD0C92A01FCE99FC00633189 /* AddRideView.xib in Resources */,
 				DD7311661F68CD1900568833 /* Assets.xcassets in Resources */,
+				F471F3AA1FD0EF2400348B9E /* MyRides.storyboard in Resources */,
+				F47DF8A81FE934290066FFC4 /* MyRidesCollectionViewController.xib in Resources */,
 				DD0A74591F945A0100C673F2 /* Calculator.storyboard in Resources */,
+				F47DF8A41FE928760066FFC4 /* MyRidesCell.xib in Resources */,
 				DD0C92A21FCE9A2A00633189 /* SeeRideView.xib in Resources */,
 				DD7311641F68CD1900568833 /* Main.storyboard in Resources */,
 			);
@@ -671,12 +693,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F47DF8A71FE934290066FFC4 /* MyRidesCollectionViewController.swift in Sources */,
 				135BDC601F7B3AD600449C08 /* Vehicle.swift in Sources */,
 				22A5CD5F1F779B9B008F5E5D /* LoginViewController.swift in Sources */,
 				DD0F727A1FD1051E00592BC2 /* rideData.swift in Sources */,
-				DD8221531FBE691B0037BA76 /* Cell.swift in Sources */,
+				DD8221531FBE691B0037BA76 /* FeedCell.swift in Sources */,
 				A0557F4D1FB5A92D00FD2868 /* SimpleUser.swift in Sources */,
-				DD8221551FBE69980037BA76 /* collectionViewController.swift in Sources */,
+				DD8221551FBE69980037BA76 /* FeedCollectionViewController.swift in Sources */,
 				135BDC591F7B30C100449C08 /* FeedTableViewController.swift in Sources */,
 				135BDC5B1F7B319F00449C08 /* FeedTableViewCell.swift in Sources */,
 				13B95E701F9D6242009C142A /* AddRideViewController.swift in Sources */,
@@ -686,16 +709,17 @@
 				135BDC661F7DCCEA00449C08 /* Ride.swift in Sources */,
 				DD0F727C1FD1052D00592BC2 /* seatOption.swift in Sources */,
 				135BDC5E1F7B39A200449C08 /* User.swift in Sources */,
-				A00249D31FD60F0D00AF70CA /* dummyData.swift in Sources */,
 				DD8221571FBE6BD90037BA76 /* demoData.swift in Sources */,
 				DD73115D1F68CD1900568833 /* AppDelegate.swift in Sources */,
 				DD0C92A81FCE9B1700633189 /* EditRideViewController.swift in Sources */,
 				DD0F72781FD1050900592BC2 /* seatData.swift in Sources */,
+				F47DF8AA1FE937EC0066FFC4 /* RatingViewController.swift in Sources */,
 				DD0C92A61FCE9AEC00633189 /* SeeRideViewController.swift in Sources */,
 				135BDC641F7B3C0700449C08 /* Locations.swift in Sources */,
 				DDC40EB51F7A10B700A340AA /* SettingsViewController.swift in Sources */,
 				DD0A745B1F945A3F00C673F2 /* CalculatorViewController.swift in Sources */,
 				135BDC681F7DD0C900449C08 /* Rating.swift in Sources */,
+				F47DF8A21FE928030066FFC4 /* MyRidesCell.swift in Sources */,
 				A0FA6E281F7DD124005BD7AF /* AppRealm.swift in Sources */,
 				A0F391511FAAB78000796EE5 /* realmInitalization.swift in Sources */,
 			);
@@ -739,15 +763,18 @@
 			children = (
 				DD7311631F68CD1900568833 /* Base */,
 				DD0F72641FD0E88B00592BC2 /* de */,
+				F47DF89F1FE8C3360066FFC4 /* da */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
+			path = "/Users/simon/Google Drive/Computer Science/4. Semester CSUMB/iOS Course/CST495_final_proj/Ridealong/Ridealong";
+			sourceTree = "<absolute>";
 		};
 		DD7311671F68CD1900568833 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				DD7311681F68CD1900568833 /* Base */,
 				DD0F72651FD0E88B00592BC2 /* de */,
+				F47DF8A01FE8C3360066FFC4 /* da */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -766,7 +793,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -774,7 +803,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -817,7 +850,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -825,7 +860,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

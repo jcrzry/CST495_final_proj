@@ -52,10 +52,13 @@ class LoginViewController: UIViewController{
                 }else{
                     print("no user passed")
                 }
+<<<<<<< HEAD
                 let allRides = getAllRidesAsResults()
                 for r in allRides{
                     print(r.rideID!)
                 }
+=======
+>>>>>>> 21e6593a8df6acefc5b35c83f1f7249f6ebe7a83
                 performSegue(withIdentifier: "mainPage", sender: nil)
             }
         }
