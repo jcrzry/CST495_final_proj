@@ -39,11 +39,9 @@ class MyRidesCollectionViewController: UICollectionViewController, UICollectionV
     override func viewDidLoad() {
         fetchObjects()
         super.viewDidLoad()
-        collectionView!.register(UINib(nibName: "MyRidesCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
+        collectionView!.register(MyRidesCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         collectionView!.delegate = self
        
-        //Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
          }
     
     // MARK: Sections
@@ -77,7 +75,10 @@ class MyRidesCollectionViewController: UICollectionViewController, UICollectionV
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! MyRidesCell
-            cell.driverName.text = "Test"
+        
+         cell.setData(driver: demoDrivers[indexPath.row])
+        
+           // cell.driverName.text = "Test"
        //     cell.setData(driver: demoDrivers[indexPath.row])
         
         return cell
