@@ -14,7 +14,6 @@
 		135BDC641F7B3C0700449C08 /* Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135BDC631F7B3C0700449C08 /* Locations.swift */; };
 		135BDC661F7DCCEA00449C08 /* Ride.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135BDC651F7DCCEA00449C08 /* Ride.swift */; };
 		135BDC681F7DD0C900449C08 /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135BDC671F7DD0C900449C08 /* Rating.swift */; };
-		13B95E701F9D6242009C142A /* AddRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B95E6F1F9D6242009C142A /* AddRideViewController.swift */; };
 		22A5CD5F1F779B9B008F5E5D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A5CD5E1F779B9B008F5E5D /* LoginViewController.swift */; };
 		22FE32631FB54AB200B017D1 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FE32621FB54AB200B017D1 /* SignUpViewController.swift */; };
 		721BFB875881E20AF72E3898 /* Pods_RidealongUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AA4BE44488141C96D7221E0 /* Pods_RidealongUITests.framework */; };
@@ -58,6 +57,7 @@
 		F47DF8A71FE934290066FFC4 /* MyRidesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47DF8A51FE934290066FFC4 /* MyRidesCollectionViewController.swift */; };
 		F47DF8A81FE934290066FFC4 /* MyRidesCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F47DF8A61FE934290066FFC4 /* MyRidesCollectionViewController.xib */; };
 		F47DF8AA1FE937EC0066FFC4 /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47DF8A91FE937EC0066FFC4 /* RatingViewController.swift */; };
+		F47DF8AC1FF9176E0066FFC4 /* AddRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47DF8AB1FF9176E0066FFC4 /* AddRideViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,7 +85,6 @@
 		135BDC631F7B3C0700449C08 /* Locations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locations.swift; sourceTree = "<group>"; };
 		135BDC651F7DCCEA00449C08 /* Ride.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ride.swift; sourceTree = "<group>"; };
 		135BDC671F7DD0C900449C08 /* Rating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
-		13B95E6F1F9D6242009C142A /* AddRideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddRideViewController.swift; path = /Users/jcrzry/Documents/rideAlong/Ridealong/Ridealong/AddRideViewController.swift; sourceTree = "<absolute>"; };
 		22A5CD5E1F779B9B008F5E5D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		22FE32621FB54AB200B017D1 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		2AA4BE44488141C96D7221E0 /* Pods_RidealongUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RidealongUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +144,7 @@
 		F47DF8A51FE934290066FFC4 /* MyRidesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRidesCollectionViewController.swift; sourceTree = "<group>"; };
 		F47DF8A61FE934290066FFC4 /* MyRidesCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyRidesCollectionViewController.xib; sourceTree = "<group>"; };
 		F47DF8A91FE937EC0066FFC4 /* RatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
+		F47DF8AB1FF9176E0066FFC4 /* AddRideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRideViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,7 +222,6 @@
 			children = (
 				22A5CD5E1F779B9B008F5E5D /* LoginViewController.swift */,
 				22FE32621FB54AB200B017D1 /* SignUpViewController.swift */,
-				13B95E6F1F9D6242009C142A /* AddRideViewController.swift */,
 				DD0C92A51FCE9AEC00633189 /* SeeRideViewController.swift */,
 				F47DF8A91FE937EC0066FFC4 /* RatingViewController.swift */,
 				DD0C92A71FCE9B1700633189 /* EditRideViewController.swift */,
@@ -233,6 +232,7 @@
 		DD0F726B1FD0F17300592BC2 /* TabViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				F47DF8AB1FF9176E0066FFC4 /* AddRideViewController.swift */,
 				DDC40EB41F7A10B700A340AA /* SettingsViewController.swift */,
 				DD0A745A1F945A3F00C673F2 /* CalculatorViewController.swift */,
 				DD8221541FBE69980037BA76 /* FeedCollectionViewController.swift */,
@@ -696,6 +696,7 @@
 			files = (
 				F47DF8A71FE934290066FFC4 /* MyRidesCollectionViewController.swift in Sources */,
 				135BDC601F7B3AD600449C08 /* Vehicle.swift in Sources */,
+				F47DF8AC1FF9176E0066FFC4 /* AddRideViewController.swift in Sources */,
 				22A5CD5F1F779B9B008F5E5D /* LoginViewController.swift in Sources */,
 				DD0F727A1FD1051E00592BC2 /* rideData.swift in Sources */,
 				DD8221531FBE691B0037BA76 /* FeedCell.swift in Sources */,
@@ -704,7 +705,6 @@
 				DD8221551FBE69980037BA76 /* FeedCollectionViewController.swift in Sources */,
 				135BDC591F7B30C100449C08 /* FeedTableViewController.swift in Sources */,
 				135BDC5B1F7B319F00449C08 /* FeedTableViewCell.swift in Sources */,
-				13B95E701F9D6242009C142A /* AddRideViewController.swift in Sources */,
 				22FE32631FB54AB200B017D1 /* SignUpViewController.swift in Sources */,
 				DDC40EBB1F7A19CC00A340AA /* ProfilViewController.swift in Sources */,
 				DD0F72761FD104F800592BC2 /* driverData.swift in Sources */,
