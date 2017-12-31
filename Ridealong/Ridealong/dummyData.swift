@@ -13,6 +13,7 @@ import RealmSwift
 let names = ["john","matt","colin","sophia","john","kiley","rey","madison"]
 var riders = [User]()
 var rides = [Ride]()
+
 func AddUsers(){
     let creds = SyncCredentials.usernamePassword(username:"jocruz@csumb.edu",password:"ridealong")
     
@@ -28,7 +29,7 @@ func AddUsers(){
                 var v = Vehicle(make: "Audi", model: "A4", year: 2003, type: "Sedan", isDefault: true, seats: 7)
                 dummyUser?.addVehicle(vehicle: v!)
                 dummyUser?.defaultVehicle = v!
-                //registerUser(newUser: dummyUser!)
+                registerUser(newUser: dummyUser!)
                 var begin = Locations(location_lat: 36.652922,location_long: -121.798163, name: "csumb")
                 var end = Locations(location_lat: 37.774929, location_long: -122.419416, name: "sf")
                 var ride = Ride(creator: dummyUser!, start: begin!, destination: end!)
@@ -38,6 +39,9 @@ func AddUsers(){
                 }
             }
             let allrides = cRealm.objects(Ride.self)
+            for i in allrides{
+                print(i)
+            }
         }else{
             print(error ?? "No user found")
         }

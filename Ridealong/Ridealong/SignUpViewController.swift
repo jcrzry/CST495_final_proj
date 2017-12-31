@@ -8,7 +8,8 @@
 
 import UIKit
 import TB
-
+//user defaults
+let RIDefaults = UserDefaults.standard
 class SignUpViewController: UIViewController {
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var lastName: UITextField!
@@ -79,6 +80,9 @@ class SignUpViewController: UIViewController {
                                 //critical section, will execute on click if all fields are correct.
                                 print("inside valid entries")
                                 let me = User(firstname: firstName.text!, lastname: lastName.text!, email: email.text!, password: password.text!, phone: phoneNumber.text!)
+                                //SET USER DEFAULTS FOR RIDEALONG
+                                RIDefaults.set(email.text!,forKey: "RI_USERNAME")
+                                RIDefaults.set(password.text!,forKey: "RI_PASS")
                                 registerUser(newUser: me!)
                                 NC.addObserver(forName: registerStatus, object:nil, queue:nil, using: getRegisterStatus)
                             }else{

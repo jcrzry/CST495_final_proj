@@ -43,7 +43,7 @@ class AddRideViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        getCoordinates(address: <#T##String#>)
+        //getCoordinates(address: <#T##String#>)
     }
     
     
@@ -54,7 +54,7 @@ class AddRideViewController: UIViewController, UITextFieldDelegate {
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
         //button to click when done
-        let doneBtn = UIBarButtonItem(barButtonSys  temItem: .done, target: nil, action: #selector(doneAction))
+        let doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(doneAction))
         toolbar.setItems([doneBtn], animated: false)
         txtDate.inputAccessoryView = toolbar
         txtTime.inputAccessoryView = toolbar
@@ -75,21 +75,21 @@ class AddRideViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    func getCoordinates(address: String) -> Locations{
-        let geocoder = CLGeocoder()
-        geocoder.geocodeAddressString(address, completionHandler: ({
-            placemarks, error in
-            if error == nil{
-                if let placemarks = placemarks{
-                    let coordinates = placemarks.first?.location
-                    let rCoordinates = Locations(cLocation: coordinates!)
-                    var locations = ["location" : rCoordinates]
-                    NC.post(name: Notification.Name(rawValue: "location"), object: nil, userInfo: locations as! [AnyHashable : Any])
-                    return rCoordinates
-                }else{
-                    print("no valid coordinate")
-                }
-            }
-        }) -> Locations)
-    }
+//    func getCoordinates(address: String) -> Locations{
+//        let geocoder = CLGeocoder()
+//        geocoder.geocodeAddressString(address, completionHandler:{
+//            placemarks, error in
+//            if error == nil{
+//                if let placemarks = placemarks{
+//                    let coordinates = placemarks.first?.location
+//                    let rCoordinates = Locations(cLocation: coordinates!)
+//                    var locations = ["location" : rCoordinates]
+//                    NC.post(name: Notification.Name(rawValue: "location"), object: nil, userInfo: locations as! [AnyHashable : Any])
+//                    return rCoordinates
+//                }else{
+//                    print("no valid coordinate")
+//                }
+//            }
+//        } -> Locations)
+//    }
 }

@@ -10,13 +10,16 @@ import Foundation
 import RealmSwift
 
 //realm file paths and urls
-let COMMON_REALM_PATH = URL(string: "realm://ec2-34-203-249-199.compute-1.amazonaws.com:9080/CommonRealm")
-let COMMON_REALM_STRING = "http://ec2-34-203-249-199.compute-1.amazonaws.com:9080/CommonRealm"
-let SERVER_PATH = URL(string: "http://ec2-34-203-249-199.compute-1.amazonaws.com:9080")
-let PRIVATE_REALM_PATH = URL(string:"realm://ec2-34-203-249-199.compute-1.amazonaws.com:9080/~/PrivateRealm")
+let COMMON_REALM_PATH = URL(string: "realm://ec2-54-226-48-21.compute-1.amazonaws.com:9080/CommonRealm")
+let COMMON_REALM_STRING = "realm://ec2-54-226-48-21.compute-1.amazonaws.com:9080/CommonRealm"
+let SERVER_PATH = URL(string: "http://ec2-54-226-48-21.compute-1.amazonaws.com:9080")
+let PRIVATE_REALM_PATH = URL(string:"realm://ec2-54-226-48-21.compute-1.amazonaws.com:9080/~/PrivateRealm")
 let NC = NotificationCenter.default
 let registerStatus = Notification.Name(rawValue: "registerStatus")
 let loginStatus = Notification.Name(rawValue:"loginStatus")
+
+
+
 
 func setDefaultConfiguration(realmUser: SyncUser)    {
     let defaultConfig = Realm.Configuration(syncConfiguration:SyncConfiguration(user: realmUser, realmURL: PRIVATE_REALM_PATH!), deleteRealmIfMigrationNeeded: true,objectTypes:[User.self, SimpleUser.self,Vehicle.self,Ride.self,Locations.self,Rating.self])
@@ -34,7 +37,9 @@ func loginUser(username: String, password: String){
             //post message for successful login
             let loginBool: [String:Bool] = ["loginFailed": false];
             NC.post(name: loginStatus, object: nil, userInfo: loginBool)
-            selfUser = (getPrivateRealm().objects(User.self).toArray()[0] as? User)!
+            //print(getCommonRealm().objects(Ride.self).toArray())
+            //print(getPrivateRealm().objects(User.self).toArray())
+            //selfUser = getUser()!
         }else if let error = error{
             print(error)
             //if this is set, then user credentials are not correct
@@ -107,7 +112,10 @@ func getAllRidesAsArray() -> [Any]{
 
 func getAllRidesAsResults() -> Results<Ride>{
     let cRealm = getCommonRealm()
-    return cRealm.objects(Ride.self)
+    print("getting all rides")
+    let rides = cRealm.objects(Ride.self)
+    print(rides)
+    return rides
 }
 
 func getRidesforRider(rider: User)->Results<Ride>{
@@ -118,6 +126,11 @@ func getRidesforRider(rider: User)->Results<Ride>{
 }
 
 
+func getUser() -> User?{
+    let pRealm = getPrivateRealm()
+    let user = pRealm.objects(User.self).first!
+    return user
+}
 extension Results{
     func toArray() -> [Any]{
         return self.map{$0}
